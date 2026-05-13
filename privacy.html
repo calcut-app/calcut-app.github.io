@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — CalCut</title>
+<meta name="description" content="CalCut's privacy policy. How we collect, use, and protect your data.">
+<meta name="theme-color" content="#FF5C00">
+
+<link rel="icon" type="image/png" href="assets/icon.png">
+<link rel="apple-touch-icon" href="assets/icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --bg: #F5F5F5;
+    --card: #FFFFFF;
+    --orange: #FF5C00;
+    --orange-pale: #FFF5F0;
+    --orange-border: #FFD4BD;
+    --black: #1A1A1A;
+    --grey: #888888;
+    --display: 'Plus Jakarta Sans', system-ui, sans-serif;
+    --body: 'DM Sans', system-ui, sans-serif;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--body); background: var(--bg); color: var(--black); line-height: 1.5; }
+  a { color: inherit; text-decoration: none; }
+  img { display: block; max-width: 100%; }
+
+  /* NAV */
+  .nav { position: sticky; top: 0; z-index: 100; background: rgba(245,245,245,0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid rgba(0,0,0,0.04); }
+  .nav-inner { max-width: 1200px; margin: 0 auto; padding: 18px 24px; display: flex; align-items: center; justify-content: space-between; }
+  .nav-wordmark { height: 26px; width: auto; }
+  .nav-links { display: flex; gap: 28px; align-items: center; font-family: var(--display); font-weight: 600; font-size: 15px; }
+  .nav-links a { color: var(--grey); transition: color 0.2s ease; }
+  .nav-links a:hover { color: var(--black); }
+  .nav-links a.active { color: var(--black); }
+  @media (max-width: 600px) { .nav-links { gap: 18px; font-size: 14px; } .nav-inner { padding: 16px 20px; } .nav-wordmark { height: 22px; } }
+
+  /* HEADER */
+  .page-header { padding: 80px 24px 40px; text-align: center; max-width: 720px; margin: 0 auto; }
+  @media (max-width: 700px) { .page-header { padding: 56px 24px 32px; } }
+  .page-eyebrow { display: inline-flex; align-items: center; gap: 8px; font-family: var(--display); font-weight: 700; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--orange); background: var(--orange-pale); border: 1px solid var(--orange-border); padding: 8px 14px; border-radius: 100px; margin-bottom: 28px; }
+  h1.page-title { font-family: var(--display); font-weight: 800; font-size: clamp(40px, 5.5vw, 60px); line-height: 1.05; letter-spacing: -0.03em; margin-bottom: 20px; }
+  .page-sub { font-size: 19px; color: var(--grey); line-height: 1.55; max-width: 540px; margin: 0 auto; }
+
+  /* POLICY CONTAINER */
+  .policy-wrap { max-width: 800px; margin: 0 auto 80px; padding: 0 24px; }
+  .policy-card { background: var(--card); border: 1px solid rgba(0,0,0,0.04); border-radius: 24px; padding: 48px; box-shadow: 0 8px 24px -16px rgba(0,0,0,0.06); }
+  @media (max-width: 700px) { .policy-card { padding: 32px 24px; border-radius: 16px; } }
+
+  /* Termly content overrides — make it match our type system */
+  .policy-card { font-family: var(--body); color: var(--black); line-height: 1.65; font-size: 16px; }
+  .policy-card h1, .policy-card h2, .policy-card h3, .policy-card h4 { font-family: var(--display); font-weight: 800; color: var(--black); letter-spacing: -0.02em; line-height: 1.2; }
+  .policy-card h1 { font-size: 32px; margin: 0 0 24px; }
+  .policy-card h2 { font-size: 24px; margin: 40px 0 16px; }
+  .policy-card h3 { font-size: 19px; margin: 28px 0 12px; }
+  .policy-card h4 { font-size: 17px; margin: 24px 0 10px; }
+  .policy-card p { margin-bottom: 16px; color: #333; }
+  .policy-card a { color: var(--orange); font-weight: 500; }
+  .policy-card a:hover { text-decoration: underline; }
+  .policy-card ul, .policy-card ol { margin: 12px 0 20px 24px; }
+  .policy-card li { margin-bottom: 8px; }
+  .policy-card strong, .policy-card b { font-weight: 700; color: var(--black); }
+
+  /* FOOTER */
+  .footer { background: var(--bg); padding: 48px 24px 40px; border-top: 1px solid rgba(0,0,0,0.04); }
+  .footer-inner { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; }
+  .footer-left { display: flex; align-items: center; gap: 14px; }
+  .footer-icon { width: 32px; height: 32px; }
+  .footer-text { font-size: 14px; color: var(--grey); }
+  .footer-links { display: flex; gap: 24px; font-family: var(--display); font-weight: 600; font-size: 14px; }
+  .footer-links a { color: var(--grey); transition: color 0.2s ease; }
+  .footer-links a:hover { color: var(--black); }
+  @media (max-width: 600px) { .footer-inner { flex-direction: column; text-align: center; } .footer-left { flex-direction: column; gap: 10px; } }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" aria-label="CalCut home"><img src="assets/wordmark.png" alt="CalCut" class="nav-wordmark"></a>
+    <div class="nav-links">
+      <a href="support.html">Support</a>
+      <a href="privacy.html" class="active">Privacy</a>
+    </div>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="page-eyebrow">Privacy</div>
+  <h1 class="page-title">Privacy Policy</h1>
+  <p class="page-sub">How we collect, use, and protect your data. We don't sell it. We never will.</p>
+</header>
+
+<div class="policy-wrap">
+  <div class="policy-card">
+
+    <!-- ============================================================ -->
+    <!-- PASTE TERMLY HTML BELOW THIS LINE                            -->
+    <!-- Replace this entire comment block with the full Termly HTML  -->
+    <!-- copied fresh from app.termly.io                              -->
+    <!-- ============================================================ -->
+
+    <p style="color: var(--grey); font-style: italic;">[Privacy policy content goes here — paste from Termly]</p>
+
+    <!-- ============================================================ -->
+    <!-- PASTE TERMLY HTML ABOVE THIS LINE                            -->
+    <!-- ============================================================ -->
+
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-left">
+      <img src="assets/icon.png" alt="CalCut" class="footer-icon">
+      <span class="footer-text">© 2026 CalCut Pty Ltd. Built in Melbourne.</span>
+    </div>
+    <div class="footer-links">
+      <a href="support.html">Support</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="mailto:support@calcut.com.au">Contact</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

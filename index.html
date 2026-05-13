@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CalCut — Two rules. Real results.</title>
+<meta name="description" content="The fat loss app built on two daily rules. Hit your steps. Stay in a calorie deficit. That's it.">
+<meta property="og:title" content="CalCut — Two rules. Real results.">
+<meta property="og:description" content="The fat loss app built on two daily rules. Hit your steps. Stay in a calorie deficit.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://calcut.com.au">
+<meta property="og:image" content="https://calcut.com.au/assets/icon.png">
+<meta name="theme-color" content="#FF5C00">
+
+<link rel="icon" type="image/png" href="assets/icon.png">
+<link rel="apple-touch-icon" href="assets/icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --bg: #F5F5F5;
+    --card: #FFFFFF;
+    --orange: #FF5C00;
+    --orange-pale: #FFF5F0;
+    --orange-border: #FFD4BD;
+    --green: #4CAF50;
+    --green-pale: #E8F5E9;
+    --black: #1A1A1A;
+    --grey: #888888;
+    --grey-light: #E5E5E5;
+    --display: 'Plus Jakarta Sans', system-ui, sans-serif;
+    --body: 'DM Sans', system-ui, sans-serif;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--body); background: var(--bg); color: var(--black); line-height: 1.5; overflow-x: hidden; }
+  a { color: inherit; text-decoration: none; }
+  img { display: block; max-width: 100%; }
+
+  /* NAV */
+  .nav { position: sticky; top: 0; z-index: 100; background: rgba(245,245,245,0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid rgba(0,0,0,0.04); }
+  .nav-inner { max-width: 1200px; margin: 0 auto; padding: 18px 24px; display: flex; align-items: center; justify-content: space-between; }
+  .nav-wordmark { height: 26px; width: auto; }
+  .nav-links { display: flex; gap: 28px; align-items: center; font-family: var(--display); font-weight: 600; font-size: 15px; }
+  .nav-links a { color: var(--grey); transition: color 0.2s ease; }
+  .nav-links a:hover { color: var(--black); }
+  @media (max-width: 600px) { .nav-links { gap: 18px; font-size: 14px; } .nav-inner { padding: 16px 20px; } .nav-wordmark { height: 22px; } }
+
+  /* HERO */
+  .hero { max-width: 1200px; margin: 0 auto; padding: 72px 24px 80px; display: grid; grid-template-columns: 1.15fr 1fr; gap: 60px; align-items: center; }
+  @media (max-width: 900px) { .hero { grid-template-columns: 1fr; gap: 56px; padding: 48px 24px 56px; text-align: center; } }
+
+  .hero-content { max-width: 580px; }
+  @media (max-width: 900px) { .hero-content { margin: 0 auto; } }
+
+  .hero-eyebrow { display: inline-flex; align-items: center; gap: 8px; font-family: var(--display); font-weight: 700; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--orange); background: var(--orange-pale); border: 1px solid var(--orange-border); padding: 8px 14px; border-radius: 100px; margin-bottom: 28px; }
+  .hero-eyebrow::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--orange); animation: pulse 2s ease-in-out infinite; }
+  @keyframes pulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.5; transform: scale(1.3); } }
+
+  h1.hero-title { font-family: var(--display); font-weight: 800; font-size: clamp(46px, 6.5vw, 76px); line-height: 1.02; letter-spacing: -0.035em; color: var(--black); margin-bottom: 24px; }
+  h1.hero-title .accent-orange { color: var(--orange); }
+  h1.hero-title .accent-green { color: var(--green); }
+
+  .hero-sub { font-size: 19px; line-height: 1.55; color: var(--grey); margin-bottom: 36px; max-width: 480px; }
+  @media (max-width: 900px) { .hero-sub { margin: 0 auto 36px; } }
+
+  .app-store-badge { display: inline-block; transition: transform 0.2s ease, box-shadow 0.2s ease; border-radius: 12px; }
+  .app-store-badge:hover { transform: translateY(-2px); }
+  .app-store-badge svg { display: block; height: 56px; width: auto; }
+
+  /* HERO PHONE */
+  .hero-visual { position: relative; display: flex; justify-content: center; align-items: center; }
+  .phone-wrap { position: relative; width: 100%; max-width: 340px; }
+  .phone-glow { position: absolute; inset: -60px; background: radial-gradient(circle at 50% 40%, rgba(255,92,0,0.22), transparent 60%); filter: blur(50px); z-index: 0; pointer-events: none; }
+  .phone-frame { position: relative; z-index: 1; padding: 11px; background: linear-gradient(160deg, #2a2a2a, #0a0a0a); border-radius: 48px; box-shadow: 0 30px 60px -20px rgba(0,0,0,0.4), 0 10px 30px -10px rgba(0,0,0,0.2), inset 0 0 0 1px rgba(255,255,255,0.08); }
+  .phone-screen { position: relative; border-radius: 38px; overflow: hidden; background: var(--bg); aspect-ratio: 9/19.5; }
+  .phone-screen img { width: 100%; height: 100%; object-fit: cover; object-position: top center; }
+  .phone-notch { position: absolute; top: 14px; left: 50%; transform: translateX(-50%); width: 100px; height: 28px; background: #000; border-radius: 100px; z-index: 2; }
+
+  /* RULES */
+  .rules { background: var(--card); padding: 100px 24px; border-top: 1px solid rgba(0,0,0,0.04); border-bottom: 1px solid rgba(0,0,0,0.04); }
+  @media (max-width: 900px) { .rules { padding: 72px 24px; } }
+  .rules-inner { max-width: 1100px; margin: 0 auto; }
+  .section-eyebrow { font-family: var(--display); font-weight: 700; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--orange); margin-bottom: 14px; }
+  .section-title { font-family: var(--display); font-weight: 800; font-size: clamp(34px, 4.5vw, 52px); line-height: 1.05; letter-spacing: -0.025em; margin-bottom: 18px; max-width: 720px; }
+  .section-sub { font-size: 18px; color: var(--grey); max-width: 580px; line-height: 1.55; margin-bottom: 56px; }
+
+  .rules-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  @media (max-width: 700px) { .rules-grid { grid-template-columns: 1fr; gap: 20px; } }
+
+  .rule-card { background: var(--bg); border: 1px solid rgba(0,0,0,0.04); border-radius: 24px; padding: 36px 32px; position: relative; overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+  .rule-card:hover { transform: translateY(-3px); box-shadow: 0 16px 32px -16px rgba(0,0,0,0.12); }
+  .rule-number { font-family: var(--display); font-weight: 800; font-size: 14px; letter-spacing: 0.08em; color: var(--orange); margin-bottom: 16px; }
+  .rule-title { font-family: var(--display); font-weight: 800; font-size: 28px; line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 12px; }
+  .rule-desc { font-size: 16px; color: var(--grey); line-height: 1.55; }
+  .rule-card::after { content: ''; position: absolute; right: -40px; top: -40px; width: 140px; height: 140px; border-radius: 50%; background: radial-gradient(circle, rgba(255,92,0,0.06), transparent 70%); pointer-events: none; }
+
+  /* TRANSFORM (orange to green) */
+  .transform { padding: 100px 24px; }
+  @media (max-width: 900px) { .transform { padding: 72px 24px; } }
+  .transform-inner { max-width: 1100px; margin: 0 auto; text-align: center; }
+  .transform-bar { display: inline-flex; align-items: center; gap: 14px; padding: 18px 28px; background: var(--card); border-radius: 100px; box-shadow: 0 8px 24px -8px rgba(0,0,0,0.08); margin-bottom: 32px; font-family: var(--display); font-weight: 700; font-size: 15px; }
+  .transform-dot { width: 14px; height: 14px; border-radius: 50%; background: var(--orange); position: relative; }
+  .transform-dot.green { background: var(--green); }
+  .transform-arrow { color: var(--grey); font-size: 18px; line-height: 1; }
+  .transform-title { font-family: var(--display); font-weight: 800; font-size: clamp(34px, 4.5vw, 52px); line-height: 1.05; letter-spacing: -0.025em; max-width: 800px; margin: 0 auto 18px; }
+  .transform-title .accent-orange { color: var(--orange); }
+  .transform-title .accent-green { color: var(--green); }
+  .transform-sub { font-size: 18px; color: var(--grey); max-width: 580px; margin: 0 auto; line-height: 1.55; }
+
+  /* WHO IT'S FOR */
+  .audience { background: var(--card); padding: 100px 24px; border-top: 1px solid rgba(0,0,0,0.04); border-bottom: 1px solid rgba(0,0,0,0.04); }
+  @media (max-width: 900px) { .audience { padding: 72px 24px; } }
+  .audience-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+  @media (max-width: 900px) { .audience-inner { grid-template-columns: 1fr; gap: 48px; text-align: center; } }
+  .audience-list { list-style: none; padding: 0; margin-top: 32px; display: flex; flex-direction: column; gap: 16px; }
+  .audience-list li { display: flex; align-items: flex-start; gap: 14px; font-size: 17px; color: var(--black); }
+  @media (max-width: 900px) { .audience-list li { justify-content: center; text-align: left; max-width: 380px; margin: 0 auto; } }
+  .check { flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%; background: var(--green-pale); display: flex; align-items: center; justify-content: center; margin-top: 1px; }
+  .check svg { width: 14px; height: 14px; stroke: var(--green); stroke-width: 3; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+
+  /* FAQ */
+  .faq { padding: 100px 24px; }
+  @media (max-width: 900px) { .faq { padding: 72px 24px; } }
+  .faq-inner { max-width: 760px; margin: 0 auto; }
+  .faq-title-block { text-align: center; margin-bottom: 56px; }
+  .faq-title-block .section-title { margin: 0 auto 18px; }
+  .faq-title-block .section-sub { margin: 0 auto; }
+  .faq-item { background: var(--card); border: 1px solid rgba(0,0,0,0.04); border-radius: 16px; margin-bottom: 12px; overflow: hidden; transition: box-shadow 0.2s ease; }
+  .faq-item[open] { box-shadow: 0 8px 24px -12px rgba(0,0,0,0.08); }
+  .faq-item summary { padding: 22px 26px; font-family: var(--display); font-weight: 700; font-size: 17px; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary::after { content: '+'; font-size: 24px; font-weight: 400; color: var(--grey); transition: transform 0.2s ease, color 0.2s ease; flex-shrink: 0; }
+  .faq-item[open] summary::after { content: '−'; color: var(--orange); }
+  .faq-body { padding: 0 26px 24px; font-size: 16px; color: var(--grey); line-height: 1.6; }
+
+  /* FINAL CTA */
+  .final-cta { padding: 100px 24px; background: var(--black); color: white; text-align: center; position: relative; overflow: hidden; }
+  @media (max-width: 900px) { .final-cta { padding: 72px 24px; } }
+  .final-cta::before { content: ''; position: absolute; top: -200px; left: 50%; transform: translateX(-50%); width: 600px; height: 600px; border-radius: 50%; background: radial-gradient(circle, rgba(255,92,0,0.18), transparent 60%); pointer-events: none; }
+  .final-cta-inner { max-width: 720px; margin: 0 auto; position: relative; z-index: 1; }
+  .final-cta-title { font-family: var(--display); font-weight: 800; font-size: clamp(38px, 5.5vw, 64px); line-height: 1.02; letter-spacing: -0.03em; margin-bottom: 20px; }
+  .final-cta-title .accent-orange { color: var(--orange); }
+  .final-cta-sub { font-size: 18px; color: rgba(255,255,255,0.65); margin-bottom: 40px; max-width: 480px; margin-left: auto; margin-right: auto; line-height: 1.55; }
+
+  /* FOOTER */
+  .footer { background: var(--bg); padding: 48px 24px 40px; border-top: 1px solid rgba(0,0,0,0.04); }
+  .footer-inner { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; }
+  .footer-left { display: flex; align-items: center; gap: 14px; }
+  .footer-icon { width: 32px; height: 32px; }
+  .footer-text { font-size: 14px; color: var(--grey); }
+  .footer-links { display: flex; gap: 24px; font-family: var(--display); font-weight: 600; font-size: 14px; }
+  .footer-links a { color: var(--grey); transition: color 0.2s ease; }
+  .footer-links a:hover { color: var(--black); }
+  @media (max-width: 600px) { .footer-inner { flex-direction: column; text-align: center; } .footer-left { flex-direction: column; gap: 10px; } }
+
+  /* INTRO ANIM */
+  .fade-up { opacity: 0; transform: translateY(20px); animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+  .delay-1 { animation-delay: 0.1s; }
+  .delay-2 { animation-delay: 0.2s; }
+  .delay-3 { animation-delay: 0.3s; }
+  .delay-4 { animation-delay: 0.4s; }
+  @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" aria-label="CalCut home"><img src="assets/wordmark.png" alt="CalCut" class="nav-wordmark"></a>
+    <div class="nav-links">
+      <a href="support.html">Support</a>
+      <a href="privacy.html">Privacy</a>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-eyebrow fade-up">Available on the App Store</div>
+    <h1 class="hero-title fade-up delay-1">
+      Two rules.<br>
+      <span class="accent-orange">Real</span> <span class="accent-green">results.</span>
+    </h1>
+    <p class="hero-sub fade-up delay-2">
+      The fat loss app built on two daily rules. Hit your steps. Stay in a calorie deficit. That's it.
+    </p>
+    <a href="https://apps.apple.com/app/calcut/idXXXXXXXXX" class="app-store-badge fade-up delay-3" aria-label="Download CalCut on the App Store">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" role="img">
+        <rect width="200" height="60" rx="12" fill="#000"/>
+        <g fill="#fff">
+          <path d="M44.3 31.4c0-3.7 3-5.5 3.2-5.6-1.7-2.5-4.4-2.9-5.4-2.9-2.3-.2-4.5 1.3-5.6 1.3-1.2 0-2.9-1.3-4.8-1.2-2.5 0-4.8 1.4-6 3.7-2.6 4.5-.7 11.1 1.8 14.7 1.2 1.8 2.7 3.7 4.6 3.7 1.9-.1 2.6-1.2 4.8-1.2s2.9 1.2 4.8 1.1c2-.1 3.3-1.8 4.5-3.6 1.4-2 2-4.1 2-4.2-.1 0-3.9-1.5-3.9-5.8zm-3.7-10.7c1-1.3 1.8-3 1.5-4.8-1.5.1-3.4 1-4.5 2.3-1 1.1-1.8 2.9-1.6 4.6 1.7.1 3.5-.8 4.6-2.1z"/>
+          <text x="60" y="27" font-family="-apple-system, system-ui, sans-serif" font-size="9" font-weight="400">Download on the</text>
+          <text x="60" y="46" font-family="-apple-system, system-ui, sans-serif" font-size="20" font-weight="600">App Store</text>
+        </g>
+      </svg>
+    </a>
+  </div>
+
+  <div class="hero-visual fade-up delay-2">
+    <div class="phone-wrap">
+      <div class="phone-glow"></div>
+      <div class="phone-frame">
+        <div class="phone-screen">
+          <img src="assets/app-screenshot.png" alt="CalCut app showing goal complete state with orange-to-green transition" loading="eager">
+          <div class="phone-notch"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="rules">
+  <div class="rules-inner">
+    <div class="section-eyebrow">How it works</div>
+    <h2 class="section-title">No tracking macros. No meal plans. No gym.</h2>
+    <p class="section-sub">CalCut runs on two non-negotiable daily rules. Follow them. Lose weight. That's the deal.</p>
+
+    <div class="rules-grid">
+      <div class="rule-card">
+        <div class="rule-number">RULE 01</div>
+        <h3 class="rule-title">Hit your daily steps.</h3>
+        <p class="rule-desc">Personalised goal based on your starting point. The app pulls your steps from your iPhone automatically — no manual logging.</p>
+      </div>
+      <div class="rule-card">
+        <div class="rule-number">RULE 02</div>
+        <h3 class="rule-title">Stay in a calorie deficit.</h3>
+        <p class="rule-desc">A target calculated for your body. Log meals by scanning, taking a photo, or describing them out loud. Done in seconds.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="transform">
+  <div class="transform-inner">
+    <div class="transform-bar">
+      <span class="transform-dot"></span>
+      <span style="color: var(--orange);">In progress</span>
+      <span class="transform-arrow">→</span>
+      <span class="transform-dot green"></span>
+      <span style="color: var(--green);">Goal hit</span>
+    </div>
+    <h2 class="transform-title">When the app turns <span class="accent-green">green</span>, you've won the day.</h2>
+    <p class="transform-sub">Every metric starts the day in orange. Hit the goal and it flips to green. That's the whole scoreboard. Simple to glance at. Hard to ignore.</p>
+  </div>
+</section>
+
+<section class="audience">
+  <div class="audience-inner">
+    <div>
+      <div class="section-eyebrow">Built for</div>
+      <h2 class="section-title">People who don't want another fitness app to figure out.</h2>
+      <p class="section-sub">CalCut isn't built for fitness obsessives. It's built for the rest of us — busy, often overwhelmed, tired of diets that didn't stick.</p>
+    </div>
+    <ul class="audience-list">
+      <li><span class="check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></span><span>You've tried diets before and they didn't stick.</span></li>
+      <li><span class="check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></span><span>You don't want to track macros or meal-plan.</span></li>
+      <li><span class="check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></span><span>You're not interested in the gym right now.</span></li>
+      <li><span class="check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></span><span>You just need something that works without thinking about it.</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="faq-inner">
+    <div class="faq-title-block">
+      <div class="section-eyebrow">FAQ</div>
+      <h2 class="section-title">Quick answers.</h2>
+      <p class="section-sub">If you can't find what you're looking for, email <a href="mailto:support@calcut.com.au" style="color: var(--orange); font-weight: 600;">support@calcut.com.au</a>.</p>
+    </div>
+
+    <details class="faq-item">
+      <summary>How much does CalCut cost?</summary>
+      <div class="faq-body">CalCut is $15.99 AUD per month or $69.99 AUD per year (saves you ~64%). Every plan starts with a 14-day free trial — try the whole app risk-free before you're charged.</div>
+    </details>
+
+    <details class="faq-item">
+      <summary>Do I need to count macros?</summary>
+      <div class="faq-body">No. CalCut only cares about your daily calorie total — not the breakdown of protein, carbs, and fat. Macros are tracked in the background if you want to see them, but they're never the goal.</div>
+    </details>
+
+    <details class="faq-item">
+      <summary>How do I log food?</summary>
+      <div class="faq-body">Three ways. Scan a barcode. Take a photo of your meal and let the AI estimate it. Or just describe what you ate ("two slices of toast with peanut butter") and it figures out the rest. Pick whichever's fastest.</div>
+    </details>
+
+    <details class="faq-item">
+      <summary>What if I miss a day?</summary>
+      <div class="faq-body">Nothing happens. No streak shaming, no guilt-trip notifications. Tomorrow's a new day. CalCut is built around consistency over weeks, not punishment for slip-ups.</div>
+    </details>
+
+    <details class="faq-item">
+      <summary>Does CalCut work with Apple Health?</summary>
+      <div class="faq-body">Yes. CalCut reads your daily step count from Apple HealthKit automatically. No fitness tracker required — your iPhone is enough.</div>
+    </details>
+
+    <details class="faq-item">
+      <summary>Is my data private?</summary>
+      <div class="faq-body">Yes. We don't sell your data, ever. Your weight, photos, and food logs are stored encrypted and only visible to you. <a href="privacy.html" style="color: var(--orange); font-weight: 600;">Read the full privacy policy</a>.</div>
+    </details>
+  </div>
+</section>
+
+<section class="final-cta">
+  <div class="final-cta-inner">
+    <h2 class="final-cta-title">Start your <span class="accent-orange">14-day free trial.</span></h2>
+    <p class="final-cta-sub">No credit card surprises. Cancel anytime in two taps from the Settings app.</p>
+    <a href="https://apps.apple.com/app/calcut/idXXXXXXXXX" class="app-store-badge" aria-label="Download CalCut on the App Store">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" role="img">
+        <rect width="200" height="60" rx="12" fill="#fff"/>
+        <g fill="#000">
+          <path d="M44.3 31.4c0-3.7 3-5.5 3.2-5.6-1.7-2.5-4.4-2.9-5.4-2.9-2.3-.2-4.5 1.3-5.6 1.3-1.2 0-2.9-1.3-4.8-1.2-2.5 0-4.8 1.4-6 3.7-2.6 4.5-.7 11.1 1.8 14.7 1.2 1.8 2.7 3.7 4.6 3.7 1.9-.1 2.6-1.2 4.8-1.2s2.9 1.2 4.8 1.1c2-.1 3.3-1.8 4.5-3.6 1.4-2 2-4.1 2-4.2-.1 0-3.9-1.5-3.9-5.8zm-3.7-10.7c1-1.3 1.8-3 1.5-4.8-1.5.1-3.4 1-4.5 2.3-1 1.1-1.8 2.9-1.6 4.6 1.7.1 3.5-.8 4.6-2.1z"/>
+          <text x="60" y="27" font-family="-apple-system, system-ui, sans-serif" font-size="9" font-weight="400">Download on the</text>
+          <text x="60" y="46" font-family="-apple-system, system-ui, sans-serif" font-size="20" font-weight="600">App Store</text>
+        </g>
+      </svg>
+    </a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-left">
+      <img src="assets/icon.png" alt="CalCut" class="footer-icon">
+      <span class="footer-text">© 2026 CalCut Pty Ltd. Built in Melbourne.</span>
+    </div>
+    <div class="footer-links">
+      <a href="support.html">Support</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="mailto:support@calcut.com.au">Contact</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

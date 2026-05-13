@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Support — CalCut</title>
+<meta name="description" content="Support and FAQ for CalCut, the fat loss accountability app.">
+<meta name="theme-color" content="#FF5C00">
+
+<link rel="icon" type="image/png" href="assets/icon.png">
+<link rel="apple-touch-icon" href="assets/icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --bg: #F5F5F5;
+    --card: #FFFFFF;
+    --orange: #FF5C00;
+    --orange-pale: #FFF5F0;
+    --orange-border: #FFD4BD;
+    --green: #4CAF50;
+    --black: #1A1A1A;
+    --grey: #888888;
+    --display: 'Plus Jakarta Sans', system-ui, sans-serif;
+    --body: 'DM Sans', system-ui, sans-serif;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--body); background: var(--bg); color: var(--black); line-height: 1.5; }
+  a { color: inherit; text-decoration: none; }
+  img { display: block; max-width: 100%; }
+
+  /* NAV */
+  .nav { position: sticky; top: 0; z-index: 100; background: rgba(245,245,245,0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid rgba(0,0,0,0.04); }
+  .nav-inner { max-width: 1200px; margin: 0 auto; padding: 18px 24px; display: flex; align-items: center; justify-content: space-between; }
+  .nav-wordmark { height: 26px; width: auto; }
+  .nav-links { display: flex; gap: 28px; align-items: center; font-family: var(--display); font-weight: 600; font-size: 15px; }
+  .nav-links a { color: var(--grey); transition: color 0.2s ease; }
+  .nav-links a:hover { color: var(--black); }
+  .nav-links a.active { color: var(--black); }
+  @media (max-width: 600px) { .nav-links { gap: 18px; font-size: 14px; } .nav-inner { padding: 16px 20px; } .nav-wordmark { height: 22px; } }
+
+  /* HEADER */
+  .page-header { padding: 80px 24px 60px; text-align: center; max-width: 720px; margin: 0 auto; }
+  @media (max-width: 700px) { .page-header { padding: 56px 24px 40px; } }
+  .page-eyebrow { display: inline-flex; align-items: center; gap: 8px; font-family: var(--display); font-weight: 700; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--orange); background: var(--orange-pale); border: 1px solid var(--orange-border); padding: 8px 14px; border-radius: 100px; margin-bottom: 28px; }
+  h1.page-title { font-family: var(--display); font-weight: 800; font-size: clamp(40px, 5.5vw, 60px); line-height: 1.05; letter-spacing: -0.03em; margin-bottom: 20px; }
+  .page-sub { font-size: 19px; color: var(--grey); line-height: 1.55; max-width: 540px; margin: 0 auto; }
+  .page-sub a { color: var(--orange); font-weight: 600; }
+
+  /* CONTACT CARD */
+  .contact-card { max-width: 720px; margin: 0 auto 64px; padding: 0 24px; }
+  .contact-inner { background: var(--card); border: 1px solid rgba(0,0,0,0.04); border-radius: 24px; padding: 32px; display: flex; align-items: center; justify-content: space-between; gap: 24px; box-shadow: 0 8px 24px -16px rgba(0,0,0,0.08); }
+  @media (max-width: 600px) { .contact-inner { flex-direction: column; text-align: center; padding: 28px 24px; } }
+  .contact-text { font-family: var(--display); font-weight: 700; font-size: 17px; }
+  .contact-text-sub { font-family: var(--body); font-weight: 400; font-size: 14px; color: var(--grey); margin-top: 4px; }
+  .contact-btn { display: inline-flex; align-items: center; gap: 8px; background: var(--orange); color: white; font-family: var(--display); font-weight: 700; font-size: 15px; padding: 14px 22px; border-radius: 100px; transition: transform 0.2s ease, box-shadow 0.2s ease; flex-shrink: 0; }
+  .contact-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px -8px rgba(255,92,0,0.4); }
+
+  /* FAQ */
+  .faq-section { padding: 0 24px 100px; max-width: 760px; margin: 0 auto; }
+  @media (max-width: 700px) { .faq-section { padding: 0 24px 72px; } }
+  .faq-category { font-family: var(--display); font-weight: 700; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--orange); margin: 48px 0 16px; }
+  .faq-category:first-child { margin-top: 0; }
+  .faq-item { background: var(--card); border: 1px solid rgba(0,0,0,0.04); border-radius: 16px; margin-bottom: 12px; overflow: hidden; transition: box-shadow 0.2s ease; }
+  .faq-item[open] { box-shadow: 0 8px 24px -12px rgba(0,0,0,0.08); }
+  .faq-item summary { padding: 22px 26px; font-family: var(--display); font-weight: 700; font-size: 17px; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary::after { content: '+'; font-size: 24px; font-weight: 400; color: var(--grey); transition: color 0.2s ease; flex-shrink: 0; }
+  .faq-item[open] summary::after { content: '−'; color: var(--orange); }
+  .faq-body { padding: 0 26px 24px; font-size: 16px; color: var(--grey); line-height: 1.6; }
+  .faq-body a { color: var(--orange); font-weight: 600; }
+  .faq-body p { margin-bottom: 10px; }
+  .faq-body p:last-child { margin-bottom: 0; }
+
+  /* FOOTER */
+  .footer { background: var(--bg); padding: 48px 24px 40px; border-top: 1px solid rgba(0,0,0,0.04); }
+  .footer-inner { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; }
+  .footer-left { display: flex; align-items: center; gap: 14px; }
+  .footer-icon { width: 32px; height: 32px; }
+  .footer-text { font-size: 14px; color: var(--grey); }
+  .footer-links { display: flex; gap: 24px; font-family: var(--display); font-weight: 600; font-size: 14px; }
+  .footer-links a { color: var(--grey); transition: color 0.2s ease; }
+  .footer-links a:hover { color: var(--black); }
+  @media (max-width: 600px) { .footer-inner { flex-direction: column; text-align: center; } .footer-left { flex-direction: column; gap: 10px; } }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" aria-label="CalCut home"><img src="assets/wordmark.png" alt="CalCut" class="nav-wordmark"></a>
+    <div class="nav-links">
+      <a href="support.html" class="active">Support</a>
+      <a href="privacy.html">Privacy</a>
+    </div>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="page-eyebrow">Support</div>
+  <h1 class="page-title">How can we help?</h1>
+  <p class="page-sub">We're a small team in Melbourne. We read every email and reply within 48 hours.</p>
+</header>
+
+<div class="contact-card">
+  <div class="contact-inner">
+    <div>
+      <div class="contact-text">Email us anytime</div>
+      <div class="contact-text-sub">We reply within 48 hours, usually faster.</div>
+    </div>
+    <a href="mailto:support@calcut.com.au" class="contact-btn">
+      support@calcut.com.au
+    </a>
+  </div>
+</div>
+
+<section class="faq-section">
+
+  <div class="faq-category">Subscription & billing</div>
+
+  <details class="faq-item">
+    <summary>How do I cancel my subscription?</summary>
+    <div class="faq-body">
+      <p>Subscriptions are managed by Apple. To cancel:</p>
+      <p>1. Open the <strong>Settings</strong> app on your iPhone<br>
+      2. Tap your name at the top<br>
+      3. Tap <strong>Subscriptions</strong><br>
+      4. Find <strong>CalCut</strong> and tap <strong>Cancel Subscription</strong></p>
+      <p>Your access continues until the end of your current billing period — you won't lose anything immediately.</p>
+    </div>
+  </details>
+
+  <details class="faq-item">
+    <summary>How does the free trial work?</summary>
+    <div class="faq-body">
+      <p>Every plan starts with a 14-day free trial. You can use the entire app — every feature, no limits — for 14 days. If you cancel before day 14, you're not charged.</p>
+      <p>You can cancel anytime during the trial through the iPhone Settings → Subscriptions menu above.</p>
+    </div>
+  </details>
+
+  <details class="faq-item">
+    <summary>How do I request a refund?</summary>
+    <div class="faq-body">
+      <p>Refunds for subscriptions are handled by Apple, not by us directly.</p>
+      <p>Go to <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a>, sign in with your Apple ID, find your CalCut purchase, and request a refund. Apple decides each request individually based on your circumstances.</p>
+    </div>
+  </details>
+
+  <div class="faq-category">Account & data</div>
+
+  <details class="faq-item">
+    <summary>How do I delete my account?</summary>
+    <div class="faq-body">
+      <p>Open the CalCut app, go to <strong>Settings</strong>, and tap <strong>Delete Account</strong>. This permanently removes your data within 30 days.</p>
+      <p>If you can't access the app, email <a href="mailto:support@calcut.com.au">support@calcut.com.au</a> from the email address linked to your account and we'll delete it for you.</p>
+    </div>
+  </details>
+
+  <details class="faq-item">
+    <summary>Is my data private?</summary>
+    <div class="faq-body">
+      <p>Yes. We don't sell your data, ever. Your weight, progress photos, and food logs are stored encrypted and only visible to you.</p>
+      <p>Read the full <a href="privacy.html">privacy policy</a> for details.</p>
+    </div>
+  </details>
+
+  <details class="faq-item">
+    <summary>Why does CalCut need access to my Health data?</summary>
+    <div class="faq-body">
+      <p>CalCut uses Apple HealthKit to read your daily step count. This is how the app knows whether you've hit your step goal automatically — no manual logging.</p>
+      <p>We don't read or share any other health data. You can revoke access anytime in the iPhone <strong>Settings</strong> app under <strong>Privacy & Security → Health</strong>.</p>
+    </div>
+  </details>
+
+  <div class="faq-category">Using the app</div>
+
+  <details class="faq-item">
+    <summary>Does CalCut work offline?</summary>
+    <div class="faq-body">
+      <p>Some features work offline (viewing already-logged data, basic tracking).</p>
+      <p>Logging new food, syncing weight, and using the AI Coach require an internet connection.</p>
+    </div>
+  </details>
+
+  <details class="faq-item">
+    <summary>How accurate is the photo food logging?</summary>
+    <div class="faq-body">
+      <p>The AI photo logging uses computer vision to identify what's on your plate and estimate portion sizes. It's accurate within about 10–15% for most common meals — good enough for sustained fat loss, since being slightly over or under on any given day evens out over weeks.</p>
+      <p>If you're not sure, you can also describe your meal in text or scan a barcode for packaged foods.</p>
+    </div>
+  </details>
+
+  <details class="faq-item">
+    <summary>The barcode scanner isn't finding a product I'm trying to log.</summary>
+    <div class="faq-body">
+      <p>Most products are in our database, but some local Australian brands aren't yet. If you scan a barcode and nothing comes up, you can describe the food using the text logger instead — the AI will estimate the calories from the description.</p>
+      <p>If you keep hitting the same missing product, email us the barcode and we'll prioritise adding it.</p>
+    </div>
+  </details>
+
+  <details class="faq-item">
+    <summary>Why isn't my step count showing up?</summary>
+    <div class="faq-body">
+      <p>CalCut reads steps from Apple HealthKit. If steps aren't appearing:</p>
+      <p>1. Open the <strong>Health</strong> app on your iPhone<br>
+      2. Tap your profile picture top right → <strong>Privacy</strong> → <strong>Apps</strong><br>
+      3. Find <strong>CalCut</strong> and make sure <strong>Steps</strong> is toggled on</p>
+      <p>If that doesn't fix it, email <a href="mailto:support@calcut.com.au">support@calcut.com.au</a>.</p>
+    </div>
+  </details>
+
+  <details class="faq-item">
+    <summary>I missed a day. Does my streak break?</summary>
+    <div class="faq-body">
+      <p>Nothing happens. No streak shaming, no guilt-trip notifications. Tomorrow's a new day.</p>
+      <p>CalCut is built around consistency over weeks and months, not punishment for slip-ups. One missed day means nothing in the long run.</p>
+    </div>
+  </details>
+
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-left">
+      <img src="assets/icon.png" alt="CalCut" class="footer-icon">
+      <span class="footer-text">© 2026 CalCut Pty Ltd. Built in Melbourne.</span>
+    </div>
+    <div class="footer-links">
+      <a href="support.html">Support</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="mailto:support@calcut.com.au">Contact</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
