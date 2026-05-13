@@ -36,12 +36,15 @@
   /* NAV */
   .nav { position: sticky; top: 0; z-index: 100; background: rgba(245,245,245,0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid rgba(0,0,0,0.04); }
   .nav-inner { max-width: 1200px; margin: 0 auto; padding: 18px 24px; display: flex; align-items: center; justify-content: space-between; }
-  .nav-wordmark { height: 26px; width: auto; }
+  .nav-brand { display: flex; align-items: center; gap: 10px; }
+  .nav-brand-icon { height: 30px; width: 30px; border-radius: 7px; }
+  .nav-brand-text { font-family: var(--display); font-weight: 800; font-size: 19px; letter-spacing: -0.02em; color: var(--black); }
+  .nav-brand-text .accent { color: var(--orange); }
   .nav-links { display: flex; gap: 28px; align-items: center; font-family: var(--display); font-weight: 600; font-size: 15px; }
   .nav-links a { color: var(--grey); transition: color 0.2s ease; }
   .nav-links a:hover { color: var(--black); }
   .nav-links a.active { color: var(--black); }
-  @media (max-width: 600px) { .nav-links { gap: 18px; font-size: 14px; } .nav-inner { padding: 16px 20px; } .nav-wordmark { height: 22px; } }
+  @media (max-width: 600px) { .nav-links { gap: 18px; font-size: 14px; } .nav-inner { padding: 16px 20px; } .nav-brand-icon { height: 26px; width: 26px; } .nav-brand-text { font-size: 17px; } }
 
   /* HEADER */
   .page-header { padding: 80px 24px 40px; text-align: center; max-width: 720px; margin: 0 auto; }
@@ -85,7 +88,7 @@
 
 <nav class="nav">
   <div class="nav-inner">
-    <a href="index.html" aria-label="CalCut home"><img src="assets/wordmark.png" alt="CalCut" class="nav-wordmark"></a>
+    <a href="index.html" aria-label="CalCut home" class="nav-brand"><img src="assets/icon.png" alt="" class="nav-brand-icon"><span class="nav-brand-text">Cal<span class="accent">Cut</span></span></a>
     <div class="nav-links">
       <a href="support.html">Support</a>
       <a href="privacy.html" class="active">Privacy</a>
