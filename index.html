@@ -210,7 +210,7 @@ fbq('track', 'PageView');
     <p class="hero-sub fade-up delay-2">
       The fat loss app built on two daily rules. Stay in a calorie deficit, hit your step goal. Nothing else to track.
     </p>
-    <a href="https://apps.apple.com/app/id6774035581" class="app-store-badge fade-up delay-3" aria-label="Download CalCut on the App Store"><img src="assets/app-store-badge.svg" alt="Download on the App Store"></a>
+    <a href="https://apps.apple.com/app/id6774035581" class="app-store-badge fade-up delay-3" aria-label="Download CalCut on the App Store" data-cta="hero"><img src="assets/app-store-badge.svg" alt="Download on the App Store"></a>
   </div>
 
   <div class="hero-visual fade-up delay-2">
@@ -321,7 +321,7 @@ fbq('track', 'PageView');
   <div class="final-cta-inner">
     <h2 class="final-cta-title">Start your <span class="accent-orange">free trial.</span></h2>
     <p class="final-cta-sub">7-day free trial on the annual plan, $59.99/year. Monthly is $15.99/month with no trial. Manage or cancel in your Apple subscription settings.</p>
-    <a href="https://apps.apple.com/app/id6774035581" class="app-store-badge" aria-label="Download CalCut on the App Store"><img src="assets/app-store-badge.svg" alt="Download on the App Store"></a>
+    <a href="https://apps.apple.com/app/id6774035581" class="app-store-badge" aria-label="Download CalCut on the App Store" data-cta="closing"><img src="assets/app-store-badge.svg" alt="Download on the App Store"></a>
   </div>
 </section>
 
@@ -339,5 +339,79 @@ fbq('track', 'PageView');
   </div>
 </footer>
 
+<!-- Bridge-page diagnostics for 04 Media-Buying Playbook: App Store button clicks and
+     scroll depth. Both are CUSTOM events - see Notion 06 section 12.7 for why.
+     Nothing here is required for the Landing-Page-View objective; PageView carries that. -->
+<script>
+(function () {
+  function send(name, params) {
+    try { if (window.fbq) window.fbq('trackCustom', name, params || {}); } catch (e) {}
+  }
+
+  /* ---- App Store button clicks ----------------------------------------
+     These links navigate away, which can cancel the pixel's in-flight
+     request. When the click would replace this page we hold navigation
+     briefly so the request leaves the browser, then continue by hand.
+     Modified clicks (cmd/ctrl/shift/middle) open elsewhere and leave this
+     page alive, so they need no delay and must not be hijacked. */
+  document.addEventListener('click', function (e) {
+    if (!e.target || !e.target.closest) return;
+    var link = e.target.closest('a[href*="apps.apple.com"]');
+    if (!link) return;
+
+    send('AppStoreClick', { placement: link.getAttribute('data-cta') || 'unknown' });
+
+    var modified = e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0;
+    if (modified || link.target === '_blank') return;
+
+    e.preventDefault();
+    var done = false;
+    function go() {
+      if (done) return;
+      done = true;
+      window.location.href = link.href;
+    }
+    setTimeout(go, 250);
+  }, true);
+
+  /* ---- Scroll depth ---------------------------------------------------
+     One event with a percent parameter rather than four event names, so
+     Events Manager keeps a single row that breaks down by depth. Each
+     threshold fires at most once per page view. */
+  var marks = [25, 50, 75, 100];
+  var fired = {};
+  var queued = false;
+
+  function depth() {
+    var scrollable = document.documentElement.scrollHeight - window.innerHeight;
+    /* Nothing to scroll means no scroll signal. Returning 100 here would mark
+       every threshold reached before the reader has done anything, which is
+       what a first draft of this did. */
+    if (scrollable <= 0) return 0;
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    return Math.min(100, Math.round((y / scrollable) * 100));
+  }
+
+  function check() {
+    queued = false;
+    var d = depth();
+    for (var i = 0; i < marks.length; i++) {
+      var m = marks[i];
+      if (d >= m && !fired[m]) {
+        fired[m] = true;
+        send('ScrollDepth', { percent: m });
+      }
+    }
+  }
+
+  window.addEventListener('scroll', function () {
+    if (queued) return;
+    queued = true;
+    window.setTimeout(check, 100);
+  }, { passive: true });
+
+  window.addEventListener('resize', check, { passive: true });
+})();
+</script>
 </body>
 </html>
