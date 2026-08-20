@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CalCut — Two rules. Real results.</title>
+<title>CalCut — Two rules. That's it.</title>
 <meta name="description" content="The fat loss app built on two daily rules. Hit your steps. Stay in a calorie deficit. That's it.">
-<meta property="og:title" content="CalCut — Two rules. Real results.">
+<meta property="og:title" content="CalCut — Two rules. That's it.">
 <meta property="og:description" content="The fat loss app built on two daily rules. Hit your steps. Stay in a calorie deficit.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://calcut.com.au">
@@ -171,6 +171,20 @@
   .delay-4 { animation-delay: 0.4s; }
   @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
 </style>
+<!-- Meta pixel - REQUIRED for Landing Page View optimisation (04 Media-Buying Playbook).
+     Replace META_PIXEL_ID below with the real pixel ID from Meta Events Manager.
+     A pixel ID is not a secret (it is visible in page source), but it is not in this repo yet. -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', 'META_PIXEL_ID');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=META_PIXEL_ID&ev=PageView&noscript=1" alt=""></noscript>
 </head>
 <body>
 
@@ -189,10 +203,10 @@
     <div class="hero-eyebrow fade-up">Now on the App Store</div>
     <h1 class="hero-title fade-up delay-1">
       Two rules.<br>
-      <span class="accent-orange">Real</span> <span class="accent-green">results.</span>
+      <span class="accent-green">That's it.</span>
     </h1>
     <p class="hero-sub fade-up delay-2">
-      The fat loss app built on two daily rules. Hit your steps. Stay in a calorie deficit. That's it.
+      The fat loss app built on two daily rules. Stay in a calorie deficit, hit your step goal. Nothing else to track.
     </p>
     <a href="https://apps.apple.com/app/id6774035581" class="app-store-badge fade-up delay-3" aria-label="Download CalCut on the App Store"><img src="assets/app-store-badge.svg" alt="Download on the App Store"></a>
   </div>
@@ -271,7 +285,7 @@
 
     <details class="faq-item">
       <summary>How much does CalCut cost?</summary>
-      <div class="faq-body">CalCut is $15.99 AUD per month or $69.99 AUD per year (saves you ~64%). Every plan starts with a 30-day free trial — try the whole app risk-free before you're charged.</div>
+      <div class="faq-body">CalCut is $15.99 AUD per month, or $59.99 AUD per year (saves you about 69%). The annual plan starts with a 7-day free trial. The monthly plan has no trial and bills immediately. You can manage or cancel your subscription in your Apple subscription settings.</div>
     </details>
 
     <details class="faq-item">
@@ -303,8 +317,8 @@
 
 <section class="final-cta">
   <div class="final-cta-inner">
-    <h2 class="final-cta-title">Start your <span class="accent-orange">30-day free trial.</span></h2>
-    <p class="final-cta-sub">No credit card surprises. Cancel anytime in two taps from the Settings app.</p>
+    <h2 class="final-cta-title">Start your <span class="accent-orange">free trial.</span></h2>
+    <p class="final-cta-sub">7-day free trial on the annual plan, $59.99/year. Monthly is $15.99/month with no trial. Manage or cancel in your Apple subscription settings.</p>
     <a href="https://apps.apple.com/app/id6774035581" class="app-store-badge" aria-label="Download CalCut on the App Store"><img src="assets/app-store-badge.svg" alt="Download on the App Store"></a>
   </div>
 </section>
