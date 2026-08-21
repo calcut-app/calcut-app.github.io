@@ -175,9 +175,13 @@
   .delay-4 { animation-delay: 0.4s; }
   @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
 </style>
-<!-- Meta pixel - REQUIRED for Landing Page View optimisation (04 Media-Buying Playbook).
-     Dataset/pixel ID 1731111768170861 - the CalCut unified dataset in Meta Events Manager.
-     Shares its ID with the Meta App ID because the dataset was created from the Facebook SDK.
+<!-- Meta pixel - REQUIRED for Landing Page View optimisation and web retargeting.
+     Pixel/dataset ID 1462477942379494 - the "CalCut Web" dataset in Meta Events Manager.
+     DO NOT change this to 1731111768170861. That number is the Meta App ID and its
+     app-only dataset. It is not a web pixel and cannot accept browser events. It was
+     deployed here on 2026-08-20 and every event this page sent was silently discarded
+     until corrected on 2026-08-21. Meta reports no error for this - the pixel appears
+     "Active" in Pixel Helper while recording nothing.
      A pixel ID is not a secret; it is visible in page source by design.
      Automatic Advanced Matching is intentionally OFF - this page has no form fields. -->
 <script>
@@ -186,11 +190,11 @@ n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
 n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
 document,'script','https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1731111768170861');
+fbq('init', '1462477942379494');
 fbq('track', 'PageView');
 </script>
 <noscript><img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=1731111768170861&ev=PageView&noscript=1" alt=""></noscript>
+  src="https://www.facebook.com/tr?id=1462477942379494&ev=PageView&noscript=1" alt=""></noscript>
 </head>
 <body>
 
