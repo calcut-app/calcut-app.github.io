@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Summer Slim-Down Terms — CalCut</title>
+<meta name="description" content="The full conditions of entry for the 8-Week Summer Slim-Down.">
+<meta name="theme-color" content="#FF5C00">
+<meta name="robots" content="index, follow">
+
+<link rel="icon" type="image/png" href="assets/icon.png">
+<link rel="apple-touch-icon" href="assets/icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --bg: #F5F5F5;
+    --card: #FFFFFF;
+    --orange: #FF5C00;
+    --orange-pale: #FFF5F0;
+    --orange-border: #FFD4BD;
+    --black: #1A1A1A;
+    --grey: #888888;
+    --display: 'Plus Jakarta Sans', system-ui, sans-serif;
+    --body: 'DM Sans', system-ui, sans-serif;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--body); background: var(--bg); color: var(--black); line-height: 1.5; }
+  a { color: inherit; text-decoration: none; }
+  img { display: block; max-width: 100%; }
+
+  /* NAV */
+  .nav { position: sticky; top: 0; z-index: 100; background: rgba(245,245,245,0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid rgba(0,0,0,0.04); }
+  .nav-inner { max-width: 1200px; margin: 0 auto; padding: 18px 24px; display: flex; align-items: center; justify-content: space-between; }
+  .nav-brand { display: flex; align-items: center; gap: 10px; }
+  .nav-brand-icon { height: 30px; width: 30px; border-radius: 7px; }
+  .nav-brand-text { font-family: var(--display); font-weight: 800; font-size: 19px; letter-spacing: -0.02em; color: var(--black); }
+  .nav-brand-text .accent { color: var(--orange); }
+  .nav-links { display: flex; gap: 28px; align-items: center; font-family: var(--display); font-weight: 600; font-size: 15px; }
+  .nav-links a { color: var(--grey); transition: color 0.2s ease; }
+  .nav-links a:hover, .nav-links a.active { color: var(--black); }
+  @media (max-width: 600px) { .nav-links { gap: 18px; font-size: 14px; } .nav-inner { padding: 16px 20px; } .nav-brand-icon { height: 26px; width: 26px; } .nav-brand-text { font-size: 17px; } }
+
+  /* HEADER */
+  .page-header { padding: 80px 24px 40px; text-align: center; max-width: 720px; margin: 0 auto; }
+  @media (max-width: 700px) { .page-header { padding: 56px 24px 32px; } }
+  .page-eyebrow { display: inline-flex; align-items: center; gap: 8px; font-family: var(--display); font-weight: 700; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--orange); background: var(--orange-pale); border: 1px solid var(--orange-border); padding: 8px 14px; border-radius: 100px; margin-bottom: 28px; }
+  h1.page-title { font-family: var(--display); font-weight: 800; font-size: clamp(36px, 5.5vw, 60px); line-height: 1.05; letter-spacing: -0.03em; margin-bottom: 20px; }
+  .page-sub { font-size: 19px; color: var(--grey); line-height: 1.55; max-width: 540px; margin: 0 auto; }
+  .page-version { font-size: 14px; color: var(--grey); margin-top: 20px; }
+
+  /* CARD */
+  .policy-wrap { max-width: 800px; margin: 0 auto 80px; padding: 0 24px; }
+  .policy-card { background: var(--card); border: 1px solid rgba(0,0,0,0.04); border-radius: 24px; padding: 48px; box-shadow: 0 8px 24px -16px rgba(0,0,0,0.06); font-family: var(--body); color: #333; line-height: 1.65; font-size: 16px; }
+  @media (max-width: 700px) { .policy-card { padding: 30px 22px; border-radius: 16px; } }
+
+  /* KEY FACTS */
+  .facts { background: var(--orange-pale); border: 1px solid var(--orange-border); border-radius: 16px; padding: 26px 28px; margin-bottom: 40px; }
+  @media (max-width: 700px) { .facts { padding: 22px 20px; } }
+  .facts h2 { font-family: var(--display); font-weight: 800; font-size: 17px; letter-spacing: -0.01em; color: var(--black); margin: 0 0 4px; }
+  .facts .facts-note { font-size: 13px; color: var(--grey); margin-bottom: 18px; }
+  .facts dl { display: grid; grid-template-columns: minmax(150px, auto) 1fr; gap: 10px 22px; font-size: 15px; }
+  @media (max-width: 560px) { .facts dl { grid-template-columns: 1fr; gap: 2px; } .facts dd { margin-bottom: 12px; } }
+  .facts dt { font-family: var(--display); font-weight: 700; color: var(--black); }
+  .facts dd { color: #333; }
+
+  /* TOC */
+  .toc { border: 1px solid rgba(0,0,0,0.07); border-radius: 16px; padding: 24px 28px; margin-bottom: 44px; }
+  @media (max-width: 700px) { .toc { padding: 20px; } }
+  .toc h2 { font-family: var(--display); font-weight: 800; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--grey); margin: 0 0 14px; }
+  .toc ol { list-style: none; columns: 2; column-gap: 28px; font-size: 14.5px; }
+  @media (max-width: 560px) { .toc ol { columns: 1; } }
+  .toc li { margin-bottom: 7px; break-inside: avoid; }
+  .toc a { color: #333; }
+  .toc a:hover { color: var(--orange); }
+
+  /* CONTENT */
+  .policy-card h2 { font-family: var(--display); font-weight: 800; color: var(--black); letter-spacing: -0.02em; line-height: 1.25; font-size: 21px; margin: 44px 0 18px; padding-top: 26px; border-top: 1px solid rgba(0,0,0,0.07); scroll-margin-top: 90px; }
+  .policy-card h2:first-of-type { border-top: none; padding-top: 0; margin-top: 0; }
+  .policy-card h3 { font-family: var(--display); font-weight: 800; color: var(--black); font-size: 16.5px; margin: 30px 0 12px; }
+  .policy-card p { margin-bottom: 14px; }
+  .policy-card a { color: var(--orange); font-weight: 500; word-break: break-word; }
+  .policy-card a:hover { text-decoration: underline; }
+  .policy-card strong { font-weight: 700; color: var(--black); }
+
+  .clause { display: grid; grid-template-columns: 54px 1fr; gap: 10px; }
+  .cl-no { font-family: var(--display); font-weight: 700; color: var(--grey); font-size: 14.5px; padding-top: 1px; }
+  @media (max-width: 560px) { .clause { grid-template-columns: 44px 1fr; gap: 8px; } }
+
+  .table-scroll { overflow-x: auto; margin: 20px 0 26px; -webkit-overflow-scrolling: touch; }
+  table { border-collapse: collapse; width: 100%; min-width: 420px; font-size: 15px; }
+  th, td { text-align: left; padding: 11px 14px; border-bottom: 1px solid rgba(0,0,0,0.08); }
+  th { font-family: var(--display); font-weight: 700; color: var(--black); font-size: 13px; letter-spacing: 0.04em; text-transform: uppercase; }
+
+  .end-mark { margin-top: 44px; padding-top: 26px; border-top: 1px solid rgba(0,0,0,0.07); font-family: var(--display); font-weight: 700; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--grey); }
+
+  /* FOOTER */
+  .footer { background: var(--bg); padding: 48px 24px 40px; border-top: 1px solid rgba(0,0,0,0.04); }
+  .footer-inner { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; }
+  .footer-left { display: flex; align-items: center; gap: 14px; }
+  .footer-icon { width: 32px; height: 32px; }
+  .footer-text { font-size: 14px; color: var(--grey); }
+  .footer-links { display: flex; gap: 24px; font-family: var(--display); font-weight: 600; font-size: 14px; }
+  .footer-links a { color: var(--grey); transition: color 0.2s ease; }
+  .footer-links a:hover { color: var(--black); }
+  @media (max-width: 600px) { .footer-inner { flex-direction: column; text-align: center; } .footer-left { flex-direction: column; gap: 10px; } }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" aria-label="CalCut home" class="nav-brand"><img src="assets/icon.png" alt="" class="nav-brand-icon"><span class="nav-brand-text">Cal<span class="accent">Cut</span></span></a>
+    <div class="nav-links">
+      <a href="support.html">Support</a>
+      <a href="privacy.html">Privacy</a>
+    </div>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="page-eyebrow">Terms</div>
+  <h1 class="page-title">Summer Slim-Down Terms</h1>
+  <p class="page-sub">The full conditions of entry for the 8-Week Summer Slim-Down.</p>
+  <p class="page-version">Version 1.1 · Last updated 1 September 2026</p>
+</header>
+
+<div class="policy-wrap">
+  <div class="policy-card">
+<section class="facts">
+  <h2>The short version</h2>
+  <p class="facts-note">A summary for convenience. The terms below are what actually govern the Challenge.</p>
+  <dl>
+    <dt>How to enter</dt>
+    <dd>Log a starting weight in the CalCut app during entry week. Entry is automatic — no form, no sign-up.</dd>
+
+    <dt>Entry closes</dt>
+    <dd>11:59pm, Sunday 4 October 2026. Entry opens Monday 28 September 2026.</dd>
+
+    <dt>Challenge runs</dt>
+    <dd>Monday 5 October to Sunday 29 November 2026 — 56 days.</dd>
+
+    <dt>Weekly draws</dt>
+    <dd>Conducted each Sunday of the Challenge and published at 8:00pm that day on <a href="https://www.instagram.com/calcut.app/">@calcut.app</a>.</dd>
+
+    <dt>Winners published</dt>
+    <dd>On <a href="https://www.instagram.com/calcut.app/">@calcut.app</a>, on or around Monday 7 December 2026, and kept up for at least 28 days.</dd>
+
+    <dt>Prize pool</dt>
+    <dd>AUD $2,650 — three main prizes plus a $50 gift card every week for eight weeks.</dd>
+
+    <dt>What it costs</dt>
+    <dd>Free to enter. An active CalCut subscription is required to stay eligible through to the end of the Challenge — the free trial is 7 days and the Challenge runs 8 weeks.</dd>
+
+    <dt>Progress photos</dt>
+    <dd>Optional. They are needed only for the Best Transformation prize, and your photos are never published unless you give consent first.</dd>
+
+    <dt>Who can enter</dt>
+    <dd>18+, in the countries listed in section 2. Some exclusions apply — see sections 2 and 3.</dd>
+  </dl>
+</section>
+
+<nav class="toc" aria-label="Contents">
+  <h2>Contents</h2>
+  <ol>
+    <li><a href="#s1-the-promoter">1. THE PROMOTER</a></li>
+    <li><a href="#s2-eligibility">2. ELIGIBILITY</a></li>
+    <li><a href="#s3-challenge-period-and-key-dates">3. CHALLENGE PERIOD AND KEY DATES</a></li>
+    <li><a href="#s4-how-to-enter">4. HOW TO ENTER</a></li>
+    <li><a href="#s5-subscription-requirement">5. SUBSCRIPTION REQUIREMENT</a></li>
+    <li><a href="#s6-the-two-rules-and-your-targets">6. THE TWO RULES AND YOUR TARGETS</a></li>
+    <li><a href="#s7-ongoing-eligibility">7. ONGOING ELIGIBILITY</a></li>
+    <li><a href="#s8-prizes">8. PRIZES</a></li>
+    <li><a href="#s9-how-the-main-prizes-are-decided">9. HOW THE MAIN PRIZES ARE DECIDED</a></li>
+    <li><a href="#s10-photographs">10. PHOTOGRAPHS</a></li>
+    <li><a href="#s11-weekly-prize-draw">11. WEEKLY PRIZE DRAW</a></li>
+    <li><a href="#s12-disqualification">12. DISQUALIFICATION</a></li>
+    <li><a href="#s13-winner-notification-claims-and-publication">13. WINNER NOTIFICATION, CLAIMS AND PUBLICATION</a></li>
+    <li><a href="#s14-tax">14. TAX</a></li>
+    <li><a href="#s15-liability-and-health">15. LIABILITY AND HEALTH</a></li>
+    <li><a href="#s16-privacy-and-use-of-your-information">16. PRIVACY AND USE OF YOUR INFORMATION</a></li>
+    <li><a href="#s17-records">17. RECORDS</a></li>
+    <li><a href="#s18-general">18. GENERAL</a></li>
+  </ol>
+</nav>
+
+<h2 id="s1-the-promoter">1. THE PROMOTER</h2>
+<p class="clause"><span class="cl-no">1.1</span><span>This promotion, the <strong>8-Week Summer Slim-Down</strong> (<strong>"the Challenge"</strong>), is conducted by <strong>CalCut Pty Ltd</strong> (ACN 697 215 660, ABN 57 697 215 660) of Tarneit, Victoria 3029 (<strong>"CalCut"</strong>, <strong>"we"</strong>, <strong>"us"</strong>). CalCut is the sole promoter and sponsor of the Challenge.</span></p>
+<p class="clause"><span class="cl-no">1.2</span><span>Any third party whose product appears in the prize pool is a prize partner only. No third party is a sponsor of, or responsible for the conduct of, the Challenge.</span></p>
+<p class="clause"><span class="cl-no">1.3</span><span>Contact for all Challenge matters: <a href="mailto:support@calcut.com.au.">support@calcut.com.au.</a></span></p>
+<p class="clause"><span class="cl-no">1.4</span><span>By entering, you accept these Terms in full. If you don't agree with them, don't enter.</span></p>
+<p class="clause"><span class="cl-no">1.5</span><span><strong>Apple Inc. is not a sponsor of the Challenge and is not involved in it in any manner.</strong> These Terms are made available within the CalCut app at all times for the duration of the Challenge.</span></p>
+<h2 id="s2-eligibility">2. ELIGIBILITY</h2>
+<p class="clause"><span class="cl-no">2.1</span><span>Entry is open to individuals who, at the time of entry:</span></p>
+<p class="clause"><span class="cl-no">(a)</span><span>are aged 18 years or over;</span></p>
+<p class="clause"><span class="cl-no">(b)</span><span>are residents of one of the following:</span></p>
+<p class="clause"><span class="cl-no">(i)</span><span>Australia;</span></p>
+<p class="clause"><span class="cl-no">(ii)</span><span>New Zealand;</span></p>
+<p class="clause"><span class="cl-no">(iii)</span><span>the United Kingdom, excluding Northern Ireland;</span></p>
+<p class="clause"><span class="cl-no">(iv)</span><span>Canada; or</span></p>
+<p class="clause"><span class="cl-no">(v)</span><span>the United States and the District of Columbia, <strong>excluding the states of Arizona, Colorado, Maryland, Nebraska, New Jersey, North Dakota, Tennessee and Vermont</strong>.</span></p>
+<p>Void where prohibited or restricted by law. Residents of the excluded states and territories listed above may use the CalCut app but are not eligible to enter the Challenge or to win any prize;</p>
+<p class="clause"><span class="cl-no">(c)</span><span>hold an active CalCut account; and</span></p>
+<p class="clause"><span class="cl-no">(d)</span><span>meet the entry requirement in section 4.</span></p>
+<p class="clause"><span class="cl-no">2.2</span><span>The following are not eligible to enter or win: employees, contractors and directors of CalCut and their immediate families; and employees and directors of any prize partner, and their immediate families.</span></p>
+<p class="clause"><span class="cl-no">2.3</span><span><strong>Creators.</strong> A person engaged by CalCut as a paid creator is eligible to enter the Challenge and to win any prize, on the same terms and scored on the same data as every other entrant.</span></p>
+<p class="clause"><span class="cl-no">2.4</span><span>Where an entrant has a current paid or commercial relationship with CalCut, that relationship will be disclosed wherever the entrant is featured in Challenge content, shortlisted as a finalist, or published as a winner.</span></p>
+<p class="clause"><span class="cl-no">2.5</span><span>You must not enter if you are pregnant, breastfeeding, currently living with an eating disorder, or have a history of an eating disorder. This exclusion applies to the Challenge only — you remain welcome to use the CalCut app.</span></p>
+<p class="clause"><span class="cl-no">2.6</span><span>If you are under medical supervision, receiving treatment for any condition, or taking medication that affects weight, appetite or physical activity, you should consult your doctor before entering. CalCut is not able to assess whether the Challenge is appropriate for you.</span></p>
+<p class="clause"><span class="cl-no">2.7</span><span>One entry per person. Entering through more than one account will result in disqualification of all associated entries.</span></p>
+<h2 id="s3-challenge-period-and-key-dates">3. CHALLENGE PERIOD AND KEY DATES</h2>
+<p class="clause"><span class="cl-no">3.1</span><span><strong>Entry Period:</strong> Monday 28 September 2026 to Sunday 4 October 2026 inclusive, closing 11:59pm on the final day.</span></p>
+<p class="clause"><span class="cl-no">3.2</span><span><strong>Challenge Period:</strong> Monday 5 October 2026 to Sunday 29 November 2026 inclusive — 56 days.</span></p>
+<p class="clause"><span class="cl-no">3.3</span><span><strong>Before photographs</strong>, where you wish to be considered for the Best Transformation prize, may be recorded at any time from the opening of the Entry Period until 11:59pm on <strong>Sunday 11 October 2026</strong> (the end of week 1 of the Challenge Period). See section 10.</span></p>
+<p class="clause"><span class="cl-no">3.4</span><span><strong>Weekly draws:</strong> conducted on each Sunday during the Challenge Period and published to the @calcut.app Instagram account at 8:00pm that day.</span></p>
+<p class="clause"><span class="cl-no">3.5</span><span><strong>Public vote for Best Transformation:</strong> opens Friday 4 December 2026 and runs for 24 hours.</span></p>
+<p class="clause"><span class="cl-no">3.6</span><span><strong>Main prize determination:</strong> on or around Saturday 5 December 2026.</span></p>
+<p class="clause"><span class="cl-no">3.7</span><span><strong>Winners announced:</strong> on or around Monday 7 December 2026.</span></p>
+<p class="clause"><span class="cl-no">3.8</span><span><strong>Publication of winners:</strong> the names of all winners will be published on the @calcut.app Instagram account as a permanent feed post, published on or around Monday 7 December 2026 and remaining publicly accessible for a minimum of 28 days from that date.</span></p>
+<p class="clause"><span class="cl-no">3.9</span><span>All times are Melbourne, Australia time — Australian Eastern Standard Time (AEST) until 4 October 2026, and Australian Eastern Daylight Time (AEDT) from that date onward.</span></p>
+<h2 id="s4-how-to-enter">4. HOW TO ENTER</h2>
+<p class="clause"><span class="cl-no">4.1</span><span>To enter, during the Entry Period you must <strong>log a starting weight</strong> within the CalCut app.</span></p>
+<p class="clause"><span class="cl-no">4.2</span><span>Entry is automatic on completion of that step. There is no form, registration or separate confirmation required. A challenge badge will appear on your progress page indicating that you have entered.</span></p>
+<p class="clause"><span class="cl-no">4.3</span><span>Progress photographs are <strong>not</strong> required to enter, and are not required to compete for the Most Perfect Days or Most Steps Total prizes. They are required only for the Best Transformation prize — see clause 9.3 and section 10.</span></p>
+<p class="clause"><span class="cl-no">4.4</span><span>Entries completed outside the Entry Period will not be accepted, and CalCut is not obliged to notify you that you have not entered.</span></p>
+<p class="clause"><span class="cl-no">4.5</span><span>There is no entry fee. No amount is payable to enter the Challenge or to be considered for any prize, other than the ordinary retail price of a CalCut subscription as described in section 5.</span></p>
+<h2 id="s5-subscription-requirement">5. SUBSCRIPTION REQUIREMENT</h2>
+<p class="clause"><span class="cl-no">5.1</span><span>There is no separate entry fee and no additional charge to compete for any prize.</span></p>
+<p class="clause"><span class="cl-no">5.2</span><span>The CalCut free trial period is 7 days. The Challenge runs for 56 days. To remain in the Challenge, and to be eligible to win any prize, you must hold an active paid CalCut subscription continuously from the end of your trial through to the end of the Challenge Period and at the time prizes are awarded.</span></p>
+<p class="clause"><span class="cl-no">5.3</span><span>A CalCut subscription is charged at its ordinary retail price. No premium, surcharge or additional cost of any kind is applied by reason of entry into the Challenge.</span></p>
+<p class="clause"><span class="cl-no">5.4</span><span>Subscription pricing, billing and cancellation are governed by the CalCut Terms of Service and by the applicable app store's terms. Entering the Challenge does not alter those terms and does not entitle you to any refund.</span></p>
+<p class="clause"><span class="cl-no">5.5</span><span>If your subscription lapses at any point during the Challenge Period, your entry becomes ineligible for prizes. Reinstating a subscription does not restore prize eligibility for the days on which it lapsed.</span></p>
+<h2 id="s6-the-two-rules-and-your-targets">6. THE TWO RULES AND YOUR TARGETS</h2>
+<p class="clause"><span class="cl-no">6.1</span><span>The Challenge is scored on two daily rules: staying at or under your personalised daily calorie target, and meeting or exceeding your personalised daily step goal.</span></p>
+<p class="clause"><span class="cl-no">6.2</span><span>A <strong>"Perfect Day"</strong> means a day on which both rules were met, as recorded by the CalCut app.</span></p>
+<p class="clause"><span class="cl-no">6.3</span><span>Your calorie and step targets are set by CalCut and are locked for the duration of the Challenge. You may not set or alter your step goal yourself, whether during onboarding or at any point during the Challenge Period.</span></p>
+<p class="clause"><span class="cl-no">6.4</span><span>CalCut may adjust your targets at any time. Where you have automatic step tracking enabled in settings, your step goal will be updated by the app as appropriate. Adjustments made by CalCut or by the app are permitted and expected, and do not affect your eligibility.</span></p>
+<p class="clause"><span class="cl-no">6.5</span><span>If you believe your targets have been set incorrectly, contact us at <a href="mailto:support@calcut.com.au">support@calcut.com.au</a> during the Entry Period and we will review them. Requests made after the Entry Period may be declined.</span></p>
+<p class="clause"><span class="cl-no">6.6</span><span>Any attempt to manually alter, override or circumvent your calorie or step targets will result in disqualification.</span></p>
+<h2 id="s7-ongoing-eligibility">7. ONGOING ELIGIBILITY</h2>
+<p class="clause"><span class="cl-no">7.1</span><span>To remain eligible for any prize you must:</span></p>
+<p class="clause"><span class="cl-no">(a)</span><span>have entered in accordance with clause 4.1. The starting weight you log to enter is your week 1 weigh-in — no separate weigh-in is required at the start of the Challenge Period;</span></p>
+<p class="clause"><span class="cl-no">(b)</span><span>log your weight during week 8 of the Challenge Period (Monday 23 November to Sunday 29 November 2026 inclusive); and</span></p>
+<p class="clause"><span class="cl-no">(c)</span><span>maintain an active subscription in accordance with section 5.</span></p>
+<p class="clause"><span class="cl-no">7.2</span><span>To be considered for the <strong>Best Transformation</strong> prize specifically, you must additionally record before and after photographs in accordance with section 10 and meet the requirement in clause 9.3(a). Photographs are not required for any other prize.</span></p>
+<p class="clause"><span class="cl-no">7.3</span><span>Failure to meet any requirement in clause 7.1 will result in your entry being ineligible for prizes.</span></p>
+<h2 id="s8-prizes">8. PRIZES</h2>
+<p class="clause"><span class="cl-no">8.1</span><span>There are three (3) main prizes. Each consists of a cash amount and a BSc product bundle.</span></p>
+<div class="table-scroll"><table><thead><tr><th>Prize</th><th>Cash</th><th>BSc bundle</th><th>Total value</th></tr></thead><tbody><tr><td>Best Transformation</td><td>AUD $1,000</td><td>AUD $300</td><td>AUD $1,300</td></tr><tr><td>Most Perfect Days</td><td>AUD $500</td><td>AUD $100</td><td>AUD $600</td></tr><tr><td>Most Steps Total</td><td>AUD $250</td><td>AUD $100</td><td>AUD $350</td></tr></tbody></table></div>
+<p class="clause"><span class="cl-no">8.2</span><span>Each of the three main prizes includes a product bundle featuring products of <strong>Body Science International Pty Ltd</strong> ("BSc"), of the approximate retail value stated in clause 8.1. Weekly prizes do not include a BSc bundle.</span></p>
+<p class="clause"><span class="cl-no">8.2A</span><span>BSc is a <strong>prize partner</strong> only. BSc is not a sponsor of, and is not responsible for the conduct of, the Challenge. Products included in prize bundles are purchased by CalCut at retail value.</span></p>
+<p class="clause"><span class="cl-no">8.3</span><span><strong>No cost to accept a prize.</strong> Winners will not incur any cost to accept a prize, other than a trivial cost. CalCut bears all transfer, currency conversion and payment platform fees associated with awarding a prize.</span></p>
+<p class="clause"><span class="cl-no">8.4</span><span>Cash prizes are paid in Australian dollars by bank transfer or PayPal, at no cost to the winner.</span></p>
+<p class="clause"><span class="cl-no">8.5</span><span>Prizes are not transferable and may not be sold or exchanged.</span></p>
+<p class="clause"><span class="cl-no">8.6</span><span>All prizes will be paid to the winner within 28 days of the relevant determination or draw.</span></p>
+<p class="clause"><span class="cl-no">8.7</span><span>Total prize pool value: AUD $2,650. This comprises AUD $1,750 in main cash prizes, AUD $500 in BSc product bundles across the three main prizes, and AUD $400 in weekly gift cards (8 × $50).</span></p>
+<h2 id="s9-how-the-main-prizes-are-decided">9. HOW THE MAIN PRIZES ARE DECIDED</h2>
+<h3>9.1 Most Perfect Days</h3>
+<p class="clause"><span class="cl-no">(a)</span><span>Awarded to the entrant with the highest number of Perfect Days recorded in the app across the Challenge Period.</span></p>
+<p class="clause"><span class="cl-no">(b)</span><span>In the event of a tie, the prize is awarded to the tied entrant with the greatest cumulative number of steps recorded above their step goal across the Challenge Period.</span></p>
+<p class="clause"><span class="cl-no">(c)</span><span>If a tie remains, CalCut will award the prize at its discretion.</span></p>
+<p class="clause"><span class="cl-no">(d)</span><span>Progress photographs are not required for this prize.</span></p>
+<h3>9.2 Most Steps Total</h3>
+<p class="clause"><span class="cl-no">(a)</span><span>Awarded to the entrant with the highest cumulative step count recorded in the app across the Challenge Period.</span></p>
+<p class="clause"><span class="cl-no">(b)</span><span>Progress photographs are not required for this prize.</span></p>
+<h3>9.3 Best Transformation</h3>
+<p class="clause"><span class="cl-no">(a)</span><span>To be considered, an entrant must have recorded a minimum of <strong>twenty (20) Perfect Days out of 56</strong> and must have submitted both before and after photographs in accordance with section 10.</span></p>
+<p class="clause"><span class="cl-no">(b)</span><span>CalCut will shortlist between three (3) and five (5) finalists from eligible entrants, assessed on visible physical change and consistency record.</span></p>
+<p class="clause"><span class="cl-no">(c)</span><span>If fewer than three (3) entrants satisfy clause 9.3(a), CalCut may shortlist from among all entrants who submitted both before and after photographs in accordance with section 10, and may shortlist fewer than three finalists.</span></p>
+<p class="clause"><span class="cl-no">(d)</span><span>The winner will be selected by public vote conducted via a poll on the @calcut.app Instagram account. The finalist receiving the highest number of votes wins.</span></p>
+<p class="clause"><span class="cl-no">(e)</span><span>Finalists will be asked for their express consent before any photograph is published. A finalist who declines will be replaced by the next-ranked eligible entrant.</span></p>
+<p class="clause"><span class="cl-no">(f)</span><span>The public vote result is final. CalCut reserves the right to void votes it reasonably believes to have been obtained by automated means, purchased, or otherwise manipulated.</span></p>
+<p><strong>9.4</strong> All determinations under this section are made using data recorded by the CalCut app. CalCut's records are the sole source of truth. No correspondence will be entered into regarding scoring, other than in relation to a clear technical error.</p>
+<h2 id="s10-photographs">10. PHOTOGRAPHS</h2>
+<p class="clause"><span class="cl-no">10.1</span><span>Progress photographs are <strong>optional</strong>. They are required only if you wish to be considered for the Best Transformation prize, and are not required for any other prize.</span></p>
+<p class="clause"><span class="cl-no">10.2</span><span>Before photographs may be recorded at any time from the opening of the Entry Period until 11:59pm on <strong>Sunday 11 October 2026</strong>. After photographs must be recorded during week 8 of the Challenge Period, on or before 11:59pm on Sunday 29 November 2026.</span></p>
+<p class="clause"><span class="cl-no">10.3</span><span>Photographs should be taken in consistent lighting, position and time of day, front and side, at both the start and the end.</span></p>
+<p class="clause"><span class="cl-no">10.4</span><span>Your photographs are stored privately in the app. They are not published by CalCut without your express consent.</span></p>
+<p class="clause"><span class="cl-no">10.5</span><span>By submitting photographs for the Best Transformation prize, you agree that CalCut may access them for the sole purpose of judging that prize. <strong>Photographs are accessed only for that purpose and are not viewed for any other purpose.</strong></span></p>
+<p class="clause"><span class="cl-no">10.6</span><span>If you are shortlisted as a finalist, CalCut will seek your express written consent before publishing any photograph. If you grant that consent, you give CalCut a non-exclusive, worldwide, royalty-free licence to use, reproduce and display those photographs, together with your first name and any statement you provide, in CalCut marketing materials across any medium, for a period of <strong>twenty-four (24) months</strong>.</span></p>
+<p class="clause"><span class="cl-no">10.7</span><span>You may withdraw consent under clause 10.6 at any time by writing to <a href="mailto:support@calcut.com.au.">support@calcut.com.au.</a> Withdrawal takes effect within a reasonable period and does not require CalCut to recall materials already distributed. Withdrawing consent prior to the conclusion of the public vote will remove you from consideration for the prize.</span></p>
+<p class="clause"><span class="cl-no">10.8</span><span>You warrant that any photograph you submit is of yourself, was taken during the relevant period, and has not been digitally altered.</span></p>
+<h2 id="s11-weekly-prize-draw">11. WEEKLY PRIZE DRAW</h2>
+<p class="clause"><span class="cl-no">11.1</span><span>A Woolworths gift card to the value of AUD $50 will be awarded each week for eight (8) consecutive weeks of the Challenge Period. Weekly prizes consist of the gift card only and do not include a BSc product bundle.</span></p>
+<p class="clause"><span class="cl-no">11.1A</span><span>Where a winner is not resident in Australia, or is otherwise unable to use a Woolworths gift card, CalCut will instead pay AUD $50 by the method described in clause 8.4, at no cost to the winner.</span></p>
+<p class="clause"><span class="cl-no">11.2</span><span>To enter a weekly draw, during the relevant week you must post to your Instagram story a screenshot of your CalCut home screen showing your step goal met, tagging @calcut.app. Your Instagram account must be public, or CalCut must otherwise be able to view the story.</span></p>
+<p class="clause"><span class="cl-no">11.3</span><span>One entry per person per week. Entries do not carry over between weeks.</span></p>
+<p class="clause"><span class="cl-no">11.4</span><span>Each draw is conducted on the Sunday of the relevant week using a randomised wheel, and a recording of the draw is published to the @calcut.app Instagram account at 8:00pm that day.</span></p>
+<p class="clause"><span class="cl-no">11.5</span><span>Every valid entry received during the relevant week will be included in the draw and each entry has a random and equal chance of being drawn.</span></p>
+<p class="clause"><span class="cl-no">11.6</span><span>Entrants do not need to be present for, or to view, the draw to be eligible to win.</span></p>
+<p class="clause"><span class="cl-no">11.7</span><span>To be eligible for a weekly prize you must be a valid entrant in the main Challenge and must satisfy the eligibility requirements in section 2. Weekly prizes are not open to non-entrants.</span></p>
+<p class="clause"><span class="cl-no">11.8</span><span>Weekly winners will be notified in writing and their names published in accordance with clause 3.8.</span></p>
+<p class="clause"><span class="cl-no">11.9</span><span>Woolworths is not a sponsor of, and has no association with, this promotion.</span></p>
+<h2 id="s12-disqualification">12. DISQUALIFICATION</h2>
+<p class="clause"><span class="cl-no">12.1</span><span>CalCut may disqualify an entrant at any time, without notice, where it reasonably believes that the entrant has:</span></p>
+<p class="clause"><span class="cl-no">(a)</span><span>manually altered, overridden or attempted to circumvent their calorie or step targets;</span></p>
+<p class="clause"><span class="cl-no">(b)</span><span>submitted, generated or manipulated step, weight or photographic data by any means that does not reflect their genuine activity, including the use of any device, application or method to generate step counts artificially;</span></p>
+<p class="clause"><span class="cl-no">(c)</span><span>entered through multiple accounts;</span></p>
+<p class="clause"><span class="cl-no">(d)</span><span>failed to log a weight during week 8 of the Challenge Period;</span></p>
+<p class="clause"><span class="cl-no">(e)</span><span>allowed their subscription to lapse during the Challenge Period;</span></p>
+<p class="clause"><span class="cl-no">(f)</span><span>breached any provision of these Terms or the CalCut Terms of Service; or</span></p>
+<p class="clause"><span class="cl-no">(g)</span><span>engaged in conduct that CalCut reasonably considers to be abusive, fraudulent, or damaging to CalCut or other entrants.</span></p>
+<p class="clause"><span class="cl-no">12.2</span><span><strong>Safety.</strong> CalCut may, at its sole discretion, remove an entrant from prize contention where their rate of weight loss or pattern of behaviour raises a health or safety concern. Where this occurs, CalCut will contact the entrant. This clause exists for participant welfare and its exercise is not open to appeal.</span></p>
+<p class="clause"><span class="cl-no">12.3</span><span>Disqualification forfeits all entitlement to any prize.</span></p>
+<p class="clause"><span class="cl-no">12.4</span><span>Failure to submit before or after photographs removes an entrant from consideration for the Best Transformation prize only. It is not a ground for disqualification and does not affect eligibility for any other prize.</span></p>
+<h2 id="s13-winner-notification-claims-and-publication">13. WINNER NOTIFICATION, CLAIMS AND PUBLICATION</h2>
+<p class="clause"><span class="cl-no">13.1</span><span>All winners will be advised <strong>in writing</strong>, by email and/or in-app notification to the contact details associated with their CalCut account, within 7 days of determination or draw.</span></p>
+<p class="clause"><span class="cl-no">13.2</span><span>Winners must respond and provide any information reasonably required to deliver the prize within 14 days of notification, so that the prize can be transferred within the period required by clause 8.6.</span></p>
+<p class="clause"><span class="cl-no">13.3</span><span><strong>Unclaimed prizes.</strong> Where, despite reasonable efforts, a winner cannot be contacted, does not respond within the claim period, or is found to be ineligible, CalCut may award the prize to the next-ranked eligible entrant, or in the case of a weekly prize conduct a second draw. This clause constitutes the conditions of entry permitting substitution of a winner.</span></p>
+<p class="clause"><span class="cl-no">13.4</span><span>The names of all winners will be published on the @calcut.app Instagram account as a permanent feed post, remaining publicly accessible for at least 28 days. By entering, you consent to publication of your first name and last initial. CalCut does not publish entrants' full names, addresses, suburbs or weight.</span></p>
+<h2 id="s14-tax">14. TAX</h2>
+<p class="clause"><span class="cl-no">14.1</span><span>Winners are responsible for any tax liability arising from receipt of a prize. CalCut recommends winners seek independent advice about their own circumstances.</span></p>
+<h2 id="s15-liability-and-health">15. LIABILITY AND HEALTH</h2>
+<p class="clause"><span class="cl-no">15.1</span><span>The Challenge involves changes to diet and physical activity. You participate at your own risk. You are solely responsible for making your own assessment of what is safe and appropriate for you, and for seeking medical advice where appropriate.</span></p>
+<p class="clause"><span class="cl-no">15.2</span><span>CalCut is not a medical provider. Nothing in the Challenge, the app, or these Terms constitutes medical advice, diagnosis or treatment.</span></p>
+<p class="clause"><span class="cl-no">15.3</span><span>Individual results vary. CalCut makes no representation, promise or guarantee as to the results any entrant will achieve.</span></p>
+<p class="clause"><span class="cl-no">15.4</span><span>To the maximum extent permitted by law, CalCut excludes all liability for any loss, injury, damage or expense arising from participation in the Challenge, from any prize, or from the use or misuse of any prize.</span></p>
+<p class="clause"><span class="cl-no">15.5</span><span>Nothing in these Terms excludes, restricts or modifies any right or remedy under the Australian Consumer Law or any other law that cannot lawfully be excluded, restricted or modified.</span></p>
+<p class="clause"><span class="cl-no">15.6</span><span>CalCut is not liable for technical failures, data loss, delayed or lost entries, or any interruption to the app or to any third-party platform.</span></p>
+<h2 id="s16-privacy-and-use-of-your-information">16. PRIVACY AND USE OF YOUR INFORMATION</h2>
+<p class="clause"><span class="cl-no">16.1</span><span>Personal information collected in connection with the Challenge is handled in accordance with the CalCut Privacy Policy at <a href="https://calcut.com.au/privacy.html.">https://calcut.com.au/privacy.html.</a></span></p>
+<p class="clause"><span class="cl-no">16.2</span><span>Information collected for the Challenge — including weight, step, photographic and subscription data — will be used for the purposes of administering the Challenge, determining winners and delivering prizes.</span></p>
+<p class="clause"><span class="cl-no">16.3</span><span><strong>Use beyond the Challenge.</strong> In addition to the purposes in clause 16.2, CalCut will use your contact details to send you marketing communications about CalCut products and services. You may opt out at any time using the unsubscribe link in any message or by writing to <a href="mailto:support@calcut.com.au.">support@calcut.com.au.</a> CalCut will not use entrants' information for any purpose other than those stated in these Terms.</span></p>
+<p class="clause"><span class="cl-no">16.4</span><span>CalCut will not disclose entrants' information to any prize partner for that partner's own marketing purposes. Where a prize partner is involved in prize fulfilment, CalCut will obtain that partner's written agreement not to use entrants' information for any purpose other than those stated in these Terms.</span></p>
+<p class="clause"><span class="cl-no">16.5</span><span>Photographs are handled in accordance with section 10.</span></p>
+<h2 id="s17-records">17. RECORDS</h2>
+<p class="clause"><span class="cl-no">17.1</span><span>CalCut will keep accurate records of the financial accounting of the Challenge, of all entries received, and of the distribution of all prizes, for a period of three (3) years after the Challenge is finalised.</span></p>
+<h2 id="s18-general">18. GENERAL</h2>
+<p class="clause"><span class="cl-no">18.1</span><span>The Challenge is conducted for the purpose of promoting CalCut and primarily benefits CalCut.</span></p>
+<p class="clause"><span class="cl-no">18.2</span><span>The Challenge will be conducted in a manner that is not offensive and not contrary to the public interest.</span></p>
+<p class="clause"><span class="cl-no">18.3</span><span>CalCut reserves the right to amend, suspend or cancel the Challenge where necessary due to circumstances beyond its reasonable control, subject to any applicable law and any direction of a relevant regulator.</span></p>
+<p class="clause"><span class="cl-no">18.4</span><span>CalCut may amend these Terms. Material amendments will be notified in-app and announced on the @calcut.app Instagram account. Continued participation constitutes acceptance.</span></p>
+<p class="clause"><span class="cl-no">18.5</span><span>This promotion is in no way sponsored, endorsed, administered by, or associated with Instagram, Meta Platforms, Apple, Woolworths Group Limited, or any other third party named in these Terms (other than as expressly stated in clause 8.2A). Entrants release each of those parties in full.</span></p>
+<p class="clause"><span class="cl-no">18.6</span><span><strong>Apple Inc. is not a sponsor of and is not involved in this promotion in any way.</strong></span></p>
+<p class="clause"><span class="cl-no">18.7</span><span>These Terms are governed by the laws of Victoria, Australia. Entrants submit to the non-exclusive jurisdiction of the courts of that State.</span></p>
+<p class="clause"><span class="cl-no">18.8</span><span>If any provision is found to be unenforceable, the remaining provisions continue in full force.</span></p>
+<h3>END OF TERMS</h3>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-left">
+      <img src="assets/icon.png" alt="CalCut" class="footer-icon">
+      <span class="footer-text">© 2026 CalCut Pty Ltd. Built in Melbourne.</span>
+    </div>
+    <div class="footer-links">
+      <a href="support.html">Support</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="mailto:support@calcut.com.au">Contact</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
