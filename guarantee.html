@@ -224,13 +224,13 @@ fbq('track', 'PageView');
       </div>
       <div class="step">
         <div class="step-no">STEP 2</div>
-        <div class="step-title">Download CalCut, start the annual plan</div>
-        <p>7 days free, then $59.99 for the year. The guarantee is offered to you right after.</p>
+        <div class="step-title">Weigh in, then download CalCut</div>
+        <p>Step on the scale, photo it, keep it. Sign up with the same email and enter that weight when the app asks.</p>
       </div>
       <div class="step">
         <div class="step-no">STEP 3</div>
-        <div class="step-title">Log your starting weight</div>
-        <p>In the app. Snap a photo of the scale for your records. Your 60 days start today.</p>
+        <div class="step-title">Pick the fastest setting, start the annual plan</div>
+        <p>When the app asks how fast, choose the fastest option. 7 days free, then $59.99 for the year. Your 60 days start today.</p>
       </div>
       <div class="step">
         <div class="step-no">STEP 4</div>
@@ -240,7 +240,7 @@ fbq('track', 'PageView');
       <div class="step pay">
         <div class="step-no">STEP 5</div>
         <div class="step-title">Weigh in on day 60</div>
-        <p>Lost 6 kg? That was the point. Didn't? We pay you $600.</p>
+        <p>Log it in the app, email us your two scale photos. Lost 6 kg? That was the point. Didn't? We pay you $600.</p>
       </div>
     </div>
   </div>
@@ -252,7 +252,7 @@ fbq('track', 'PageView');
     <div>
       <div class="eyebrow">Why we can promise this</div>
       <h2 class="h2">It isn't a diet secret. It's arithmetic.</h2>
-      <p class="lead">CalCut gives you a calorie number 750 below what your body burns in a day, and a step goal. Hold that gap for 60 days and it adds up to about 6 kg. The app does the sums, sets the numbers, and turns the day green when you hit both.</p>
+      <p class="lead">On its fastest setting, CalCut gives you a calorie number 750 below what your body burns in a day, and a step goal. Hold that gap for 60 days and it adds up to about 6 kg. The app does the sums, sets the numbers, and turns the day green when you hit both.</p>
       <p class="lead" style="margin-top:16px;">The app records every day, so both of us can see what happened. Follow the rules and it still doesn't happen? Then the maths was wrong, and we pay.</p>
       <div class="rules">
         <div class="rule"><div class="rule-ic">1</div><div><b>Eat under your number</b><p>Log what you eat. Scan it, say it, or type it. Stay at or under the calorie target the app gives you.</p></div></div>
@@ -278,7 +278,6 @@ fbq('track', 'PageView');
       <h3>Who it's for</h3>
       <ul>
         <li>Australian residents, 18 or over, new to CalCut.</li>
-        <li>People the app can safely set a 750-calorie gap for. It checks when you enter and tells you straight away if it can't.</li>
         <li>Nothing to put in. No stake, no deposit. The $600 is our money, not a pool.</li>
         <li class="x">Not open if you're pregnant, breastfeeding, or have a history of an eating disorder. You're still welcome to use CalCut.</li>
       </ul>
@@ -326,13 +325,13 @@ fbq('track', 'PageView');
         <h2>You're in.</h2>
         <p class="lead">Your place is saved under <strong id="done-email"></strong>. Sending you to the App Store now. If it doesn't open, tap the button below.</p>
         <ol class="next">
-          <li>Download CalCut from the App Store.</li>
-          <li>Create your account with the same email.</li>
-          <li>Choose the annual plan. 7 days free, then $59.99 for the year.</li>
-          <li>The guarantee is offered to you straight after. Enter it and log your starting weight.</li>
+          <li>Weigh yourself. Photo the scale. Keep it.</li>
+          <li>Sign up in CalCut with this exact email, and enter that weight when it asks.</li>
+          <li>When it asks how fast you want to lose, choose the fastest option.</li>
+          <li>Choose the annual plan. 7 days free, then $59.99 for the year. That's you entered.</li>
         </ol>
         <a id="store" href="https://apps.apple.com/app/id6774035581" class="app-store-badge" aria-label="Download CalCut on the App Store" data-cta="guarantee"><img src="assets/app-store-badge.svg" alt="Download on the App Store"></a>
-        <p class="fine">Signing up with Apple, or a different email? Your code is <span class="code" id="code"></span><br>Redeem it under Settings in the app and the guarantee will appear.</p>
+        <p class="fine">Signing up with Apple? Choose "Share my email" so it matches. Used a different email by mistake? Email support@calcut.com.au from this address and we'll link them.</p>
       </div>
 
       <div class="closed" id="closed" style="display:none;">
@@ -417,7 +416,6 @@ fbq('track', 'PageView');
       return r.json();
     }).then(function (code) {
       $('done-email').textContent = email;
-      $('code').textContent = typeof code === 'string' ? code : String(code);
       $('form-wrap').style.display = 'none';
       $('done').style.display = 'block';
       try { if (window.fbq) window.fbq('track', 'Lead'); } catch (e) {}
