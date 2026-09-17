@@ -145,6 +145,8 @@
   .check input { margin-top: 3px; width: 18px; height: 18px; accent-color: var(--orange); flex: 0 0 auto; }
   .check a { color: var(--orange); font-weight: 600; text-decoration: underline; }
   .fine { font-size: 13px; color: var(--grey); margin-top: 14px; line-height: 1.5; }
+  .note { display: flex; gap: 10px; background: var(--orange-pale); border: 1px solid var(--orange-border); border-radius: 12px; padding: 12px 14px; font-size: 14px; line-height: 1.45; color: #5a3a28; margin: -6px 0 18px; }
+  .note b { color: var(--black); }
   .err { display: none; background: #FDECEC; color: #B3261E; border-radius: 10px; padding: 12px 14px; font-size: 14px; margin-bottom: 14px; }
   .hp { position: absolute; left: -9999px; opacity: 0; height: 0; }
   .closed { text-align: center; }
@@ -226,7 +228,7 @@ fbq('track', 'PageView');
       <div class="step">
         <div class="step-no">STEP 2</div>
         <div class="step-title">Weigh in, then download CalCut</div>
-        <p>Step on the scale, photo it, keep it. Sign up with the same email and enter that weight when the app asks.</p>
+        <p>Step on the scale, photo it, keep it. Sign up with the same email — if you use Apple, choose <strong>Share My Email</strong> — and enter that weight when the app asks.</p>
       </div>
       <div class="step">
         <div class="step-no">STEP 3</div>
@@ -313,6 +315,7 @@ fbq('track', 'PageView');
           <label class="field" for="email">Email</label>
           <input type="email" id="email" name="email" autocomplete="email" inputmode="email" placeholder="you@example.com" required>
           <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off">
+          <p class="note">Signing up with <b>Apple</b>? Choose <b>Share My Email</b>, not Hide My Email. A hidden address is the one thing that stops us finding your entry.</p>
           <label class="check"><input type="checkbox" id="au" required> I'm an Australian resident, 18 or over.</label>
           <label class="check"><input type="checkbox" id="terms" required> I've read the <a href="guarantee-terms.html" target="_blank" rel="noopener">guarantee terms</a>.</label>
           <button class="btn btn-block" type="submit" id="submit">Save my place</button>
@@ -331,7 +334,7 @@ fbq('track', 'PageView');
           <li>Choose the annual plan. 7 days free, then $59.99 for the year. That's you entered.</li>
         </ol>
         <a id="store" href="https://apps.apple.com/app/id6774035581" class="app-store-badge" aria-label="Download CalCut on the App Store" data-cta="guarantee"><img src="assets/app-store-badge.svg" alt="Download on the App Store"></a>
-        <p class="fine">Signing up with Apple? Choose "Share my email" so it matches. Used a different email by mistake? Email support@calcut.com.au from this address and we'll link them.</p>
+        <p class="note">Used a different address, or hid your email with Apple? Email <b>support@calcut.com.au</b> from this address within 14 days and we'll link them. We can't find your entry otherwise.</p>
       </div>
 
       <div class="closed" id="closed" style="display:none;">
