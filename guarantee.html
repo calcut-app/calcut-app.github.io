@@ -116,6 +116,11 @@
   .maths-row.total b { color: var(--orange); font-size: 26px; }
   .maths-note { font-size: 13px; color: var(--grey); margin-top: 14px; line-height: 1.5; }
   .rules { display: grid; gap: 14px; margin-top: 24px; }
+  /* The one image on the page. It is proof of the mechanism, not decoration:
+     both goals complete is what "a green day" actually looks like. */
+  .shot { margin-top: 26px; text-align: center; }
+  .shot img { width: 100%; max-width: 236px; margin: 0 auto; border-radius: 18px; border: 1px solid rgba(0,0,0,0.08); box-shadow: 0 18px 44px -20px rgba(0,0,0,0.28); }
+  .shot figcaption { font-size: 14px; color: var(--grey); margin-top: 12px; }
   .rule { display: flex; gap: 16px; background: var(--card); border-radius: 16px; padding: 18px 20px; border: 1px solid rgba(0,0,0,0.05); }
   .rule-ic { flex: 0 0 40px; height: 40px; border-radius: 10px; background: var(--orange-pale); display: grid; place-items: center; color: var(--orange); font-family: var(--display); font-weight: 800; font-size: 15px; }
   .rule b { font-family: var(--display); font-weight: 800; font-size: 17px; display: block; margin-bottom: 3px; }
@@ -161,6 +166,8 @@
   .check input { margin-top: 3px; width: 18px; height: 18px; accent-color: var(--orange); flex: 0 0 auto; }
   .check a { color: var(--orange); font-weight: 600; text-decoration: underline; }
   .fine { font-size: 13px; color: var(--grey); margin-top: 14px; line-height: 1.5; }
+  .proof { font-family: var(--display); font-weight: 700; font-size: 14px; color: #444; margin-top: 14px; text-align: center; }
+  .proof .star { color: var(--orange); }
   .err { display: none; background: #FDECEC; color: #B3261E; border-radius: 10px; padding: 12px 14px; font-size: 14px; margin-bottom: 14px; }
   .hp { position: absolute; left: -9999px; opacity: 0; height: 0; }
   .closed { text-align: center; }
@@ -297,6 +304,10 @@ fbq('track', 'PageView');
       <div class="maths-row"><span>Every week</span><b>0.75 kg</b></div>
       <div class="maths-row total"><span>After 60 days</span><b>≈ 6 kg</b></div>
       <p class="maths-note">Bodies aren't calculators and the scale moves around day to day. That's why the guarantee is on the result, not on the theory. Under 6 kg after 50 green days, and we pay.</p>
+      <figure class="shot">
+        <img src="assets/green-day.png" alt="The CalCut home screen with both daily goals marked complete: calories under target and steps done." width="560" height="1213" loading="lazy">
+        <figcaption>This is a green day. Both goals done, and the app says so.</figcaption>
+      </figure>
     </div>
   </div>
 </section>
@@ -305,7 +316,7 @@ fbq('track', 'PageView');
 <section id="who" style="background:#fff;">
   <div class="wrap">
     <div class="panel" style="max-width:720px;margin:0 auto;background:var(--bg);">
-      <h3>Who it's for</h3>
+      <h3>For anyone with 6&nbsp;kg to lose.</h3>
       <ul>
         <li>Australian residents, 18 or over, new to CalCut.</li>
         <li>People who want 6&nbsp;kg gone — or $600 for having a real crack at it.</li>
@@ -338,7 +349,7 @@ fbq('track', 'PageView');
     <div class="reg-card">
       <div class="js-wrap">
         <h2>Save your place.</h2>
-        <p class="lead">Use the email you'll sign up to CalCut with. That's how the app knows to offer you the guarantee.</p>
+        <p class="lead"><strong>Lose 6&nbsp;kg in 60 days, or we pay you $600.</strong> Use the email you'll sign up to CalCut with — that's how we know you're in.</p>
         <div class="err js-err"></div>
         <form class="js-form" novalidate>
           <label class="field">Email</label>
@@ -348,6 +359,7 @@ fbq('track', 'PageView');
           <label class="check"><input type="checkbox" class="js-terms" required> <span>I've read the <a href="guarantee-terms.html" target="_blank" rel="noopener">guarantee terms</a>.</span></label>
           <button class="btn btn-block js-submit" type="submit">Save my place</button>
         </form>
+        <p class="proof"><span class="star">★</span> 5.0 on the App&nbsp;Store · Australian owned</p>
         <p class="fine">We'll email you about the guarantee and about CalCut. Unsubscribe any time. Your place is free and doesn't commit you to anything.</p>
       </div>
 
