@@ -154,7 +154,10 @@
   label.field { display: block; font-family: var(--display); font-weight: 700; font-size: 13px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--grey); margin-bottom: 8px; }
   input[type=email] { width: 100%; font-family: var(--body); font-size: 17px; padding: 16px 18px; border: 1.5px solid rgba(0,0,0,0.12); border-radius: 12px; background: #fff; color: var(--black); margin-bottom: 18px; }
   input[type=email]:focus { outline: none; border-color: var(--orange); box-shadow: 0 0 0 4px rgba(255,92,0,0.12); }
+  /* The label text sits in a span so the link stays inline: a bare <a> in a flex
+     container becomes its own flex item and the gap opens up around it. */
   .check { display: flex; gap: 12px; align-items: flex-start; font-size: 15px; color: #444; margin-bottom: 14px; line-height: 1.45; cursor: pointer; }
+  .check > span { flex: 1; }
   .check input { margin-top: 3px; width: 18px; height: 18px; accent-color: var(--orange); flex: 0 0 auto; }
   .check a { color: var(--orange); font-weight: 600; text-decoration: underline; }
   .fine { font-size: 13px; color: var(--grey); margin-top: 14px; line-height: 1.5; }
@@ -341,8 +344,8 @@ fbq('track', 'PageView');
           <label class="field">Email</label>
           <input type="email" class="js-email" name="email" autocomplete="email" inputmode="email" placeholder="you@example.com" required>
           <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off">
-          <label class="check"><input type="checkbox" class="js-au" required> I'm an Australian resident, 18 or over.</label>
-          <label class="check"><input type="checkbox" class="js-terms" required> I've read the <a href="guarantee-terms.html" target="_blank" rel="noopener">guarantee terms</a>.</label>
+          <label class="check"><input type="checkbox" class="js-au" required> <span>I'm an Australian resident, 18 or over.</span></label>
+          <label class="check"><input type="checkbox" class="js-terms" required> <span>I've read the <a href="guarantee-terms.html" target="_blank" rel="noopener">guarantee terms</a>.</span></label>
           <button class="btn btn-block js-submit" type="submit">Save my place</button>
         </form>
         <p class="fine">We'll email you about the guarantee and about CalCut. Unsubscribe any time. Your place is free and doesn't commit you to anything.</p>
