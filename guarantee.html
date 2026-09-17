@@ -168,10 +168,25 @@
   .code { display: inline-block; font-family: var(--display); font-weight: 800; font-size: 26px; letter-spacing: 0.18em; background: var(--orange-pale); border: 1px dashed var(--orange-border); color: var(--black); padding: 12px 18px; border-radius: 12px; margin: 8px 0 6px; }
   .next { list-style: none; counter-reset: n; display: grid; gap: 12px; margin: 22px 0 26px; }
   .next li { counter-increment: n; display: flex; gap: 14px; font-size: 16px; color: #333; line-height: 1.45; }
+  /* The text lives in a span so inline <strong>/<em> are not turned into flex items. */
+  .next li > span { flex: 1; }
   .next li::before { content: counter(n); flex: 0 0 28px; height: 28px; border-radius: 50%; background: var(--black); color: #fff; font-family: var(--display); font-weight: 800; font-size: 13px; display: grid; place-items: center; }
   .app-store-badge img { height: 56px; width: auto; }
   .app-store-badge { display: inline-block; transition: transform 0.15s ease; }
   .app-store-badge:hover { transform: translateY(-2px); }
+
+  /* MODAL — the same card, floated over wherever they happen to be */
+  .modal[hidden] { display: none; }
+  .modal { position: fixed; inset: 0; z-index: 200; display: flex; align-items: center; justify-content: center; padding: 20px; }
+  .modal-backdrop { position: absolute; inset: 0; background: rgba(26,26,26,0.55); backdrop-filter: blur(3px); -webkit-backdrop-filter: blur(3px); animation: fade 0.18s ease; }
+  .modal-panel { position: relative; width: 100%; max-width: 560px; max-height: 92vh; max-height: 92svh; overflow-y: auto; -webkit-overflow-scrolling: touch; animation: rise 0.22s cubic-bezier(0.2,0.8,0.3,1); }
+  .modal-panel .reg-card { margin: 0; }
+  @keyframes fade { from { opacity: 0; } }
+  @keyframes rise { from { opacity: 0; transform: translateY(14px); } }
+  @media (prefers-reduced-motion: reduce) { .modal-backdrop, .modal-panel { animation: none; } }
+  .modal-x { position: absolute; top: 12px; right: 14px; z-index: 2; width: 34px; height: 34px; border: 0; border-radius: 50%; background: rgba(0,0,0,0.05); color: #555; font-size: 22px; line-height: 1; cursor: pointer; }
+  .modal-x:hover { background: rgba(0,0,0,0.1); color: var(--black); }
+  body.modal-open { overflow: hidden; }
 
   /* PLAIN */
   .plain { text-align: center; padding: 0 0 72px; font-size: 14px; color: var(--grey); }
@@ -318,36 +333,36 @@ fbq('track', 'PageView');
 <section class="register" id="register">
   <div class="wrap">
     <div class="reg-card">
-      <div id="form-wrap">
+      <div class="js-wrap">
         <h2>Save your place.</h2>
         <p class="lead">Use the email you'll sign up to CalCut with. That's how the app knows to offer you the guarantee.</p>
-        <div class="err" id="err"></div>
-        <form id="reg" novalidate>
-          <label class="field" for="email">Email</label>
-          <input type="email" id="email" name="email" autocomplete="email" inputmode="email" placeholder="you@example.com" required>
+        <div class="err js-err"></div>
+        <form class="js-form" novalidate>
+          <label class="field">Email</label>
+          <input type="email" class="js-email" name="email" autocomplete="email" inputmode="email" placeholder="you@example.com" required>
           <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off">
-          <label class="check"><input type="checkbox" id="au" required> I'm an Australian resident, 18 or over.</label>
-          <label class="check"><input type="checkbox" id="terms" required> I've read the <a href="guarantee-terms.html" target="_blank" rel="noopener">guarantee terms</a>.</label>
-          <button class="btn btn-block" type="submit" id="submit">Save my place</button>
+          <label class="check"><input type="checkbox" class="js-au" required> I'm an Australian resident, 18 or over.</label>
+          <label class="check"><input type="checkbox" class="js-terms" required> I've read the <a href="guarantee-terms.html" target="_blank" rel="noopener">guarantee terms</a>.</label>
+          <button class="btn btn-block js-submit" type="submit">Save my place</button>
         </form>
         <p class="fine">We'll email you about the guarantee and about CalCut. Unsubscribe any time. Your place is free and doesn't commit you to anything.</p>
       </div>
 
-      <div class="done" id="done">
+      <div class="done js-done">
         <div class="tick">✓</div>
         <h2>You're in.</h2>
-        <p class="lead">Your place is saved under <strong id="done-email"></strong>. Sending you to the App Store now. If it doesn't open, tap the button below.</p>
+        <p class="lead">Your place is saved under <strong class="js-done-email"></strong>. Sending you to the App Store now. If it doesn't open, tap the button below.</p>
         <ol class="next">
-          <li>Weigh yourself. Photo the scale. Keep it.</li>
-          <li>Sign up in CalCut with this exact email, and enter that weight when it asks.</li>
-          <li>When it asks how fast you want to lose weight, choose the fastest option: <strong>0.75&nbsp;kg a week</strong>, labelled <em>Aggressive</em>.</li>
-          <li>Choose the annual plan. 7 days free, then $59.99 for the year. That's you entered.</li>
+          <li><span>Weigh yourself. Photo the scale. Keep it.</span></li>
+          <li><span>Sign up in CalCut with this exact email, and enter that weight when it asks.</span></li>
+          <li><span>When it asks how fast you want to lose weight, choose the fastest option: <strong>0.75&nbsp;kg a week</strong>, labelled <em>Aggressive</em>.</span></li>
+          <li><span>Choose the annual plan. 7 days free, then $59.99 for the year. That's you entered.</span></li>
         </ol>
-        <a id="store" href="https://apps.apple.com/app/id6774035581" class="app-store-badge" aria-label="Download CalCut on the App Store" data-cta="guarantee"><img src="assets/app-store-badge.svg" alt="Download on the App Store"></a>
+        <a href="https://apps.apple.com/app/id6774035581" class="app-store-badge js-store" aria-label="Download CalCut on the App Store" data-cta="guarantee"><img src="assets/app-store-badge.svg" alt="Download on the App Store"></a>
         <p class="fine">Signing up with Apple? Choose "Share my email" so it matches. Used a different email by mistake? Email support@calcut.com.au from this address and we'll link them.</p>
       </div>
 
-      <div class="closed" id="closed" style="display:none;">
+      <div class="closed js-closed" style="display:none;">
         <h2>Pre-registration has closed.</h2>
         <p class="lead">If you saved your place before it closed, your entry window in the app is still open. Everyone else: CalCut is still the simplest way to lose weight, two rules a day.</p>
         <p style="margin-top:22px;"><a href="https://apps.apple.com/app/id6774035581" class="app-store-badge" aria-label="Download CalCut on the App Store" data-cta="closed"><img src="assets/app-store-badge.svg" alt="Download on the App Store"></a></p>
@@ -357,6 +372,14 @@ fbq('track', 'PageView');
 </section>
 
 <p class="plain">Just want the app, no guarantee? <a href="https://apps.apple.com/app/id6774035581" data-cta="plain">Download CalCut</a>.</p>
+</div>
+
+<div class="modal" id="modal" hidden>
+  <div class="modal-backdrop" data-close></div>
+  <div class="modal-panel" role="dialog" aria-modal="true" aria-label="Save your place">
+    <button class="modal-x" type="button" data-close aria-label="Close">&times;</button>
+    <!-- the card is cloned in here at load, so there is only ever one copy to maintain -->
+  </div>
 </div>
 
 <footer class="footer">
@@ -399,79 +422,139 @@ fbq('track', 'PageView');
   window.addEventListener('resize', setNavHeight);
   window.addEventListener('orientationchange', setNavHeight);
 
+  var bottomCard = document.querySelector('.register .reg-card');
+
+  // The modal holds a clone of the same card. Everything inside is class-driven, so
+  // two copies can coexist; wireCard() below is called once per copy.
+  var modal = $('modal');
+  var modalPanel = modal ? modal.querySelector('.modal-panel') : null;
+  var modalCard = null;
+  if (bottomCard && modalPanel) {
+    modalCard = bottomCard.cloneNode(true);
+    modalPanel.appendChild(modalCard);
+  }
+
+  var lastFocus = null;
+  function openModal() {
+    if (!modal) return;
+    lastFocus = document.activeElement;
+    modal.hidden = false;
+    document.body.classList.add('modal-open');
+    send('OfferFormOpened', { offer: OFFER.id });
+    // Focus the field on pointer devices only — autofocusing on a phone throws the
+    // keyboard up over the card before they have read it.
+    if (!window.matchMedia('(hover: none)').matches) {
+      var f = modalCard && modalCard.querySelector('.js-email');
+      if (f) { try { f.focus({ preventScroll: true }); } catch (e) { f.focus(); } }
+    }
+  }
+  function closeModal() {
+    if (!modal || modal.hidden) return;
+    modal.hidden = true;
+    document.body.classList.remove('modal-open');
+    if (lastFocus && lastFocus.focus) { try { lastFocus.focus({ preventScroll: true }); } catch (e) {} }
+  }
+  if (modal) {
+    modal.addEventListener('click', function (e) {
+      if (e.target.hasAttribute && e.target.hasAttribute('data-close')) closeModal();
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') closeModal();
+    });
+    // Keep tabbing inside the panel while it is open.
+    modal.addEventListener('keydown', function (e) {
+      if (e.key !== 'Tab' || modal.hidden) return;
+      var f = modal.querySelectorAll('a[href], button:not([disabled]), input, [tabindex]:not([tabindex="-1"])');
+      var list = [].filter.call(f, function (el) { return el.offsetParent !== null; });
+      if (!list.length) return;
+      var first = list[0], last = list[list.length - 1];
+      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+      else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+    });
+  }
+
+  // The two "Save my place" buttons above the form open the modal rather than
+  // firing the page down to the bottom. The form is still there for anyone who
+  // simply scrolls.
+  document.querySelectorAll('a[href="#register"]').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      if (!modal || !bottomCard) return;
+      e.preventDefault();
+      openModal();
+    });
+  });
+
   // Close line + auto-close. Closes at the end of closeDate, Melbourne time.
   var closeAt = new Date(OFFER.closeDate + 'T23:59:59+11:00');
   try {
     var fmt = new Intl.DateTimeFormat('en-AU', { weekday: 'long', day: 'numeric', month: 'long', timeZone: 'Australia/Melbourne' });
     $('close-line').textContent = 'Pre-registration closes ' + fmt.format(closeAt);
   } catch (e) {}
-  if (Date.now() > closeAt.getTime()) {
-    $('form-wrap').style.display = 'none';
-    $('closed').style.display = 'block';
+  var isClosed = Date.now() > closeAt.getTime();
+  if (isClosed) {
+    document.querySelectorAll('.js-wrap').forEach(function (el) { el.style.display = 'none'; });
+    document.querySelectorAll('.js-closed').forEach(function (el) { el.style.display = 'block'; });
     document.querySelectorAll('.nav-cta, .btn[data-cta="hero-scroll"]').forEach(function (el) { el.style.display = 'none'; });
   }
 
-  // App Store link: point at the offer's Custom Product Page when one exists.
-  var store = $('store');
-  if (OFFER.cppId && store) store.href = store.href + '?ppid=' + encodeURIComponent(OFFER.cppId);
-
-  // Which ad sent them. Stored per field so each ad can be read on its own, plus the
-  // joined form as a fallback for links that carry something odd.
+  // Which ad sent them.
   var q = new URLSearchParams(location.search);
   var utmSource = q.get('utm_source');
   var utmCampaign = q.get('utm_campaign');
   var utmContent = q.get('utm_content');
   var source = [utmSource, utmCampaign, utmContent].filter(Boolean).join('/') || null;
 
-  var form = $('reg');
-  if (form) form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    var err = $('err'); err.style.display = 'none';
-    var email = $('email').value.trim();
-    if (form.website.value) return; // honeypot
-    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) return fail('Check the email address.');
-    if (!$('au').checked) return fail('The guarantee is open to Australian residents aged 18 or over.');
-    if (!$('terms').checked) return fail('Please read the terms and tick the box.');
+  function wireCard(card) {
+    if (!card) return;
+    var store = card.querySelector('.js-store');
+    if (OFFER.cppId && store) store.href = store.href + '?ppid=' + encodeURIComponent(OFFER.cppId);
 
-    var btn = $('submit'); btn.disabled = true; btn.textContent = 'Saving…';
-    fetch(OFFER.supabaseUrl + '/rest/v1/rpc/register_offer', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'apikey': OFFER.supabaseKey, 'Authorization': 'Bearer ' + OFFER.supabaseKey },
-      body: JSON.stringify({ p_email: email, p_au_resident: true, p_terms_version: OFFER.termsVersion,
-                             p_offer_id: OFFER.id, p_source: source,
-                             p_utm_source: utmSource, p_utm_campaign: utmCampaign, p_utm_content: utmContent })
-    }).then(function (r) {
-      if (!r.ok) throw new Error('http ' + r.status);
-      return r.json();
-    }).then(function (code) {
-      $('done-email').textContent = email;
-      $('form-wrap').style.display = 'none';
-      $('done').style.display = 'block';
-      try { if (window.fbq) window.fbq('track', 'Lead'); } catch (e) {}
-      send('OfferRegistered', { offer: OFFER.id });
-      send('AppStoreClick', { placement: 'auto' });
-      try { $('done').scrollIntoView({ block: 'start' }); } catch (e) {}
-      // Straight to the App Store at peak interest. The success state stays on the page
-      // for when they come back to Safari, code and steps included.
-      setTimeout(function () { location.href = $('store').href; }, 400);
-    }).catch(function () {
-      btn.disabled = false; btn.textContent = 'Save my place';
-      fail('That didn\'t save. Try again in a moment, or email support@calcut.com.au with "guarantee" in the subject and we\'ll register you by hand.');
-    });
-
-    function fail(msg) { err.textContent = msg; err.style.display = 'block'; }
-  });
-
-  // "Save my place" centres the card rather than parking it under the sticky nav.
-  document.querySelectorAll('a[href="#register"]').forEach(function (a) {
-    a.addEventListener('click', function (e) {
-      var card = document.querySelector('.reg-card');
-      if (!card || !card.scrollIntoView) return;
+    var form = card.querySelector('.js-form');
+    if (!form) return;
+    form.addEventListener('submit', function (e) {
       e.preventDefault();
-      try { card.scrollIntoView({ behavior: 'smooth', block: 'center' }); }
-      catch (err) { card.scrollIntoView(); }
+      var err = card.querySelector('.js-err');
+      err.style.display = 'none';
+      var emailEl = card.querySelector('.js-email');
+      var email = emailEl.value.trim();
+      if (form.website && form.website.value) return; // honeypot
+      if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) return fail('Check the email address.');
+      if (!card.querySelector('.js-au').checked) return fail('The guarantee is open to Australian residents aged 18 or over.');
+      if (!card.querySelector('.js-terms').checked) return fail('Please read the terms and tick the box.');
+
+      var btn = card.querySelector('.js-submit');
+      btn.disabled = true; btn.textContent = 'Saving…';
+      fetch(OFFER.supabaseUrl + '/rest/v1/rpc/register_offer', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'apikey': OFFER.supabaseKey, 'Authorization': 'Bearer ' + OFFER.supabaseKey },
+        body: JSON.stringify({ p_email: email, p_au_resident: true, p_terms_version: OFFER.termsVersion,
+                               p_offer_id: OFFER.id, p_source: source,
+                               p_utm_source: utmSource, p_utm_campaign: utmCampaign, p_utm_content: utmContent })
+      }).then(function (r) {
+        if (!r.ok) throw new Error('http ' + r.status);
+        return r.json();
+      }).then(function () {
+        // Show the result in BOTH copies, so closing the modal does not look like
+        // it never happened.
+        document.querySelectorAll('.js-done-email').forEach(function (el) { el.textContent = email; });
+        document.querySelectorAll('.js-wrap').forEach(function (el) { el.style.display = 'none'; });
+        document.querySelectorAll('.js-done').forEach(function (el) { el.style.display = 'block'; });
+        try { if (window.fbq) window.fbq('track', 'Lead'); } catch (e) {}
+        send('OfferRegistered', { offer: OFFER.id });
+        send('AppStoreClick', { placement: 'auto' });
+        // Straight to the App Store at peak interest. The success state stays behind
+        // for when they come back to Safari.
+        setTimeout(function () { location.href = bottomCard.querySelector('.js-store').href; }, 400);
+      }).catch(function () {
+        btn.disabled = false; btn.textContent = 'Save my place';
+        fail('That didn\'t save. Try again in a moment, or email support@calcut.com.au with "guarantee" in the subject and we\'ll register you by hand.');
+      });
+
+      function fail(msg) { err.textContent = msg; err.style.display = 'block'; }
     });
-  });
+  }
+  wireCard(bottomCard);
+  wireCard(modalCard);
 
   // App Store clicks, same event and hold as index.html.
   document.addEventListener('click', function (e) {
