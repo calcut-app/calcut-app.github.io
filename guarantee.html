@@ -366,7 +366,7 @@ fbq('track', 'PageView');
   var OFFER = {
     id: 'lose6-2026',
     closeDate: '2026-10-26',        // last day of pre-registration, Melbourne time (AEDT)
-    termsVersion: '1.0',
+    termsVersion: '1.5',
     cppId: '',                      // App Store Custom Product Page id for the offer, once created
     supabaseUrl: 'https://bodewohasqeehdwkpqen.supabase.co',
     supabaseKey: 'sb_publishable_6ks_SHUl2xiKMZpIAQa23w_yjQwYuEA'   // publishable, safe in a page
@@ -393,9 +393,13 @@ fbq('track', 'PageView');
   var store = $('store');
   if (OFFER.cppId && store) store.href = store.href + '?ppid=' + encodeURIComponent(OFFER.cppId);
 
-  // Source, for the row: utm_source / utm_campaign if the ad carries them.
+  // Which ad sent them. Stored per field so each ad can be read on its own, plus the
+  // joined form as a fallback for links that carry something odd.
   var q = new URLSearchParams(location.search);
-  var source = [q.get('utm_source'), q.get('utm_campaign'), q.get('utm_content')].filter(Boolean).join('/') || null;
+  var utmSource = q.get('utm_source');
+  var utmCampaign = q.get('utm_campaign');
+  var utmContent = q.get('utm_content');
+  var source = [utmSource, utmCampaign, utmContent].filter(Boolean).join('/') || null;
 
   var form = $('reg');
   if (form) form.addEventListener('submit', function (e) {
@@ -411,7 +415,9 @@ fbq('track', 'PageView');
     fetch(OFFER.supabaseUrl + '/rest/v1/rpc/register_offer', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'apikey': OFFER.supabaseKey, 'Authorization': 'Bearer ' + OFFER.supabaseKey },
-      body: JSON.stringify({ p_email: email, p_au_resident: true, p_terms_version: OFFER.termsVersion, p_offer_id: OFFER.id, p_source: source })
+      body: JSON.stringify({ p_email: email, p_au_resident: true, p_terms_version: OFFER.termsVersion,
+                             p_offer_id: OFFER.id, p_source: source,
+                             p_utm_source: utmSource, p_utm_campaign: utmCampaign, p_utm_content: utmContent })
     }).then(function (r) {
       if (!r.ok) throw new Error('http ' + r.status);
       return r.json();
