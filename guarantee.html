@@ -65,8 +65,21 @@
   @media (max-width: 700px) { .lead { font-size: 17px; } }
 
   /* HERO */
-  .hero { padding: 72px 0 56px; text-align: center; }
-  @media (max-width: 700px) { .hero { padding: 48px 0 40px; } }
+  /* The hero fills whatever is left under the nav, on any phone. 100svh is the
+     SMALL viewport height — the one that assumes Safari's toolbars are showing —
+     so the fold never lands under a toolbar. --nav-h is measured at runtime; the
+     66px fallback is close enough if the script never runs. min-height, not
+     height, so a small screen lets the content grow rather than clipping it. */
+  .hero { min-height: calc(100vh - var(--nav-h, 66px)); min-height: calc(100svh - var(--nav-h, 66px)); display: flex; flex-direction: column; justify-content: center; padding: 40px 0; text-align: center; }
+  @media (max-width: 700px) { .hero { padding: 32px 0; } }
+  /* Short screens: trim the hero so its content still fits above the fold. */
+  @media (max-height: 700px) {
+    .hero { padding: 20px 0; }
+    .pill { margin-bottom: 16px; }
+    h1.hero-title { font-size: clamp(30px, 5.6vw, 48px); margin-bottom: 14px; }
+    .hero-sub { font-size: 16px; margin-bottom: 22px; }
+    .hero-meta { margin-top: 14px; }
+  }
   .pill { display: inline-flex; align-items: center; gap: 8px; font-family: var(--display); font-weight: 700; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--orange); background: var(--orange-pale); border: 1px solid var(--orange-border); padding: 8px 14px; border-radius: 100px; margin-bottom: 26px; }
   .pill::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--orange); animation: pulse 2s ease-in-out infinite; }
   @keyframes pulse { 0%,100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.5; transform: scale(0.8); } }
@@ -376,6 +389,15 @@ fbq('track', 'PageView');
     try { if (window.fbq) window.fbq('trackCustom', name, params || {}); } catch (e) {}
   }
   function $(id) { return document.getElementById(id); }
+
+  // Measure the sticky nav so the hero can fill exactly the rest of the screen.
+  function setNavHeight() {
+    var nav = document.querySelector('.nav');
+    if (nav) document.documentElement.style.setProperty('--nav-h', nav.offsetHeight + 'px');
+  }
+  setNavHeight();
+  window.addEventListener('resize', setNavHeight);
+  window.addEventListener('orientationchange', setNavHeight);
 
   // Close line + auto-close. Closes at the end of closeDate, Melbourne time.
   var closeAt = new Date(OFFER.closeDate + 'T23:59:59+11:00');
