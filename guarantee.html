@@ -114,16 +114,7 @@
   .maths-row:last-child { border-bottom: 0; }
   .maths-row b { font-family: var(--display); font-weight: 800; font-size: 20px; letter-spacing: -0.01em; }
   .maths-row.total b { color: var(--orange); font-size: 26px; }
-  .maths-note { font-size: 13px; color: var(--grey); margin-top: 14px; line-height: 1.5; }
   .rules { display: grid; gap: 14px; margin-top: 24px; }
-  /* The one image on the page. Proof of the mechanism, not decoration.
-     Cropped to the banner and the calorie card only: the steps card is left out
-     deliberately because its 13,800 against a 10,000 goal is far above what the
-     app actually sets most people (median goal 8,000, only 40% at 10,000+), so
-     it read as a warning rather than as proof. It carries no caption of its own
-     — the note below the card does that job in one clause. */
-  .shot { margin-top: 22px; text-align: center; }
-  .shot img { width: 100%; height: auto; max-width: 268px; margin: 0 auto; border-radius: 16px; border: 1px solid rgba(0,0,0,0.08); box-shadow: 0 14px 36px -18px rgba(0,0,0,0.22); }
   .rule { display: flex; gap: 16px; background: var(--card); border-radius: 16px; padding: 18px 20px; border: 1px solid rgba(0,0,0,0.05); }
   .rule-ic { flex: 0 0 40px; height: 40px; border-radius: 10px; background: var(--orange-pale); display: grid; place-items: center; color: var(--orange); font-family: var(--display); font-weight: 800; font-size: 15px; }
   .rule b { font-family: var(--display); font-weight: 800; font-size: 17px; display: block; margin-bottom: 3px; }
@@ -306,10 +297,6 @@ fbq('track', 'PageView');
       <div class="maths-row"><span>Every day</span><b>750 cal under</b></div>
       <div class="maths-row"><span>Every week</span><b>0.75 kg</b></div>
       <div class="maths-row total"><span>After 60 days</span><b>≈ 6 kg</b></div>
-      <figure class="shot">
-        <img src="assets/green-day.png" alt="The CalCut home screen: a banner reading Goal hit, locked in your deficit, above a card showing goal 1 of 2 complete with 525 calories left." width="620" height="687" loading="lazy">
-      </figure>
-      <p class="maths-note">That's one rule done, recorded by the app. Bodies aren't calculators and the scale moves around day to day, which is why the guarantee is on the result, not on the theory. Under 6 kg after 50 green days, and we pay.</p>
     </div>
   </div>
 </section>
