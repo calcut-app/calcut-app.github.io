@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The CalCut Monthly — Terms — CalCut</title>
+<meta name="description" content="Hit your two daily rules more than any other member this month and CalCut pays you A$1,000.">
+<meta name="theme-color" content="#FF5C00">
+<meta name="robots" content="noindex, follow">
+
+<link rel="icon" type="image/png" href="assets/icon.png">
+<link rel="apple-touch-icon" href="assets/icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --bg: #F5F5F5;
+    --card: #FFFFFF;
+    --orange: #FF5C00;
+    --orange-pale: #FFF5F0;
+    --orange-border: #FFD4BD;
+    --black: #1A1A1A;
+    --grey: #888888;
+    --display: 'Plus Jakarta Sans', system-ui, sans-serif;
+    --body: 'DM Sans', system-ui, sans-serif;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--body); background: var(--bg); color: var(--black); line-height: 1.5; }
+  a { color: inherit; text-decoration: none; }
+  img { display: block; max-width: 100%; }
+
+  /* NAV */
+  .nav { position: sticky; top: 0; z-index: 100; background: rgba(245,245,245,0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid rgba(0,0,0,0.04); }
+  .nav-inner { max-width: 1200px; margin: 0 auto; padding: 18px 24px; display: flex; align-items: center; justify-content: space-between; }
+  .nav-brand { display: flex; align-items: center; gap: 10px; }
+  .nav-brand-icon { height: 30px; width: 30px; border-radius: 7px; }
+  .nav-brand-text { font-family: var(--display); font-weight: 800; font-size: 19px; letter-spacing: -0.02em; color: var(--black); }
+  .nav-brand-text .accent { color: var(--orange); }
+  .nav-links { display: flex; gap: 28px; align-items: center; font-family: var(--display); font-weight: 600; font-size: 15px; }
+  .nav-links a { color: var(--grey); transition: color 0.2s ease; }
+  .nav-links a:hover, .nav-links a.active { color: var(--black); }
+  @media (max-width: 600px) { .nav-links { gap: 18px; font-size: 14px; } .nav-inner { padding: 16px 20px; } .nav-brand-icon { height: 26px; width: 26px; } .nav-brand-text { font-size: 17px; } }
+
+  /* HEADER */
+  .page-header { padding: 80px 24px 40px; text-align: center; max-width: 720px; margin: 0 auto; }
+  @media (max-width: 700px) { .page-header { padding: 56px 24px 32px; } }
+  .page-eyebrow { display: inline-flex; align-items: center; gap: 8px; font-family: var(--display); font-weight: 700; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--orange); background: var(--orange-pale); border: 1px solid var(--orange-border); padding: 8px 14px; border-radius: 100px; margin-bottom: 28px; }
+  h1.page-title { font-family: var(--display); font-weight: 800; font-size: clamp(36px, 5.5vw, 60px); line-height: 1.05; letter-spacing: -0.03em; margin-bottom: 20px; }
+  .page-sub { font-size: 19px; color: var(--grey); line-height: 1.55; max-width: 540px; margin: 0 auto; }
+  .page-version { font-size: 14px; color: var(--grey); margin-top: 20px; }
+
+  /* CARD */
+  .policy-wrap { max-width: 800px; margin: 0 auto 80px; padding: 0 24px; }
+  .policy-card { background: var(--card); border: 1px solid rgba(0,0,0,0.04); border-radius: 24px; padding: 48px; box-shadow: 0 8px 24px -16px rgba(0,0,0,0.06); font-family: var(--body); color: #333; line-height: 1.65; font-size: 16px; }
+  @media (max-width: 700px) { .policy-card { padding: 30px 22px; border-radius: 16px; } }
+
+  /* KEY FACTS */
+  .facts { background: var(--orange-pale); border: 1px solid var(--orange-border); border-radius: 16px; padding: 26px 28px; margin-bottom: 40px; }
+  @media (max-width: 700px) { .facts { padding: 22px 20px; } }
+  .facts h2 { font-family: var(--display); font-weight: 800; font-size: 17px; letter-spacing: -0.01em; color: var(--black); margin: 0 0 4px; }
+  .facts .facts-note { font-size: 13px; color: var(--grey); margin-bottom: 18px; }
+  .facts dl { display: grid; grid-template-columns: minmax(150px, auto) 1fr; gap: 10px 22px; font-size: 15px; }
+  @media (max-width: 560px) { .facts dl { grid-template-columns: 1fr; gap: 2px; } .facts dd { margin-bottom: 12px; } }
+  .facts dt { font-family: var(--display); font-weight: 700; color: var(--black); }
+  .facts dd { color: #333; }
+
+  /* TOC */
+  .toc { border: 1px solid rgba(0,0,0,0.07); border-radius: 16px; padding: 24px 28px; margin-bottom: 44px; }
+  @media (max-width: 700px) { .toc { padding: 20px; } }
+  .toc h2 { font-family: var(--display); font-weight: 800; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--grey); margin: 0 0 14px; }
+  .toc ol { list-style: none; columns: 2; column-gap: 28px; font-size: 14.5px; }
+  @media (max-width: 560px) { .toc ol { columns: 1; } }
+  .toc li { margin-bottom: 7px; break-inside: avoid; }
+  .toc a { color: #333; }
+  .toc a:hover { color: var(--orange); }
+
+  /* CONTENT */
+  .policy-card h2 { font-family: var(--display); font-weight: 800; color: var(--black); letter-spacing: -0.02em; line-height: 1.25; font-size: 21px; margin: 44px 0 18px; padding-top: 26px; border-top: 1px solid rgba(0,0,0,0.07); scroll-margin-top: 90px; }
+  .policy-card h2:first-of-type { border-top: none; padding-top: 0; margin-top: 0; }
+  .policy-card h3 { font-family: var(--display); font-weight: 800; color: var(--black); font-size: 16.5px; margin: 30px 0 12px; }
+  .policy-card p { margin-bottom: 14px; }
+  .policy-card a { color: var(--orange); font-weight: 500; word-break: break-word; }
+  .policy-card a:hover { text-decoration: underline; }
+  .policy-card strong { font-weight: 700; color: var(--black); }
+
+  .clause { display: grid; grid-template-columns: 54px 1fr; gap: 10px; }
+  .cl-no { font-family: var(--display); font-weight: 700; color: var(--grey); font-size: 14.5px; padding-top: 1px; }
+  @media (max-width: 560px) { .clause { grid-template-columns: 44px 1fr; gap: 8px; } }
+
+  .table-scroll { overflow-x: auto; margin: 20px 0 26px; -webkit-overflow-scrolling: touch; }
+  table { border-collapse: collapse; width: 100%; min-width: 420px; font-size: 15px; }
+  th, td { text-align: left; padding: 11px 14px; border-bottom: 1px solid rgba(0,0,0,0.08); }
+  th { font-family: var(--display); font-weight: 700; color: var(--black); font-size: 13px; letter-spacing: 0.04em; text-transform: uppercase; }
+
+  .end-mark { margin-top: 44px; padding-top: 26px; border-top: 1px solid rgba(0,0,0,0.07); font-family: var(--display); font-weight: 700; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--grey); }
+
+  /* FOOTER */
+  .footer { background: var(--bg); padding: 48px 24px 40px; border-top: 1px solid rgba(0,0,0,0.04); }
+  .footer-inner { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; }
+  .footer-left { display: flex; align-items: center; gap: 14px; }
+  .footer-icon { width: 32px; height: 32px; }
+  .footer-text { font-size: 14px; color: var(--grey); }
+  .footer-links { display: flex; gap: 24px; font-family: var(--display); font-weight: 600; font-size: 14px; }
+  .footer-links a { color: var(--grey); transition: color 0.2s ease; }
+  .footer-links a:hover { color: var(--black); }
+  @media (max-width: 600px) { .footer-inner { flex-direction: column; text-align: center; } .footer-left { flex-direction: column; gap: 10px; } }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" aria-label="CalCut home" class="nav-brand"><img src="assets/icon.png" alt="" class="nav-brand-icon"><span class="nav-brand-text">Cal<span class="accent">Cut</span></span></a>
+    <div class="nav-links">
+      <a href="support.html">Support</a>
+      <a href="privacy.html">Privacy</a>
+    </div>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="page-eyebrow">Monthly terms</div>
+  <h1 class="page-title">The CalCut Monthly — Terms</h1>
+  <p class="page-sub">Hit your two daily rules more than any other member this month and CalCut pays you A$1,000.</p>
+  <p class="page-version">Version 1.0 · Last updated 1 October 2026 · Applies to every Competition Month from November 2026</p>
+</header>
+
+<div class="policy-wrap">
+  <div class="policy-card">
+<section class="facts">
+  <h2>In brief</h2>
+  <p class="facts-note">The full Terms below are what count.</p>
+  <dl>
+    <dt>The prize</dt>
+    <dd>One prize of <strong>AUD $1,000</strong> each calendar month, to the eligible entrant with the most points. An exact tie splits it equally. No draw, no luck.</dd>
+
+    <dt>How points work</dt>
+    <dd>Points are for hitting CalCut's two daily rules — your calorie target and your step goal — never for weight lost.</dd>
+
+    <dt>Who can enter</dt>
+    <dd>Open to CalCut subscribers aged 18 or over who live in Australia, New Zealand, the United Kingdom, Canada (except Quebec) or the United States (except the states listed in clause 3.1), and who have opted in inside the app.</dd>
+
+    <dt>What it costs</dt>
+    <dd>It costs nothing beyond your normal CalCut subscription. Promotional access CalCut has given you for free does not count as a subscription.</dd>
+
+    <dt>Each month closes</dt>
+    <dd>At 12:00 UTC on the 2nd of the following month. Open the app before then so your steps are counted.</dd>
+
+    <dt>Who runs it</dt>
+    <dd>Apple is not a sponsor. Instagram is not a sponsor. CalCut Pty Ltd runs the Monthly.</dd>
+  </dl>
+</section>
+
+<nav class="toc" aria-label="Contents">
+  <h2>Contents</h2>
+  <ol>
+    <li><a href="#s1-the-promoter">1. THE PROMOTER</a></li>
+    <li><a href="#s2-what-this-is">2. WHAT THIS IS</a></li>
+    <li><a href="#s3-eligibility">3. ELIGIBILITY</a></li>
+    <li><a href="#s4-the-competition-month-and-the-close">4. THE COMPETITION MONTH AND THE CLOSE</a></li>
+    <li><a href="#s5-how-to-enter-and-how-to-leave">5. HOW TO ENTER AND HOW TO LEAVE</a></li>
+    <li><a href="#s6-subscription-requirement">6. SUBSCRIPTION REQUIREMENT</a></li>
+    <li><a href="#s7-your-targets">7. YOUR TARGETS</a></li>
+    <li><a href="#s8-how-points-are-scored">8. HOW POINTS ARE SCORED</a></li>
+    <li><a href="#s9-the-winner-and-the-prize">9. THE WINNER AND THE PRIZE</a></li>
+    <li><a href="#s10-verification-review-and-disqualification">10. VERIFICATION, REVIEW AND DISQUALIFICATION</a></li>
+    <li><a href="#s11-display-names-standings-and-the-reveal">11. DISPLAY NAMES, STANDINGS AND THE REVEAL</a></li>
+    <li><a href="#s12-health-and-safety">12. HEALTH AND SAFETY</a></li>
+    <li><a href="#s13-liability">13. LIABILITY</a></li>
+    <li><a href="#s14-privacy-and-use-of-your-information">14. PRIVACY AND USE OF YOUR INFORMATION</a></li>
+    <li><a href="#s15-changes-and-closure">15. CHANGES AND CLOSURE</a></li>
+    <li><a href="#s16-general">16. GENERAL</a></li>
+  </ol>
+</nav>
+
+<h2 id="s1-the-promoter">1. THE PROMOTER</h2>
+<p class="clause"><span class="cl-no">1.1</span><span>This competition, <strong>The CalCut Monthly</strong> (<strong>"the Monthly"</strong>), is conducted by <strong>CalCut Pty Ltd</strong> (ACN 697 215 660, ABN 57 697 215 660) of Tarneit, Victoria 3029, Australia (<strong>"CalCut"</strong>, <strong>"we"</strong>, <strong>"us"</strong>). CalCut is the sole promoter and sponsor of the Monthly.</span></p>
+<p class="clause"><span class="cl-no">1.2</span><span>Contact for all Monthly matters: <a href="mailto:support@calcut.com.au">support@calcut.com.au</a>.</span></p>
+<p class="clause"><span class="cl-no">1.3</span><span>By entering, you accept these Terms in full. If you don't agree with them, don't enter. You can use every other part of the CalCut app without entering.</span></p>
+<p class="clause"><span class="cl-no">1.4</span><span><strong>Apple Inc. is not a sponsor of the Monthly and is not involved in it in any manner.</strong> These Terms are presented inside the CalCut app for the duration of the Monthly and are also available at <a href="https://calcut.com.au/monthly-terms.html">https://calcut.com.au/monthly-terms.html</a>.</span></p>
+<p class="clause"><span class="cl-no">1.5</span><span>The Monthly is in no way sponsored, endorsed or administered by, or associated with, Instagram or Meta Platforms, Inc. Entrants release Instagram and Meta Platforms, Inc. in full.</span></p>
+<h2 id="s2-what-this-is">2. WHAT THIS IS</h2>
+<p class="clause"><span class="cl-no">2.1</span><span>The Monthly is a <strong>competition of skill and effort</strong>. Each calendar month, the entrant who scores the most points for hitting CalCut's two daily rules wins. The winner is determined entirely by the points recorded in the app under section 8. <strong>Nothing is drawn, no winner is selected at random, and there is no element of chance in deciding who wins.</strong> The Monthly is not a lottery, sweepstake, raffle or game of chance. There are no odds: the number of entrants in a month does not affect how the winner is decided.</span></p>
+<p class="clause"><span class="cl-no">2.2</span><span>If two or more entrants finish a month on exactly the same number of points, the prize for that month is divided equally between them. No tie-break, draw or judging is used.</span></p>
+<p class="clause"><span class="cl-no">2.3</span><span><strong>One prize of AUD $1,000 is paid each month, to one member</strong> (or shared equally between tied winners under clause 2.2). Entering does not entitle any other entrant to any payment.</span></p>
+<p class="clause"><span class="cl-no">2.4</span><span><strong>Points are awarded for hitting your daily calorie and step rules, not for losing weight.</strong> Your weight is never scored, compared or published in the Monthly. "Pays you to lose weight" describes what following the two rules does; the competition itself rewards hitting the rules.</span></p>
+<p class="clause"><span class="cl-no">2.5</span><span>There is no entry fee, no stake and no deposit. The only cost of taking part is the ordinary retail price of a CalCut subscription (section 6), which is the same whether or not you enter. No part of your subscription price is a payment for the opportunity to compete or to win.</span></p>
+<p class="clause"><span class="cl-no">2.6</span><span>Payment of the prize is made by CalCut directly to the winner. No payment is made through the App Store or through the app.</span></p>
+<h2 id="s3-eligibility">3. ELIGIBILITY</h2>
+<p class="clause"><span class="cl-no">3.1</span><span>You may enter if, at the time you enter and at the close of the month you are competing in, you:</span></p>
+<p class="clause"><span class="cl-no">(a)</span><span>are aged 18 years or over;</span></p>
+<p class="clause"><span class="cl-no">(b)</span><span>are a resident of one of the following, <strong>and</strong> your App Store account is set to that country's storefront:</span></p>
+<p class="clause"><span class="cl-no">(i)</span><span>Australia;</span></p>
+<p class="clause"><span class="cl-no">(ii)</span><span>New Zealand;</span></p>
+<p class="clause"><span class="cl-no">(iii)</span><span>the United Kingdom, including Northern Ireland;</span></p>
+<p class="clause"><span class="cl-no">(iv)</span><span>Canada, <strong>excluding the province of Quebec</strong>; or</span></p>
+<p class="clause"><span class="cl-no">(v)</span><span>the United States of America and the District of Columbia, <strong>excluding the states of Arizona, Colorado, Maryland, Nebraska, New Jersey, North Dakota, Tennessee and Vermont</strong>.</span></p>
+<p>Void where prohibited or restricted by law. Residents of any excluded state, province or territory may use the CalCut app but may not enter the Monthly or win any prize;</p>
+<p class="clause"><span class="cl-no">(c)</span><span>hold an active CalCut subscription that satisfies section 6;</span></p>
+<p class="clause"><span class="cl-no">(d)</span><span>have entered under section 5 and have not left; and</span></p>
+<p class="clause"><span class="cl-no">(e)</span><span>meet the requirements in clause 3.3.</span></p>
+<p class="clause"><span class="cl-no">3.2</span><span>The following are not eligible to enter or win: employees, contractors and directors of CalCut, and their immediate families; any person engaged by CalCut as a paid creator or ambassador; and any account CalCut has registered as a test, demonstration or complimentary account.</span></p>
+<p class="clause"><span class="cl-no">3.3</span><span><strong>You must not enter if you are pregnant, breastfeeding, currently living with an eating disorder, or have a history of an eating disorder.</strong> This exclusion applies to the Monthly only. You remain welcome to use the CalCut app.</span></p>
+<p class="clause"><span class="cl-no">3.4</span><span>If you are under medical supervision, receiving treatment for any condition, or taking medication that affects weight, appetite or physical activity, consult your doctor before entering. CalCut cannot assess whether the Monthly is appropriate for you.</span></p>
+<p class="clause"><span class="cl-no">3.5</span><span>One entry per person. Entering through more than one account, or through another person's account, disqualifies every associated entry. A previous winner may enter and win again.</span></p>
+<p class="clause"><span class="cl-no">3.6</span><span>If CalCut later learns that an entrant did not meet clause 3.1 or 3.2 at the time of entry or at the close, that entrant's entry for the month is void and any prize is withheld or, where it has been paid, recoverable.</span></p>
+<h2 id="s4-the-competition-month-and-the-close">4. THE COMPETITION MONTH AND THE CLOSE</h2>
+<p class="clause"><span class="cl-no">4.1</span><span>Each <strong>Competition Month</strong> is a calendar month. Days are counted in the local time set on your device, as the app records them. Your month runs from the first to the last day of the calendar month in your local time.</span></p>
+<p class="clause"><span class="cl-no">4.2</span><span><strong>Scoring closes at 12:00 UTC on the second day of the following month</strong> (<strong>"the Close"</strong>). For example, November 2026 closes at 12:00 UTC on 2 December 2026 — 11:00pm Melbourne time, 7:00am New York time, 12:00 noon London time on 2 December.</span></p>
+<p class="clause"><span class="cl-no">4.3</span><span><strong>Steps reach CalCut only when you open the app.</strong> Your phone counts your steps, and the app reads them when it is opened. To make sure every day of your month is scored, open CalCut after your last day of the month and before the Close. Step data that first reaches CalCut after the Close is not scored for that month, whatever date it relates to.</span></p>
+<p class="clause"><span class="cl-no">4.4</span><span>Food must be logged in the app on or before the Close to be scored.</span></p>
+<p class="clause"><span class="cl-no">4.5</span><span>Standings shown in the app during a month are <strong>provisional</strong>. They change as data arrives and are not final until CalCut has completed the review in section 10 after the Close.</span></p>
+<p class="clause"><span class="cl-no">4.6</span><span>Points are scored from the first day of the Competition Month, or from the day you entered if you entered part-way through a month, whichever is later.</span></p>
+<h2 id="s5-how-to-enter-and-how-to-leave">5. HOW TO ENTER AND HOW TO LEAVE</h2>
+<p class="clause"><span class="cl-no">5.1</span><span>To enter, in the CalCut app, when first invited after joining as a Pro member or at any later time from Settings:</span></p>
+<p class="clause"><span class="cl-no">(a)</span><span>choose a <strong>display name</strong> (section 11);</span></p>
+<p class="clause"><span class="cl-no">(b)</span><span>confirm that you are 18 or over and a resident of an eligible country under clause 3.1(b); and</span></p>
+<p class="clause"><span class="cl-no">(c)</span><span>accept these Terms.</span></p>
+<p class="clause"><span class="cl-no">5.2</span><span>Your entry is complete when you have done all three. You stay entered for every following Competition Month until you leave or become ineligible. You do not need to re-enter each month.</span></p>
+<p class="clause"><span class="cl-no">5.3</span><span>The invitation to enter is shown once per account. If you dismiss it, you can enter later from Settings.</span></p>
+<p class="clause"><span class="cl-no">5.4</span><span><strong>Leaving.</strong> You may leave the Monthly at any time from Settings. Leaving removes you from the current month's standings and from every public display under section 11, and no points are scored for you for that month. You may re-enter later; re-entry counts from the day you re-enter under clause 4.6. Leaving does not affect your subscription or any other part of the app.</span></p>
+<p class="clause"><span class="cl-no">5.5</span><span>CalCut records the date and time of your entry, the version of these Terms you accepted, your display name, the country you declared, your App Store storefront country, and the targets locked for you under section 7.</span></p>
+<h2 id="s6-subscription-requirement">6. SUBSCRIPTION REQUIREMENT</h2>
+<p class="clause"><span class="cl-no">6.1</span><span>To enter and to win you must hold an <strong>active CalCut subscription</strong> purchased through the App Store — monthly or annual, including the annual plan's free-trial period — charged at its ordinary retail price as shown in the App Store. No premium, surcharge or additional charge of any kind applies because of the Monthly, and nothing in these Terms changes the price, terms or cancellation of any subscription.</span></p>
+<p class="clause"><span class="cl-no">6.2</span><span><strong>Promotional access is not a subscription for the purposes of the Monthly.</strong> Access to the app that CalCut grants without payment — for example a free pass, a complimentary account or review access — does not satisfy clause 6.1, even though the app is unlocked.</span></p>
+<p class="clause"><span class="cl-no">6.3</span><span>You must hold a subscription under clause 6.1 <strong>at the Close</strong> of the month you are competing in, and any renewal payment due before the Close must have been successfully charged. <strong>A subscription with an unresolved billing failure at the Close does not qualify</strong>, even if the app remains unlocked while the payment is retried.</span></p>
+<p class="clause"><span class="cl-no">6.4</span><span>If your subscription lapses, or you are refunded, before the Close, you are not eligible to win that month. You remain entered and become eligible again in the first full month for which clause 6.3 is met.</span></p>
+<p class="clause"><span class="cl-no">6.5</span><span>Subscription pricing, billing, refunds and cancellation are governed by the CalCut Terms of Use and by Apple's terms. Entering the Monthly does not alter those terms and does not entitle you to any refund from CalCut or Apple.</span></p>
+<h2 id="s7-your-targets">7. YOUR TARGETS</h2>
+<p class="clause"><span class="cl-no">7.1</span><span>CalCut scores two daily rules: staying at or under your daily calorie target, and meeting or exceeding your daily step goal. For the Monthly, the targets you are scored against are <strong>locked</strong> as described in this section, so that no entrant can change the rules mid-month.</span></p>
+<p class="clause"><span class="cl-no">7.2</span><span><strong>Calorie target.</strong> Your Monthly calorie target is the daily target the app <strong>recommends</strong> for the pace you have chosen, calculated from your profile and your latest logged weight on or before the first day of the month (or the day you entered, under clause 4.6). It is locked for the whole month. A calorie target you have typed in yourself is not used; if your typed target is higher than the recommended one, you are scored against the recommended one.</span></p>
+<p class="clause"><span class="cl-no">7.3</span><span><strong>Step goal — manual.</strong> If you set your own step goal, your Monthly step goal is locked on the first day of the month (or the day you entered) at <strong>the higher of 6,000 steps and the goal you have set</strong>, taken after any adjustment the app itself makes on that day. Lowering your goal during the month does not lower your Monthly step goal.</span></p>
+<p class="clause"><span class="cl-no">7.4</span><span><strong>Step goal — automatic.</strong> If the app sets your step goal for you ("automatic"), you are scored each day against the step goal the app had set for you on that day. The app raises and lowers automatic goals itself and you cannot set them; no minimum applies to them.</span></p>
+<p class="clause"><span class="cl-no">7.5</span><span><strong>Maintain mode.</strong> If your account is set to maintain your weight rather than lose it on any day of a month, the calorie rule is not scored for you on that day. The step rule is scored as normal.</span></p>
+<p class="clause"><span class="cl-no">7.6</span><span>The app may adjust your live targets during the month exactly as it does for every member. Those adjustments do not change the locked targets above, and do not affect your eligibility.</span></p>
+<p class="clause"><span class="cl-no">7.7</span><span>If you believe your locked targets are wrong, contact <a href="mailto:support@calcut.com.au">support@calcut.com.au</a> within 7 days of the first day of the month (or of your entry). Requests made later may be declined.</span></p>
+<h2 id="s8-how-points-are-scored">8. HOW POINTS ARE SCORED</h2>
+<p class="clause"><span class="cl-no">8.1</span><span>A day counts towards the Monthly only as the app records it. Each day, two rules are assessed against your locked targets:</span></p>
+<p class="clause"><span class="cl-no">(a)</span><span><strong>The step rule</strong> is met when the steps the app reads for that day are at or above your Monthly step goal (clause 7.3 or 7.4).</span></p>
+<p class="clause"><span class="cl-no">(b)</span><span><strong>The calorie rule</strong> is met when the calories you logged for that day are <strong>between 60% and 100% of your Monthly calorie target</strong> (both inclusive), from <strong>at least two separate food entries</strong>. A day with nothing logged, a single entry, or a total below 60% of your target does not meet the calorie rule for the Monthly, even if the app shows that day as under your target.</span></p>
+<p class="clause"><span class="cl-no">8.2</span><span>The 60% floor and the two-entry minimum apply to the Monthly only. They exist so that a prize cannot be won by logging a fraction of what was eaten. They do not change how the app itself shows your day.</span></p>
+<p class="clause"><span class="cl-no">8.3</span><span>A <strong>"Green Day"</strong> for the Monthly is a day on which both rules in clause 8.1 are met.</span></p>
+<p class="clause"><span class="cl-no">8.4</span><span><strong>Points per day:</strong></span></p>
+<div class="table-scroll"><table><thead><tr><th>What you did that day</th><th>Points</th></tr></thead><tbody><tr><td>Met the step rule only</td><td>2</td></tr><tr><td>Met the calorie rule only</td><td>2</td></tr><tr><td>Met both — a Green Day</td><td>8</td></tr><tr><td>A Green Day on a Saturday or Sunday (your local time)</td><td>16</td></tr><tr><td>A Green Day on the day immediately after a Green Day</td><td>+1 on top of the above</td></tr></tbody></table></div>
+<p class="clause"><span class="cl-no">8.5</span><span>The +1 in clause 8.4 is a flat bonus for each Green Day that follows a Green Day; it does not grow with the length of the run. No points are awarded for weight lost, for steps beyond your goal, for eating further below your target, or for anything else. Over-walking and under-eating earn nothing.</span></p>
+<p class="clause"><span class="cl-no">8.6</span><span>Your <strong>month score</strong> is the sum of your daily points for the days scored under clause 4.6, as they stand at the Close.</span></p>
+<p class="clause"><span class="cl-no">8.7</span><span><strong>The app's record is the record.</strong> Scores are determined solely from data recorded by the CalCut app. No other evidence of diet or activity is considered. Correspondence is entered into only in relation to a clear technical error, reported to <a href="mailto:support@calcut.com.au">support@calcut.com.au</a> within 7 days of the day in question and in any case before the Close.</span></p>
+<h2 id="s9-the-winner-and-the-prize">9. THE WINNER AND THE PRIZE</h2>
+<p class="clause"><span class="cl-no">9.1</span><span>The <strong>winner</strong> of a Competition Month is the eligible entrant with the highest month score at the Close, after the review in section 10.</span></p>
+<p class="clause"><span class="cl-no">9.2</span><span>Where two or more eligible entrants have exactly the same highest month score, each is a winner and the prize is divided equally between them.</span></p>
+<p class="clause"><span class="cl-no">9.3</span><span>The prize is <strong>AUD $1,000</strong> per Competition Month. It is paid in Australian dollars to an Australian account, or converted to the winner's local currency at the exchange rate on the day of payment where the winner is paid outside Australia. CalCut bears all transfer, conversion and payment-platform fees.</span></p>
+<p class="clause"><span class="cl-no">9.4</span><span>The prize is paid by bank transfer, PayPal or Wise, at the winner's election, within <strong>28 days</strong> of the winner's claim being verified under section 10.</span></p>
+<p class="clause"><span class="cl-no">9.5</span><span><strong>Claiming.</strong> CalCut will notify the winner in the app and by email to the address on their CalCut account within 7 days of the Close. To claim, the winner must reply from that email address within <strong>14 days</strong> of the notification with their preferred payment method, the details needed to pay them, and the declaration CalCut asks for. Payment details are never collected inside the app.</span></p>
+<p class="clause"><span class="cl-no">9.6</span><span><strong>Unclaimed prizes.</strong> Where, despite reasonable efforts, a winner cannot be contacted, does not claim within 14 days, or is found to be ineligible or disqualified, CalCut may award the prize to the next-ranked eligible entrant, who is then notified and may claim under clause 9.5. This clause constitutes the conditions of entry permitting substitution of a winner.</span></p>
+<p class="clause"><span class="cl-no">9.7</span><span>The prize is not transferable, cannot be taken as subscription credit or in any other form, and cannot be sold or exchanged.</span></p>
+<p class="clause"><span class="cl-no">9.8</span><span><strong>Tax.</strong> CalCut does not deduct or withhold tax from the prize. The winner is responsible for any tax liability arising from the prize in their own country. CalCut recommends winners seek independent advice about their own circumstances.</span></p>
+<h2 id="s10-verification-review-and-disqualification">10. VERIFICATION, REVIEW AND DISQUALIFICATION</h2>
+<p class="clause"><span class="cl-no">10.1</span><span><strong>Before any prize is paid, CalCut reviews the records of at least the three highest-scoring entrants</strong> for the month: food entries per day, calorie totals against the entrant's profile, and the pattern of step counts. A review is not an accusation. The review is completed before the winner is announced under section 11.</span></p>
+<p class="clause"><span class="cl-no">10.2</span><span>CalCut may ask a potential winner for reasonable confirmation that their records reflect genuine intake and activity, and may ask them to confirm their age and country of residence. Declining or not completing a reasonable request means the prize cannot be paid.</span></p>
+<p class="clause"><span class="cl-no">10.3</span><span>CalCut may disqualify an entrant from a month, or from the Monthly, at any time, without payment, where it reasonably believes the entrant has:</span></p>
+<p class="clause"><span class="cl-no">(a)</span><span>logged food, weight or step data that does not reflect their genuine intake, weight or activity, including the use of any device, application or method to generate step counts artificially, or logging in a way designed to score a day that did not reflect the day;</span></p>
+<p class="clause"><span class="cl-no">(b)</span><span>attempted to alter, override or circumvent the targets locked under section 7;</span></p>
+<p class="clause"><span class="cl-no">(c)</span><span>entered through multiple accounts, or through another person's account;</span></p>
+<p class="clause"><span class="cl-no">(d)</span><span>entered, or claimed, while ineligible under section 3 or section 6, or misstated their age or country;</span></p>
+<p class="clause"><span class="cl-no">(e)</span><span>chosen a display name that breaches clause 11.4;</span></p>
+<p class="clause"><span class="cl-no">(f)</span><span>breached these Terms or the CalCut Terms of Use; or</span></p>
+<p class="clause"><span class="cl-no">(g)</span><span>engaged in conduct that CalCut reasonably considers fraudulent, abusive or damaging to CalCut or to other entrants.</span></p>
+<p class="clause"><span class="cl-no">10.4</span><span>Where an entry is ended under this section, CalCut will tell the entrant why. Disqualification forfeits all entitlement to any prize for the month in question and, where CalCut reasonably decides, for future months.</span></p>
+<h2 id="s11-display-names-standings-and-the-reveal">11. DISPLAY NAMES, STANDINGS AND THE REVEAL</h2>
+<p class="clause"><span class="cl-no">11.1</span><span><strong>The reveal.</strong> The winner of each month is announced in the CalCut app and on CalCut's Instagram account (@calcut.app), including on a live broadcast, within 7 days of the Close. The announcement is a reveal of the result determined under section 9; nothing is decided during it.</span></p>
+<p class="clause"><span class="cl-no">11.2</span><span><strong>What is published.</strong> By entering, you consent to CalCut displaying, in the app to other entrants and on CalCut's Instagram account and website, your <strong>display name, your rank and your month score</strong> (points and counted days), and — if you win — your display name, your month card and the fact that you won. CalCut does not publish entrants' real names, weights, email addresses, locations or photographs. You can withdraw this consent at any time by leaving the Monthly under clause 5.4, which removes you from every display from that moment; a result already announced is not withdrawn.</span></p>
+<p class="clause"><span class="cl-no">11.3</span><span><strong>Standings in the app.</strong> During a month, entrants can see a standings list showing display names and points. Only entrants see it. If you prefer not to appear, leave the Monthly under clause 5.4; there is no way to compete without appearing.</span></p>
+<p class="clause"><span class="cl-no">11.4</span><span><strong>Display names.</strong> Your display name is chosen by you when you enter and can be changed in Settings. By default it is your first name and the initial of your last name. It must not be offensive, misleading, impersonate another person, contain contact details, or promote any product or service. CalCut may change or remove a display name that breaches this clause, and may ask you to choose another.</span></p>
+<p class="clause"><span class="cl-no">11.5</span><span><strong>Your month card.</strong> Every entrant receives a shareable card at the Close showing their own display name, Green Days and points for the month. Sharing it is entirely your choice.</span></p>
+<p class="clause"><span class="cl-no">11.6</span><span>If you win, CalCut may ask for a short statement or a photograph for use in CalCut's marketing. That is optional, requires your separate written consent, and you are free to say no without affecting your prize.</span></p>
+<h2 id="s12-health-and-safety">12. HEALTH AND SAFETY</h2>
+<p class="clause"><span class="cl-no">12.1</span><span>The Monthly rewards staying at or under a calorie target and meeting a daily step goal. You take part at your own risk. You are solely responsible for deciding whether it is safe and appropriate for you, and for seeking medical advice where appropriate.</span></p>
+<p class="clause"><span class="cl-no">12.2</span><span>CalCut is not a medical provider. Nothing in the Monthly, the app or these Terms is medical advice, diagnosis or treatment.</span></p>
+<p class="clause"><span class="cl-no">12.3</span><span>The app will not set a calorie target below its minimum daily calorie floor, and the Monthly awards nothing for eating below your target: the calorie rule requires at least 60% of it. If your circumstances change such that your calorie target is no longer appropriate, change your pace in the app. Your locked target for the current month does not change (clause 7.6), but your health comes first.</span></p>
+<p class="clause"><span class="cl-no">12.4</span><span><strong>Welfare.</strong> CalCut may remove an entrant from prize contention where their rate of weight loss, their logging or their activity pattern raises a genuine health or safety concern. Where this occurs CalCut will contact the entrant. This clause exists for participant welfare.</span></p>
+<h2 id="s13-liability">13. LIABILITY</h2>
+<p class="clause"><span class="cl-no">13.1</span><span>Individual results vary. Other than the prize described in section 9, CalCut makes no representation, promise or guarantee as to the results any entrant will achieve.</span></p>
+<p class="clause"><span class="cl-no">13.2</span><span>To the maximum extent permitted by law, CalCut excludes all liability for any loss, injury, damage or expense arising from participation in the Monthly or from any prize.</span></p>
+<p class="clause"><span class="cl-no">13.3</span><span>Nothing in these Terms excludes, restricts or modifies any right or remedy under the Australian Consumer Law, or under the consumer protection law of the country in which you live, that cannot lawfully be excluded, restricted or modified.</span></p>
+<p class="clause"><span class="cl-no">13.4</span><span>CalCut is not liable for technical failures, data loss, or any interruption to the app, Apple Health, the App Store or any third-party platform, except that where a fault in the CalCut app itself prevents a day from being scored, CalCut will score that day from the evidence available and in the entrant's favour.</span></p>
+<h2 id="s14-privacy-and-use-of-your-information">14. PRIVACY AND USE OF YOUR INFORMATION</h2>
+<p class="clause"><span class="cl-no">14.1</span><span>Personal information collected in connection with the Monthly is handled in accordance with the CalCut Privacy Policy at <a href="https://calcut.com.au/privacy.html#monthly">https://calcut.com.au/privacy.html</a>, which has a section on the Monthly.</span></p>
+<p class="clause"><span class="cl-no">14.2</span><span>Information collected for the Monthly — your display name, declared country and storefront country, age confirmation, entry date, locked targets, daily rule data and scores, subscription status, and (for a winner) payment details — is used to run the Monthly, to determine and pay the prize, and to prevent fraud.</span></p>
+<p class="clause"><span class="cl-no">14.3</span><span>A winner's payment details are collected by email, used only to pay the prize, and deleted within 90 days of payment unless a dispute is open. CalCut keeps a record of each month's entries, scores, review and payment for three years.</span></p>
+<p class="clause"><span class="cl-no">14.4</span><span>CalCut does not sell or share entrants' information with any third party for that party's own purposes.</span></p>
+<h2 id="s15-changes-and-closure">15. CHANGES AND CLOSURE</h2>
+<p class="clause"><span class="cl-no">15.1</span><span><strong>Each Competition Month is a separate promotion.</strong> CalCut may change these Terms, the points in section 8, the eligible countries or the prize for <strong>future</strong> months. A change is announced in the app and at the address in clause 1.4 before the first day of the first month it applies to. A month that has already started runs to its Close on the Terms in force on its first day.</span></p>
+<p class="clause"><span class="cl-no">15.2</span><span>CalCut may end the Monthly for future months at any time by announcing it in the same way. Any month that has started is completed and its prize paid.</span></p>
+<p class="clause"><span class="cl-no">15.3</span><span>The prize for a month that has started is not reduced or withdrawn for any reason within CalCut's control.</span></p>
+<p class="clause"><span class="cl-no">15.4</span><span>CalCut may suspend or cancel a month only where required to do so by law or by a direction of a regulator, or where circumstances beyond its reasonable control make it impossible to score the month fairly. Where that happens CalCut will announce it in the app and explain why.</span></p>
+<h2 id="s16-general">16. GENERAL</h2>
+<p class="clause"><span class="cl-no">16.1</span><span>The Monthly is conducted for the purpose of promoting CalCut and primarily benefits CalCut.</span></p>
+<p class="clause"><span class="cl-no">16.2</span><span>These Terms are governed by the laws of Victoria, Australia, and entrants submit to the non-exclusive jurisdiction of the courts of that State. If you live outside Australia, you keep the benefit of any mandatory consumer protection law of the country in which you live, and nothing in this clause takes it away.</span></p>
+<p class="clause"><span class="cl-no">16.3</span><span>If any part of these Terms is found to be unenforceable, the rest remains in force.</span></p>
+<p class="clause"><span class="cl-no">16.4</span><span>CalCut's decisions on matters covered by these Terms are made reasonably and in good faith. If you believe a decision is wrong, write to <a href="mailto:support@calcut.com.au">support@calcut.com.au</a> within 14 days and CalCut will review it and reply in writing.</span></p>
+<p class="clause"><span class="cl-no">16.5</span><span>Questions: <a href="mailto:support@calcut.com.au">support@calcut.com.au</a>.</span></p>
+<h3>END OF TERMS</h3>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-left">
+      <img src="assets/icon.png" alt="CalCut" class="footer-icon">
+      <span class="footer-text">© 2026 CalCut Pty Ltd. Built in Melbourne.</span>
+    </div>
+    <div class="footer-links">
+      <a href="support.html">Support</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="mailto:support@calcut.com.au">Contact</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
