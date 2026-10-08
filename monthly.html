@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The CalCut Monthly — Win A$1,000 every month | CalCut</title>
+<meta name="description" content="Lose weight and win A$1,000 every month, just for hitting your daily calorie and step goals. Most points wins. 18+, eligible countries, T&amp;Cs apply.">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="The CalCut Monthly — Win A$1,000 every month">
+<meta property="og:description" content="Hit your calorie and step goals each day to score points. Most points at the end of the month wins A$1,000. 18+, eligible countries, T&amp;Cs apply.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://calcut.com.au/monthly.html">
+<meta property="og:image" content="https://calcut.com.au/assets/icon.png">
+<meta name="theme-color" content="#FF5C00">
+
+<link rel="icon" type="image/png" href="assets/icon.png">
+<link rel="apple-touch-icon" href="assets/icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --bg: #F5F5F5;
+    --card: #FFFFFF;
+    --orange: #FF5C00;
+    --orange-pale: #FFF5F0;
+    --orange-border: #FFD4BD;
+    --green: #4CAF50;
+    --green-pale: #E8F5E9;
+    --black: #1A1A1A;
+    --grey: #888888;
+    --grey-dark: #5C5C5C;
+    --display: 'Plus Jakarta Sans', system-ui, sans-serif;
+    --body: 'DM Sans', system-ui, sans-serif;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--body); background: var(--bg); color: var(--black); line-height: 1.5; overflow-x: hidden; }
+  a { color: inherit; text-decoration: none; }
+  img { display: block; max-width: 100%; height: auto; }
+
+  /* NAV (same as the homepage) */
+  .nav { position: sticky; top: 0; z-index: 100; background: rgba(245,245,245,0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid rgba(0,0,0,0.04); }
+  .nav-inner { max-width: 1200px; margin: 0 auto; padding: 18px 24px; display: flex; align-items: center; justify-content: space-between; }
+  .nav-brand { display: flex; align-items: center; gap: 10px; }
+  .nav-brand-icon { height: 30px; width: 30px; border-radius: 7px; }
+  .nav-brand-text { font-family: var(--display); font-weight: 800; font-size: 19px; letter-spacing: -0.02em; color: var(--black); }
+  .nav-brand-text .accent { color: var(--orange); }
+  .nav-links { display: flex; gap: 28px; align-items: center; font-family: var(--display); font-weight: 600; font-size: 15px; }
+  .nav-links a { color: var(--grey); transition: color 0.2s ease; }
+  .nav-links a:hover { color: var(--black); }
+  @media (max-width: 600px) { .nav-links { gap: 18px; font-size: 14px; } .nav-inner { padding: 16px 20px; } .nav-brand-icon { height: 26px; width: 26px; } .nav-brand-text { font-size: 17px; } }
+
+  /* HERO */
+  .hero { overflow-x: clip; max-width: 1200px; margin: 0 auto; padding: 64px 24px 72px; display: grid; grid-template-columns: 1.15fr 1fr; gap: 56px; align-items: center; }
+  @media (max-width: 900px) { .hero { grid-template-columns: minmax(0, 1fr); gap: 40px; padding: 40px 20px 56px; text-align: center; } }
+  @media (max-width: 400px) { .prize { padding: 28px 22px 24px; } .prize-amount { font-size: 54px; } }
+  .hero-content { max-width: 600px; }
+  @media (max-width: 900px) { .hero-content { margin: 0 auto; } }
+  .hero-eyebrow { display: inline-flex; align-items: center; gap: 8px; font-family: var(--display); font-weight: 700; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--orange); background: var(--orange-pale); border: 1px solid var(--orange-border); padding: 8px 14px; border-radius: 100px; margin-bottom: 24px; }
+  .hero-eyebrow::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--orange); animation: pulse 2s ease-in-out infinite; }
+  @keyframes pulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.5; transform: scale(1.3); } }
+  h1.hero-title { font-family: var(--display); font-weight: 800; font-size: clamp(38px, 6.4vw, 74px); line-height: 1.02; letter-spacing: -0.035em; margin-bottom: 22px; }
+  h1.hero-title .accent-orange { color: var(--orange); }
+  .hero-sub { font-size: 19px; line-height: 1.55; color: var(--grey-dark); margin-bottom: 32px; max-width: 500px; }
+  @media (max-width: 900px) { .hero-sub { margin: 0 auto 28px; font-size: 18px; } }
+  .app-store-badge { display: inline-block; transition: transform 0.2s ease; border-radius: 12px; }
+  .app-store-badge:hover { transform: translateY(-2px); }
+  .app-store-badge img { display: block; height: 56px; width: auto; }
+  .fine { margin-top: 18px; font-size: 13px; color: var(--grey); line-height: 1.5; }
+  .fine a { text-decoration: underline; }
+
+  /* PRIZE CARD */
+  .prize-wrap { position: relative; display: flex; justify-content: center; }
+  .prize-glow { position: absolute; inset: -40px; background: radial-gradient(circle at 50% 45%, rgba(255,92,0,0.25), transparent 62%); filter: blur(40px); pointer-events: none; }
+  .prize { position: relative; width: 100%; max-width: 400px; border-radius: 32px; padding: 34px 32px 30px; color: #fff; text-align: left;
+    background: linear-gradient(160deg, #FF4800 0%, #FF9E00 100%); box-shadow: 0 30px 60px -24px rgba(255,72,0,0.55), 0 10px 30px -12px rgba(0,0,0,0.18); transform: rotate(-2deg); }
+  .prize-month { font-family: var(--display); font-weight: 700; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.92; }
+  .prize-amount { font-family: var(--display); font-weight: 800; font-size: clamp(60px, 15vw, 78px); line-height: 1; letter-spacing: -0.04em; margin: 10px 0 6px; }
+  .prize-line { font-family: var(--display); font-weight: 700; font-size: 20px; }
+  .prize-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
+  .prize-chip { background: rgba(255,255,255,0.22); border: 1px solid rgba(255,255,255,0.45); border-radius: 100px; padding: 7px 13px; font-family: var(--display); font-weight: 700; font-size: 13px; }
+  .prize-close { margin-top: 22px; padding-top: 18px; border-top: 1px solid rgba(255,255,255,0.35); font-size: 14px; line-height: 1.45; }
+  .prize-close strong { font-family: var(--display); font-weight: 800; }
+
+  /* SECTIONS */
+  .band { padding: 88px 24px; }
+  .band.white { background: var(--card); border-top: 1px solid rgba(0,0,0,0.04); border-bottom: 1px solid rgba(0,0,0,0.04); }
+  @media (max-width: 900px) { .band { padding: 64px 20px; } }
+  .inner { max-width: 1100px; margin: 0 auto; }
+  .section-eyebrow { font-family: var(--display); font-weight: 700; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--orange); margin-bottom: 14px; }
+  .section-title { font-family: var(--display); font-weight: 800; font-size: clamp(32px, 4.4vw, 50px); line-height: 1.05; letter-spacing: -0.025em; margin-bottom: 16px; max-width: 720px; }
+  .section-sub { font-size: 18px; color: var(--grey-dark); max-width: 600px; line-height: 1.55; margin-bottom: 44px; }
+  @media (max-width: 900px) { .center-m { text-align: center; } .center-m .section-title, .center-m .section-sub { margin-left: auto; margin-right: auto; } }
+
+  /* POINTS */
+  .points { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  @media (max-width: 900px) { .points { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 520px) { .points { grid-template-columns: 1fr; } }
+  .pt { background: var(--bg); border: 1px solid rgba(0,0,0,0.04); border-radius: 22px; padding: 24px 24px 22px; display: flex; align-items: center; gap: 18px; }
+  .pt-val { flex-shrink: 0; min-width: 76px; height: 64px; border-radius: 18px; background: var(--orange-pale); border: 1px solid var(--orange-border); color: var(--orange); display: flex; align-items: center; justify-content: center; font-family: var(--display); font-weight: 800; font-size: 28px; letter-spacing: -0.02em; padding: 0 10px; }
+  .pt.big .pt-val { background: var(--green-pale); border-color: #C8E6C9; color: #2E7D32; }
+  .pt-txt { text-align: left; }
+  .pt-txt strong { display: block; font-family: var(--display); font-weight: 800; font-size: 18px; line-height: 1.2; }
+  .pt-txt span { display: block; font-size: 15px; color: var(--grey-dark); margin-top: 4px; line-height: 1.4; }
+  .note { text-align: left; margin-top: 22px; font-size: 15px; color: var(--grey-dark); line-height: 1.6; max-width: 760px; }
+  .note strong { color: var(--black); }
+
+  /* STEPS */
+  .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; counter-reset: step; }
+  @media (max-width: 900px) { .steps { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 520px) { .steps { grid-template-columns: 1fr; } }
+  .step { background: var(--card); border: 1px solid rgba(0,0,0,0.04); border-radius: 22px; padding: 26px 24px; text-align: left; }
+  .step-n { width: 36px; height: 36px; border-radius: 50%; background: var(--orange); color: #fff; font-family: var(--display); font-weight: 800; font-size: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
+  .step h3 { font-family: var(--display); font-weight: 800; font-size: 20px; line-height: 1.2; margin-bottom: 8px; }
+  .step p { font-size: 15px; color: var(--grey-dark); line-height: 1.5; }
+
+  /* WHO */
+  .who { text-align: left; background: var(--bg); border-radius: 24px; padding: 30px 30px; font-size: 16px; color: var(--grey-dark); line-height: 1.65; max-width: 860px; }
+  .who strong { color: var(--black); }
+
+  /* FAQ (same as the homepage) */
+  .faq-inner { max-width: 760px; margin: 0 auto; }
+  .faq-title-block { text-align: center; margin-bottom: 44px; }
+  .faq-title-block .section-title { margin: 0 auto 14px; }
+  .faq-title-block .section-sub { margin: 0 auto; }
+  .faq-item { background: var(--card); border: 1px solid rgba(0,0,0,0.04); border-radius: 16px; margin-bottom: 12px; overflow: hidden; }
+  .faq-item[open] { box-shadow: 0 8px 24px -12px rgba(0,0,0,0.08); }
+  .faq-item summary { padding: 20px 24px; font-family: var(--display); font-weight: 700; font-size: 17px; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary::after { content: '+'; font-size: 24px; font-weight: 400; color: var(--grey); flex-shrink: 0; }
+  .faq-item[open] summary::after { content: '−'; color: var(--orange); }
+  .faq-body { padding: 0 24px 22px; font-size: 16px; color: var(--grey-dark); line-height: 1.6; }
+
+  /* DETAILS (the full rules block) */
+  .details { max-width: 860px; margin: 0 auto; background: var(--bg); border-radius: 24px; padding: 32px 32px 28px; font-size: 14.5px; color: var(--grey-dark); line-height: 1.65; }
+  .details h3 { font-family: var(--display); font-weight: 800; font-size: 20px; color: var(--black); margin-bottom: 14px; }
+  .details p { margin-bottom: 12px; }
+  .details p strong { color: var(--black); }
+  .details a { color: var(--orange); font-weight: 600; }
+  @media (max-width: 520px) { .details { padding: 24px 20px; } }
+
+  /* FINAL CTA */
+  .final-cta { padding: 88px 24px; background: var(--black); color: white; text-align: center; position: relative; overflow: hidden; }
+  .final-cta::before { content: ''; position: absolute; top: -200px; left: 50%; transform: translateX(-50%); width: 600px; height: 600px; border-radius: 50%; background: radial-gradient(circle, rgba(255,92,0,0.2), transparent 60%); pointer-events: none; }
+  .final-cta-inner { max-width: 720px; margin: 0 auto; position: relative; z-index: 1; }
+  .final-cta-title { font-family: var(--display); font-weight: 800; font-size: clamp(36px, 5.4vw, 60px); line-height: 1.04; letter-spacing: -0.03em; margin-bottom: 18px; }
+  .final-cta-title .accent-orange { color: var(--orange); }
+  .final-cta-sub { font-size: 18px; color: rgba(255,255,255,0.68); margin: 0 auto 34px; max-width: 480px; line-height: 1.55; }
+
+  /* FOOTER */
+  .footer { background: var(--bg); padding: 44px 24px 36px; border-top: 1px solid rgba(0,0,0,0.04); }
+  .footer-inner { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; }
+  .footer-left { display: flex; align-items: center; gap: 14px; }
+  .footer-icon { width: 32px; height: 32px; }
+  .footer-text { font-size: 14px; color: var(--grey); }
+  .footer-links { display: flex; gap: 24px; font-family: var(--display); font-weight: 600; font-size: 14px; flex-wrap: wrap; justify-content: center; }
+  .footer-links a { color: var(--grey); }
+  .footer-links a:hover { color: var(--black); }
+  .footer-conditions { max-width: 1200px; margin: 24px auto 0; font-size: 12px; color: var(--grey); line-height: 1.55; }
+  @media (max-width: 600px) { .footer-inner { flex-direction: column; text-align: center; } .footer-left { flex-direction: column; gap: 10px; } .footer-conditions { text-align: center; } }
+</style>
+<!-- Meta pixel — the "CalCut Web" dataset 1462477942379494, same as index.html.
+     NEVER 1731111768170861 (the Meta App ID; not a web pixel — see index.html).
+     PageView + custom AppStoreClick (placement) + ScrollDepth, as on the homepage.
+     No form on this page, so Automatic Advanced Matching stays off. -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1462477942379494');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1462477942379494&ev=PageView&noscript=1" alt=""></noscript>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" aria-label="CalCut home" class="nav-brand"><img src="assets/icon.png" alt="" class="nav-brand-icon"><span class="nav-brand-text">Cal<span class="accent">Cut</span></span></a>
+    <div class="nav-links">
+      <a href="support.html">Support</a>
+      <a href="privacy.html">Privacy</a>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-eyebrow">The CalCut Monthly</div>
+    <h1 class="hero-title">Lose weight.<br><span class="accent-orange">Win A$1,000</span> every month.</h1>
+    <p class="hero-sub">Hit your calorie and step goals each day to score points. The member with the most points at the end of the month wins A$1,000.</p>
+    <a href="https://apps.apple.com/app/id6774035581" class="app-store-badge" aria-label="Download CalCut on the App Store" data-cta="monthly-hero"><img src="assets/app-store-badge.svg" alt="Download on the App Store"></a>
+    <p class="fine">18+. Australia, New Zealand, UK, Canada and US only, exclusions apply. <a href="monthly-terms.html">Full terms</a>.</p>
+  </div>
+  <div class="prize-wrap">
+    <div class="prize-glow"></div>
+    <div class="prize" aria-label="This month's prize">
+      <div class="prize-month" id="prize-month">This month's prize</div>
+      <div class="prize-amount">A$1,000</div>
+      <div class="prize-line">Most points wins. No draw.</div>
+      <div class="prize-chips">
+        <span class="prize-chip">Perfect Day +8</span>
+        <span class="prize-chip">Weekends +16</span>
+        <span class="prize-chip">Ties split</span>
+      </div>
+      <div class="prize-close" id="prize-close">Every month closes at 12:00 UTC on the 2nd of the next month.</div>
+    </div>
+  </div>
+</section>
+
+<section class="band white">
+  <div class="inner center-m">
+    <div class="section-eyebrow">How you score</div>
+    <h2 class="section-title">Every day you hit your goals, you score.</h2>
+    <p class="section-sub">Two daily goals: stay in your calorie target and hit your step goal. Points add up all month.</p>
+    <div class="points">
+      <div class="pt"><div class="pt-val">+2</div><div class="pt-txt"><strong>Hit your step goal</strong><span>Counted automatically from Apple Health and your Watch.</span></div></div>
+      <div class="pt"><div class="pt-val">+2</div><div class="pt-txt"><strong>Stay in your calorie target</strong><span>Log at least two entries and land between 60% and 100% of your target.</span></div></div>
+      <div class="pt big"><div class="pt-val">+8</div><div class="pt-txt"><strong>Both = a Perfect Day</strong><span>The day turns green.</span></div></div>
+      <div class="pt big"><div class="pt-val">+16</div><div class="pt-txt"><strong>A Perfect Day on the weekend</strong><span>Saturdays and Sundays score double.</span></div></div>
+      <div class="pt"><div class="pt-val">+1</div><div class="pt-txt"><strong>Back-to-back bonus</strong><span>Every Perfect Day straight after another one.</span></div></div>
+      <div class="pt"><div class="pt-val">A$1k</div><div class="pt-txt"><strong>Most points wins</strong><span>No draw and no luck. An exact tie splits the prize.</span></div></div>
+    </div>
+    <p class="note"><strong>Points are for hitting the goals, never for weight lost.</strong> Walking further or eating less than your target earns nothing extra — consistency does.</p>
+  </div>
+</section>
+
+<section class="band">
+  <div class="inner center-m">
+    <div class="section-eyebrow">How it works</div>
+    <h2 class="section-title">Four steps to the leaderboard.</h2>
+    <p class="section-sub">Most points by the end of the month takes the prize.</p>
+    <div class="steps">
+      <div class="step"><div class="step-n">1</div><h3>Get CalCut</h3><p>Download it and start your plan. The annual plan begins with a 7-day free trial.</p></div>
+      <div class="step"><div class="step-n">2</div><h3>Enter the Monthly</h3><p>Tap "Enter the Monthly" in the app and choose a display name. No entry fee.</p></div>
+      <div class="step"><div class="step-n">3</div><h3>Hit your two goals</h3><p>Every Perfect Day moves you up the Leaderboard.</p></div>
+      <div class="step"><div class="step-n">4</div><h3>Results by the 5th</h3><p>Results land in the app on the 3rd. The winner is revealed live on <a href="https://www.instagram.com/calcut.app/" style="color:var(--orange);font-weight:600;">@calcut.app</a> by the 5th.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="band white">
+  <div class="inner center-m">
+    <div class="section-eyebrow">Who can enter</div>
+    <h2 class="section-title">CalCut members, 18 and over.</h2>
+    <div class="who" style="margin: 0 auto;">
+      <strong>Open to CalCut subscribers aged 18 or over</strong> who live in Australia, New Zealand, the United Kingdom, Canada (except Quebec) or the United States (except Arizona, Colorado, Maryland, Nebraska, New Jersey, North Dakota, Tennessee and Vermont), with their App Store account set to that country. The annual plan's free trial counts, and so does free access CalCut has given you, while it's active.
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="faq-inner">
+    <div class="faq-title-block">
+      <div class="section-eyebrow">FAQ</div>
+      <h2 class="section-title">Quick answers.</h2>
+    </div>
+    <details class="faq-item"><summary>Do I have to lose the most weight to win?</summary><div class="faq-body">No. Points are only for hitting your daily calorie and step goals. Weight lost never scores — so everyone starts level, whatever their size.</div></details>
+    <details class="faq-item"><summary>Is it a lucky draw?</summary><div class="faq-body">No luck involved. The member with the most points at the close wins. If two or more finish exactly level, they split the prize equally.</div></details>
+    <details class="faq-item"><summary>Does it cost anything extra?</summary><div class="faq-body">No entry fee. You need an active CalCut subscription — monthly or annual, including the annual plan's 7-day free trial.</div></details>
+    <details class="faq-item"><summary>How does the winner get paid?</summary><div class="faq-body">We email the winner. Reply within 14 days and we pay within 28 days of a verified claim, by bank transfer, PayPal or Wise. Outside Australia it's converted to your currency on the day we pay, and we cover the fees.</div></details>
+    <details class="faq-item"><summary>When does a month close?</summary><div class="faq-body">At 12:00 UTC on the 2nd of the following month. Open CalCut before then so your last steps are counted.</div></details>
+    <details class="faq-item"><summary>How do you keep it fair?</summary><div class="faq-body">Before any prize is paid we review the top scores — food entries, calorie totals and step patterns. Honest logging is the only way to win.</div></details>
+    <details class="faq-item"><summary>Who sees my name?</summary><div class="faq-body">Only the display name you choose and your points, on the Leaderboard and at the reveal. Never your real name, weight or email.</div></details>
+  </div>
+</section>
+
+<section class="band white">
+  <div class="inner">
+    <div class="details">
+      <h3>The details</h3>
+      <p><strong>The CalCut Monthly — how it works.</strong> Promoter: CalCut Pty Ltd (ACN 697 215 660).</p>
+      <p><strong>Who can enter:</strong> CalCut subscribers (monthly or annual, including the annual plan's free trial) aged 18 or over who live in Australia, New Zealand, the United Kingdom, Canada (except Quebec) or the United States (except Arizona, Colorado, Maryland, Nebraska, New Jersey, North Dakota, Tennessee and Vermont), with their App Store account on that country's storefront. Staff, paid creators and test accounts are excluded. Free access CalCut has given you counts as a subscription while it is active.</p>
+      <p><strong>How to enter:</strong> opt in inside the CalCut app — choose a display name, confirm your age and country, accept the terms. No entry fee; nothing to buy beyond your normal subscription at its usual price.</p>
+      <p><strong>How the winner is decided:</strong> each day you earn 2 points for meeting your step goal, 2 for logging calories within your target (60–100% of it, at least two entries), 8 for both (a Perfect Day), 16 for a Perfect Day on a Saturday or Sunday, and +1 for each Perfect Day that follows one. The eligible entrant with the most points when the month closes wins. There is no draw and no element of chance; an exact tie splits the prize equally.</p>
+      <p><strong>The prize:</strong> one prize of A$1,000 per calendar month, paid by bank transfer, PayPal or Wise within 28 days of a verified claim. Paid in your local currency at the exchange rate on the day of payment if you are outside Australia.</p>
+      <p><strong>Closing:</strong> each competition month is a calendar month; scoring closes at 12:00 UTC on the 2nd day of the following month. Open the app before then so your steps are counted. The result is announced in the app on the 3rd and confirmed by a review before the prize is paid. The winner is revealed on @calcut.app within 7 days of the close.</p>
+      <p><strong>Full terms:</strong> <a href="monthly-terms.html">calcut.com.au/monthly-terms</a>. Apple Inc. is not a sponsor of the Monthly and is not involved in it in any manner. The Monthly is in no way sponsored, endorsed or administered by, or associated with, Instagram or Meta.</p>
+    </div>
+  </div>
+</section>
+
+<section class="final-cta">
+  <div class="final-cta-inner">
+    <h2 class="final-cta-title">Your first <span class="accent-orange">Perfect Day</span> starts today.</h2>
+    <p class="final-cta-sub">Download CalCut, enter the Monthly, and start stacking points.</p>
+    <a href="https://apps.apple.com/app/id6774035581" class="app-store-badge" aria-label="Download CalCut on the App Store" data-cta="monthly-closing"><img src="assets/app-store-badge.svg" alt="Download on the App Store"></a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-left">
+      <img src="assets/icon.png" alt="CalCut" class="footer-icon">
+      <span class="footer-text">© 2026 CalCut Pty Ltd. Built in Melbourne.</span>
+    </div>
+    <div class="footer-links">
+      <a href="monthly-terms.html">Monthly terms</a>
+      <a href="support.html">Support</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="mailto:support@calcut.com.au">Contact</a>
+    </div>
+  </div>
+  <p class="footer-conditions">The CalCut Monthly: 18+. Residents of AU, NZ, UK, CA (excl. Quebec) and the US (excl. AZ, CO, MD, NE, NJ, ND, TN, VT) with an active CalCut subscription. One A$1,000 prize per calendar month to the eligible entrant with the most points for hitting their daily calorie and step targets; ties split. Terms: calcut.com.au/monthly-terms</p>
+</footer>
+
+<script>
+/* This month's name and close time, worked out in the reader's own time zone, so the
+   page never needs a monthly edit. Months close at 12:00 UTC on the 2nd of the next
+   month (terms 2.x / the full block above). The first month is November 2026. */
+(function () {
+  try {
+    var now = new Date();
+    var first = new Date(2026, 10, 1); // 1 November 2026, local
+    var y = now.getFullYear(), m = now.getMonth();
+    var preLaunch = now < first;
+    if (preLaunch) { y = 2026; m = 10; }
+    var monthName = new Date(y, m, 1).toLocaleString('en-AU', { month: 'long' });
+    var close = new Date(Date.UTC(y, m + 1, 2, 12, 0, 0));
+    var closeTxt = close.toLocaleString('en-AU', { weekday: 'short', day: 'numeric', month: 'long', hour: 'numeric', minute: '2-digit' });
+    var monthEl = document.getElementById('prize-month');
+    var closeEl = document.getElementById('prize-close');
+    monthEl.textContent = preLaunch ? 'First month · ' + monthName : monthName + "'s prize";
+    if (preLaunch) {
+      closeEl.innerHTML = '<strong>Points start 1 November.</strong> Enter in the app now and be on the Leaderboard from day one.';
+    } else {
+      var days = Math.max(0, Math.ceil((close - now) / 86400000));
+      closeEl.innerHTML = '<strong>Closes in ' + days + (days === 1 ? ' day' : ' days') + '</strong> — ' + closeTxt + ' your time.';
+    }
+  } catch (e) {}
+})();
+</script>
+
+<!-- App Store clicks + scroll depth, the same custom events as index.html. -->
+<script>
+(function () {
+  function send(name, params) {
+    try { if (window.fbq) window.fbq('trackCustom', name, params || {}); } catch (e) {}
+  }
+  document.addEventListener('click', function (e) {
+    if (!e.target || !e.target.closest) return;
+    var link = e.target.closest('a[href*="apps.apple.com"]');
+    if (!link) return;
+    send('AppStoreClick', { placement: link.getAttribute('data-cta') || 'unknown' });
+    var modified = e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0;
+    if (modified || link.target === '_blank') return;
+    e.preventDefault();
+    var done = false;
+    function go() { if (done) return; done = true; window.location.href = link.href; }
+    setTimeout(go, 250);
+  }, true);
+  var marks = [25, 50, 75, 100], fired = {}, queued = false;
+  function depth() {
+    var scrollable = document.documentElement.scrollHeight - window.innerHeight;
+    if (scrollable <= 0) return 0;
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    return Math.min(100, Math.round((y / scrollable) * 100));
+  }
+  function check() {
+    queued = false;
+    var d = depth();
+    for (var i = 0; i < marks.length; i++) {
+      var m = marks[i];
+      if (d >= m && !fired[m]) { fired[m] = true; send('ScrollDepth', { percent: m, page: 'monthly' }); }
+    }
+  }
+  window.addEventListener('scroll', function () { if (queued) return; queued = true; window.setTimeout(check, 100); }, { passive: true });
+})();
+</script>
+</body>
+</html>
