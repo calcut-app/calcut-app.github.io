@@ -7,10 +7,10 @@
      Deleting this tag silently un-verifies the domain, with no error anywhere, and
      degrades iOS web-event attribution. Must stay on the root page. -->
 <meta name="facebook-domain-verification" content="4comzjx3nbvg57ntysb26hwv81cun3" />
-<title>CalCut — Two rules. That's it.</title>
-<meta name="description" content="The fat loss app built on two daily rules. Hit your steps. Stay in a calorie deficit. That's it.">
-<meta property="og:title" content="CalCut — Two rules. That's it.">
-<meta property="og:description" content="The fat loss app built on two daily rules. Hit your steps. Stay in a calorie deficit.">
+<title>CalCut — Lose weight. Win A$1,000 every month.</title>
+<meta name="description" content="The calorie and step tracker that pays out. Hit your two daily goals to score points — the member with the most points each month wins A$1,000. 18+, eligible countries, T&amp;Cs apply.">
+<meta property="og:title" content="CalCut — Lose weight. Win A$1,000 every month.">
+<meta property="og:description" content="Hit your calorie and step goals each day to score points. Most points each month wins A$1,000. 18+, eligible countries, T&amp;Cs apply.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://calcut.com.au">
 <meta property="og:image" content="https://calcut.com.au/assets/icon.png">
@@ -58,8 +58,8 @@
   @media (max-width: 600px) { .nav-links { gap: 18px; font-size: 14px; } .nav-inner { padding: 16px 20px; } .nav-brand-icon { height: 26px; width: 26px; } .nav-brand-text { font-size: 17px; } }
 
   /* HERO */
-  .hero { max-width: 1200px; margin: 0 auto; padding: 72px 24px 80px; display: grid; grid-template-columns: 1.15fr 1fr; gap: 60px; align-items: center; }
-  @media (max-width: 900px) { .hero { grid-template-columns: 1fr; gap: 56px; padding: 48px 24px 56px; text-align: center; } }
+  .hero { overflow-x: clip; max-width: 1200px; margin: 0 auto; padding: 72px 24px 80px; display: grid; grid-template-columns: 1.15fr 1fr; gap: 60px; align-items: center; }
+  @media (max-width: 900px) { .hero { grid-template-columns: minmax(0, 1fr); gap: 56px; padding: 48px 24px 56px; text-align: center; } }
 
   .hero-content { max-width: 580px; }
   @media (max-width: 900px) { .hero-content { margin: 0 auto; } }
@@ -68,7 +68,7 @@
   .hero-eyebrow::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--orange); animation: pulse 2s ease-in-out infinite; }
   @keyframes pulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.5; transform: scale(1.3); } }
 
-  h1.hero-title { font-family: var(--display); font-weight: 800; font-size: clamp(46px, 6.5vw, 76px); line-height: 1.02; letter-spacing: -0.035em; color: var(--black); margin-bottom: 24px; }
+  h1.hero-title { font-family: var(--display); font-weight: 800; font-size: clamp(40px, 6.5vw, 76px); line-height: 1.02; letter-spacing: -0.035em; color: var(--black); margin-bottom: 24px; }
   h1.hero-title .accent-orange { color: var(--orange); }
   h1.hero-title .accent-green { color: var(--green); }
 
@@ -174,6 +174,26 @@
   .delay-3 { animation-delay: 0.3s; }
   .delay-4 { animation-delay: 0.4s; }
   @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+
+  /* MONTHLY (added for 1.4.0) */
+  .hero-links { margin-top: 18px; }
+  .how-link { display: inline-block; font-family: var(--display); font-weight: 700; font-size: 16px; color: var(--orange); }
+  .how-link:hover { text-decoration: underline; }
+  .hero-fine { margin-top: 14px; font-size: 13px; color: var(--grey); line-height: 1.5; max-width: 480px; }
+  .hero-fine a { text-decoration: underline; }
+  @media (max-width: 900px) { .hero-fine { margin-left: auto; margin-right: auto; } }
+  .monthly-band { background: var(--card); padding: 96px 24px; border-top: 1px solid rgba(0,0,0,0.04); }
+  @media (max-width: 900px) { .monthly-band { padding: 68px 20px; text-align: center; } .monthly-band .section-title, .monthly-band .section-sub { margin-left: auto; margin-right: auto; } }
+  .monthly-inner { max-width: 1100px; margin: 0 auto; }
+  .monthly-band .section-sub { margin-bottom: 28px; }
+  .monthly-chips { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 26px; }
+  @media (max-width: 900px) { .monthly-chips { justify-content: center; } }
+  .mchip { background: var(--orange-pale); border: 1px solid var(--orange-border); color: var(--black); border-radius: 100px; padding: 9px 16px; font-family: var(--display); font-weight: 700; font-size: 15px; }
+  .mchip b { color: var(--orange); font-weight: 800; }
+  .mchip.green { background: var(--green-pale); border-color: #C8E6C9; }
+  .mchip.green b { color: #2E7D32; }
+  .footer-conditions { max-width: 1200px; margin: 24px auto 0; font-size: 12px; color: var(--grey); line-height: 1.55; }
+  @media (max-width: 600px) { .footer-conditions { text-align: center; } }
 </style>
 <!-- Meta pixel - REQUIRED for Landing Page View optimisation and web retargeting.
      Pixel/dataset ID 1462477942379494 - the "CalCut Web" dataset in Meta Events Manager.
@@ -210,15 +230,18 @@ fbq('track', 'PageView');
 
 <section class="hero">
   <div class="hero-content">
-    <div class="hero-eyebrow fade-up">Now on the App Store</div>
+    <div class="hero-eyebrow fade-up">New: The CalCut Monthly</div>
     <h1 class="hero-title fade-up delay-1">
-      Two rules.<br>
-      <span class="accent-green">That's it.</span>
+      Lose weight.<br>
+      <span class="accent-orange">Win A$1,000</span><br>
+      every month.
     </h1>
     <p class="hero-sub fade-up delay-2">
-      The fat loss app built on two daily rules. Stay in a calorie deficit, hit your step goal. Nothing else to track.
+      The calorie tracker with two daily rules: stay in your calorie target and hit your steps. Every day you hit them scores points — the member with the most points each month wins A$1,000.
     </p>
     <a href="https://apps.apple.com/app/id6774035581" class="app-store-badge fade-up delay-3" aria-label="Download CalCut on the App Store" data-cta="hero"><img src="assets/app-store-badge.svg" alt="Download on the App Store"></a>
+    <div class="hero-links fade-up delay-3"><a href="monthly.html" class="how-link">How the Monthly works &rarr;</a></div>
+    <p class="hero-fine fade-up delay-3">18+. Australia, New Zealand, UK, Canada and US only, exclusions apply. <a href="monthly-terms.html">Terms</a>.</p>
   </div>
 
   <div class="hero-visual fade-up delay-2">
@@ -249,7 +272,7 @@ fbq('track', 'PageView');
       <div class="rule-card">
         <div class="rule-number">RULE 02</div>
         <h3 class="rule-title">Hit your daily steps.</h3>
-        <p class="rule-desc">Personalised goal based on your starting point. The app pulls your steps from your iPhone automatically — no manual logging.</p>
+        <p class="rule-desc">Personalised goal based on your starting point. Steps are counted automatically from Apple Health — your iPhone, or your Apple Watch if you wear one.</p>
       </div>
     </div>
   </div>
@@ -264,8 +287,23 @@ fbq('track', 'PageView');
       <span class="transform-dot green"></span>
       <span style="color: var(--green);">Goal hit</span>
     </div>
-    <h2 class="transform-title">When the app turns <span class="accent-green">green</span>, you've won the day.</h2>
+    <h2 class="transform-title">When the app turns <span class="accent-green">green</span>, that's a Perfect Day.</h2>
     <p class="transform-sub">Every metric starts the day in orange. Hit the goal and it flips to green. That's the whole scoreboard. Simple to glance at. Hard to ignore.</p>
+  </div>
+</section>
+
+<section class="monthly-band">
+  <div class="monthly-inner">
+    <div class="section-eyebrow">The CalCut Monthly</div>
+    <h2 class="section-title">Every Perfect Day scores. Most points wins A$1,000.</h2>
+    <p class="section-sub">Each month, the member who hits their two rules most consistently takes the prize. Weight lost never scores — consistency does.</p>
+    <div class="monthly-chips">
+      <span class="mchip"><b>+2</b> steps</span>
+      <span class="mchip"><b>+2</b> calories</span>
+      <span class="mchip green"><b>+8</b> Perfect Day</span>
+      <span class="mchip green"><b>+16</b> on weekends</span>
+    </div>
+    <a href="monthly.html" class="how-link">How the Monthly works &rarr;</a>
   </div>
 </section>
 
@@ -294,6 +332,10 @@ fbq('track', 'PageView');
     </div>
 
     <details class="faq-item">
+      <summary>What is the CalCut Monthly?</summary>
+      <div class="faq-body">Every month, A$1,000 goes to the member with the most points for hitting their two daily rules. 2 points for your steps, 2 for your calories, 8 for both, 16 for both on a weekend. No draw, no luck — and weight lost never scores. 18+, in Australia, New Zealand, the UK, Canada and the US (exclusions apply). <a href="monthly.html" style="color: var(--orange); font-weight: 600;">How it works</a>.</div>
+    </details>
+    <details class="faq-item">
       <summary>How much does CalCut cost?</summary>
       <div class="faq-body">CalCut is $15.99 AUD per month, or $59.99 AUD per year (saves you about 69%). The annual plan starts with a 7-day free trial. The monthly plan has no trial and bills immediately. You can manage or cancel your subscription in your Apple subscription settings.</div>
     </details>
@@ -315,7 +357,7 @@ fbq('track', 'PageView');
 
     <details class="faq-item">
       <summary>Does CalCut work with Apple Health?</summary>
-      <div class="faq-body">Yes. CalCut reads your daily step count from Apple HealthKit automatically. No fitness tracker required — your iPhone is enough.</div>
+      <div class="faq-body">Yes. CalCut reads your daily steps from Apple Health automatically — from your iPhone, or your Apple Watch if you wear one. No other tracker needed.</div>
     </details>
 
     <details class="faq-item">
@@ -340,12 +382,13 @@ fbq('track', 'PageView');
       <span class="footer-text">© 2026 CalCut Pty Ltd. Built in Melbourne.</span>
     </div>
     <div class="footer-links">
-      <a href="guarantee.html">Guarantee</a>
+      <a href="monthly.html">The Monthly</a>
       <a href="support.html">Support</a>
       <a href="privacy.html">Privacy</a>
       <a href="mailto:support@calcut.com.au">Contact</a>
     </div>
   </div>
+  <p class="footer-conditions">The CalCut Monthly: 18+. Residents of AU, NZ, UK, CA (excl. Quebec) and the US (excl. AZ, CO, MD, NE, NJ, ND, TN, VT) with an active CalCut subscription. One A$1,000 prize per calendar month to the eligible entrant with the most points for hitting their daily calorie and step targets; ties split. Terms: calcut.com.au/monthly-terms</p>
 </footer>
 
 <!-- Bridge-page diagnostics for 04 Media-Buying Playbook: App Store button clicks and
