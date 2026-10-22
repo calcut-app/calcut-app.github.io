@@ -149,7 +149,7 @@
     <summary>Why didn't a day count?</summary>
     <div class="faq-body">
       <p>Your calorie rule counts when you've logged <strong>at least two entries</strong> and your total lands <strong>between 60% and 100% of your target</strong>. Eating far below your target doesn't score.</p>
-      <p>Your iPhone counts your steps, and CalCut reads them when you open it. Your iPhone keeps only about a week of step history, so open the app at least once every 6 days (every day is easiest). At the end of the month, open it before <strong>12:00 UTC on the 2nd</strong> so your last steps are counted.</p>
+      <p>Steps reach CalCut when you open it. If you've connected Apple Health, opening it once before the month closes counts every day. If you haven't, open it at least once every 6 days, because your iPhone keeps only about a week of step history (every day is easiest). At the end of the month, open it before <strong>12:00 UTC on the 2nd</strong> so your last steps are counted.</p>
     </div>
   </details>
 
@@ -224,10 +224,25 @@
   </details>
 
   <details class="faq-item">
-    <summary>Why does CalCut ask for Motion &amp; Fitness access?</summary>
+    <summary>Where does CalCut get my steps?</summary>
     <div class="faq-body">
-      <p>CalCut counts your daily steps with your iPhone's motion sensor. That's how the app knows whether you've hit your step goal, with no manual logging. Steps from an Apple Watch aren't counted.</p>
-      <p>We don't read or share any other health data. You can turn access off any time in the iPhone <strong>Settings</strong> app under <strong>Privacy & Security → Motion & Fitness</strong>.</p>
+      <p>Your iPhone counts your steps on its own. If you connect <strong>Apple Health</strong> in CalCut, it also reads the steps Apple Health holds from your iPhone and <strong>Apple Watch</strong>, and from 1 November (on CalCut 1.4.2 or later) from <a href="#watches" style="color: var(--orange); font-weight: 600;">supported watches</a>. Each day counts the highest of these. They're never added together.</p>
+      <p>CalCut only reads your step counts. It never writes to Apple Health or reads any other health data. Steps typed into Apple Health by hand, and steps from other apps, don't count.</p>
+      <p>To change access: <strong>Settings → Health → Data Access & Devices → CalCut</strong> for Apple Health, and <strong>Settings → Privacy & Security → Motion & Fitness</strong> for your iPhone's own count.</p>
+    </div>
+  </details>
+
+  <details class="faq-item" id="watches">
+    <summary>Which watches count?</summary>
+    <div class="faq-body">
+      <p><strong>Apple Watch</strong> counts now: connect Apple Health in CalCut.</p>
+      <p>From <strong>1 November 2026</strong>, on CalCut 1.4.2 or later, steps these watch apps write into Apple Health count too: <strong>Garmin</strong> (Garmin Connect), <strong>Fitbit</strong> (Google Health), <strong>Oura</strong>, <strong>Polar</strong> (Polar Flow), <strong>Withings</strong>, <strong>COROS</strong>, <strong>Amazfit</strong> (Zepp) and <strong>Suunto</strong>.</p>
+      <p>To set it up, turn on writing steps to Apple Health in your watch's app:<br>
+      Garmin: Garmin Connect → Apple Health → Steps<br>
+      Fitbit: Google Health → Connections → Apps and services → Apple Health<br>
+      Others: the Apple Health setting in each app<br>
+      Then allow Steps for CalCut: <strong>Settings → Health → Data Access & Devices → CalCut</strong>.</p>
+      <p>Samsung Galaxy watches don't work with iPhone. Steps from other apps, like Strava, WHOOP or Shortcuts, don't count, and neither do steps typed in by hand. This list can change, and this page always shows the current one.</p>
     </div>
   </details>
 
@@ -260,10 +275,10 @@
   <details class="faq-item">
     <summary>Why isn't my step count showing up?</summary>
     <div class="faq-body">
-      <p>CalCut counts steps with your iPhone's motion sensor, so only steps taken with your phone on you are counted. If steps aren't appearing:</p>
+      <p>If steps aren't appearing:</p>
       <p>1. Open the <strong>Settings</strong> app on your iPhone<br>
-      2. Tap <strong>Privacy & Security</strong> → <strong>Motion & Fitness</strong><br>
-      3. Make sure <strong>Fitness Tracking</strong> is on, and <strong>CalCut</strong> is switched on</p>
+      2. Tap <strong>Privacy & Security</strong> → <strong>Motion & Fitness</strong>, and make sure <strong>Fitness Tracking</strong> and <strong>CalCut</strong> are on<br>
+      3. If you use Apple Health or a watch: in <strong>Settings</strong>, tap <strong>Health</strong> → <strong>Data Access & Devices</strong> → <strong>CalCut</strong>, and turn on <strong>Steps</strong></p>
       <p>Then open CalCut. Steps update each time the app opens.</p>
       <p>If that doesn't fix it, email <a href="mailto:support@calcut.com.au">support@calcut.com.au</a>.</p>
     </div>
