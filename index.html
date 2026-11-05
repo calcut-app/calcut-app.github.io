@@ -7,8 +7,9 @@
      Deleting this tag silently un-verifies the domain, with no error anywhere, and
      degrades iOS web-event attribution. Must stay on the root page. -->
 <meta name="facebook-domain-verification" content="4comzjx3nbvg57ntysb26hwv81cun3" />
-<title>CalCut — Lose weight. Win A$1,000 every month.</title>
+<title>CalCut: Calorie &amp; Step Tracker. Win A$1,000 every month</title>
 <meta name="description" content="The calorie and step tracker that pays out. Hit your two daily goals to score points — the member with the most points each month wins A$1,000. 18+, eligible countries, T&amp;Cs apply.">
+<link rel="canonical" href="https://calcut.com.au/">
 <meta property="og:title" content="CalCut — Lose weight. Win A$1,000 every month.">
 <meta property="og:description" content="Hit your calorie and step goals each day to score points. Most points each month wins A$1,000. 18+, eligible countries, T&amp;Cs apply.">
 <meta property="og:type" content="website">
@@ -194,6 +195,23 @@
   .mchip.green b { color: #2E7D32; }
   .footer-conditions { max-width: 1200px; margin: 24px auto 0; font-size: 12px; color: var(--grey); line-height: 1.55; }
   @media (max-width: 600px) { .footer-conditions { text-align: center; } }
+
+  /* APP STORE PROOF. Re-check the rating and count against the Australian store when they change. */
+  .rating-line { margin-top: 14px; font-family: var(--display); font-weight: 700; font-size: 14px; color: var(--black); }
+  .rating-line .stars { color: var(--orange); letter-spacing: 1px; }
+  .final-cta .rating-line { color: rgba(255,255,255,0.8); }
+  @media (max-width: 420px) { .rating-line .stars { display: block; margin-bottom: 2px; } }
+  .reviews { background: var(--card); padding: 88px 24px; border-top: 1px solid rgba(0,0,0,0.04); }
+  @media (max-width: 900px) { .reviews { padding: 64px 20px; } }
+  .reviews-inner { max-width: 1100px; margin: 0 auto; text-align: center; }
+  .reviews-inner .section-title { margin: 0 auto 40px; }
+  .reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; text-align: left; }
+  @media (max-width: 800px) { .reviews-grid { grid-template-columns: 1fr; } }
+  .review { background: var(--bg); border-radius: 20px; padding: 26px; }
+  .review .stars { display: block; color: var(--orange); letter-spacing: 1px; margin-bottom: 12px; }
+  .review blockquote { font-family: var(--display); font-weight: 700; font-size: 18px; line-height: 1.35; letter-spacing: -0.01em; margin-bottom: 12px; }
+  .review figcaption { font-size: 14px; color: var(--grey); }
+  @media (max-width: 600px) { .footer-links { flex-wrap: wrap; justify-content: center; gap: 12px 24px; } }
 </style>
 <!-- Meta pixel - REQUIRED for Landing Page View optimisation and web retargeting.
      Pixel/dataset ID 1462477942379494 - the "CalCut Web" dataset in Meta Events Manager.
@@ -240,6 +258,7 @@ fbq('track', 'PageView');
       The calorie tracker with two daily rules: stay in your calorie target and hit your steps. Every day you hit them scores points — the member with the most points each month wins A$1,000.
     </p>
     <a href="https://apps.apple.com/app/id6774035581" class="app-store-badge fade-up delay-3" aria-label="Download CalCut on the App Store" data-cta="hero"><img src="assets/app-store-badge.svg" alt="Download on the App Store"></a>
+    <p class="rating-line fade-up delay-3"><span class="stars" aria-hidden="true">★★★★★</span> 5.0 on the Australian App Store · 32 ratings</p>
     <div class="hero-links fade-up delay-3"><a href="monthly.html" class="how-link">How the Monthly works &rarr;</a></div>
     <p class="hero-fine fade-up delay-3">18+. Australia, New Zealand, UK, Canada and US only, exclusions apply. <a href="monthly-terms.html">Terms</a>.</p>
   </div>
@@ -323,7 +342,7 @@ fbq('track', 'PageView');
   </div>
 </section>
 
-<section class="faq">
+<section class="faq" id="faq">
   <div class="faq-inner">
     <div class="faq-title-block">
       <div class="section-eyebrow">FAQ</div>
@@ -367,11 +386,36 @@ fbq('track', 'PageView');
   </div>
 </section>
 
+<section class="reviews">
+  <div class="reviews-inner">
+    <div class="section-eyebrow">From the App Store</div>
+    <h2 class="section-title">What members say.</h2>
+    <div class="reviews-grid">
+      <figure class="review">
+        <span class="stars" aria-label="Five stars">★★★★★</span>
+        <blockquote>“The ‘describe my meal’ feature is an absolute game changer.”</blockquote>
+        <figcaption>App Store review, Australia</figcaption>
+      </figure>
+      <figure class="review">
+        <span class="stars" aria-label="Five stars">★★★★★</span>
+        <blockquote>“…tracking my calories has become part of my daily routine without feeling like a chore.”</blockquote>
+        <figcaption>App Store review, Australia</figcaption>
+      </figure>
+      <figure class="review">
+        <span class="stars" aria-label="Five stars">★★★★★</span>
+        <blockquote>“Normally I refuse to spend money on app subscriptions but it’s a worthwhile investment.”</blockquote>
+        <figcaption>App Store review, Australia</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
 <section class="final-cta">
   <div class="final-cta-inner">
     <h2 class="final-cta-title">Start your <span class="accent-orange">free trial.</span></h2>
     <p class="final-cta-sub">7-day free trial on the annual plan, $59.99/year. Monthly is $15.99/month with no trial. Manage or cancel in your Apple subscription settings.</p>
     <a href="https://apps.apple.com/app/id6774035581" class="app-store-badge" aria-label="Download CalCut on the App Store" data-cta="closing"><img src="assets/app-store-badge.svg" alt="Download on the App Store"></a>
+    <p class="rating-line"><span class="stars" aria-hidden="true">★★★★★</span> 5.0 on the Australian App Store · 32 ratings</p>
   </div>
 </section>
 
@@ -383,6 +427,7 @@ fbq('track', 'PageView');
     </div>
     <div class="footer-links">
       <a href="monthly.html">The Monthly</a>
+      <a href="apps-that-pay-you-to-lose-weight.html">Compare apps</a>
       <a href="support.html">Support</a>
       <a href="privacy.html">Privacy</a>
       <a href="mailto:support@calcut.com.au">Contact</a>
