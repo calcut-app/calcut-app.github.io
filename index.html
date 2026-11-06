@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-AU">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,14 +8,21 @@
      degrades iOS web-event attribution. Must stay on the root page. -->
 <meta name="facebook-domain-verification" content="4comzjx3nbvg57ntysb26hwv81cun3" />
 <title>CalCut: Calorie &amp; Step Tracker. Win A$1,000 every month</title>
-<meta name="description" content="The calorie and step tracker that pays out. Hit your two daily goals to score points — the member with the most points each month wins A$1,000. 18+, eligible countries, T&amp;Cs apply.">
+<meta name="description" content="The calorie and step tracker that pays out. Hit your two daily goals to score points. Most points each month wins A$1,000. 18+, eligible countries, T&amp;Cs apply.">
 <link rel="canonical" href="https://calcut.com.au/">
+<meta name="apple-itunes-app" content="app-id=6774035581, affiliate-data=ct=web-smart-banner&amp;pt=128962605">
 <meta property="og:title" content="CalCut — Lose weight. Win A$1,000 every month.">
 <meta property="og:description" content="Hit your calorie and step goals each day to score points. Most points each month wins A$1,000. 18+, eligible countries, T&amp;Cs apply.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://calcut.com.au">
-<meta property="og:image" content="https://calcut.com.au/assets/icon.png">
+<meta property="og:image" content="https://calcut.com.au/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#FF5C00">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "CalCut", "legalName": "CalCut Pty Ltd", "url": "https://calcut.com.au/", "logo": "https://calcut.com.au/assets/icon.png", "email": "support@calcut.com.au", "sameAs": ["https://www.instagram.com/calcut.app/", "https://apps.apple.com/au/app/id6774035581"]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "CalCut", "url": "https://calcut.com.au/"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "MobileApplication", "name": "CalCut: Calorie & Step Tracker", "operatingSystem": "iOS", "applicationCategory": "HealthApplication", "url": "https://calcut.com.au/", "downloadUrl": "https://apps.apple.com/au/app/id6774035581", "description": "A calorie and step tracker built around two daily rules: stay in your calorie target and hit your step goal.", "publisher": {"@type": "Organization", "name": "CalCut Pty Ltd"}}</script>
 
 <link rel="icon" type="image/png" href="assets/icon.png">
 <link rel="apple-touch-icon" href="assets/icon.png">
@@ -163,7 +170,7 @@
   .footer-left { display: flex; align-items: center; gap: 14px; }
   .footer-icon { width: 32px; height: 32px; }
   .footer-text { font-size: 14px; color: var(--grey); }
-  .footer-links { display: flex; gap: 24px; font-family: var(--display); font-weight: 600; font-size: 14px; }
+  .footer-links { display: flex; flex-wrap: wrap; gap: 12px 24px; font-family: var(--display); font-weight: 600; font-size: 14px; }
   .footer-links a { color: var(--grey); transition: color 0.2s ease; }
   .footer-links a:hover { color: var(--black); }
   @media (max-width: 600px) { .footer-inner { flex-direction: column; text-align: center; } .footer-left { flex-direction: column; gap: 10px; } }
@@ -211,7 +218,16 @@
   .review .stars { display: block; color: var(--orange); letter-spacing: 1px; margin-bottom: 12px; }
   .review blockquote { font-family: var(--display); font-weight: 700; font-size: 18px; line-height: 1.35; letter-spacing: -0.01em; margin-bottom: 12px; }
   .review figcaption { font-size: 14px; color: var(--grey); }
-  @media (max-width: 600px) { .footer-links { flex-wrap: wrap; justify-content: center; gap: 12px 24px; } }
+  @media (max-width: 600px) { .footer-links { justify-content: center; } }
+  .tools-band { padding: 0 24px 88px; }
+  @media (max-width: 900px) { .tools-band { padding: 0 20px 64px; } }
+  .tools-inner { max-width: 760px; margin: 0 auto; }
+  .tools-inner h2 { font-family: var(--display); font-weight: 800; font-size: 24px; letter-spacing: -0.02em; margin-bottom: 14px; text-align: center; }
+  .tools-links { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+  @media (max-width: 700px) { .tools-links { grid-template-columns: 1fr; } }
+  .tools-links a { display: block; background: var(--card); border: 1px solid rgba(0,0,0,0.04); border-radius: 16px; padding: 18px 20px; font-family: var(--display); font-weight: 700; font-size: 16px; line-height: 1.3; }
+  .tools-links a span { display: block; margin-top: 4px; font-family: var(--body); font-weight: 400; font-size: 14px; color: var(--grey); }
+  .tools-links a:hover { color: var(--orange); }
 </style>
 <!-- Meta pixel - REQUIRED for Landing Page View optimisation and web retargeting.
      Pixel/dataset ID 1462477942379494 - the "CalCut Web" dataset in Meta Events Manager.
@@ -268,7 +284,7 @@ fbq('track', 'PageView');
       <div class="phone-glow"></div>
       <div class="phone-frame">
         <div class="phone-screen">
-          <img src="assets/app-leaderboard-v2.png" alt="The CalCut Leaderboard: November's $1,000 prize card above the top five members and their points" loading="eager">
+          <picture><source srcset="assets/app-leaderboard-v2.webp" type="image/webp"><img src="assets/app-leaderboard-v2.png" alt="The CalCut Leaderboard: the month's $1,000 prize card above the top five members and their points" width="900" height="1951" loading="eager" fetchpriority="high"></picture>
           <div class="phone-notch"></div>
         </div>
       </div>
@@ -386,6 +402,17 @@ fbq('track', 'PageView');
   </div>
 </section>
 
+<section class="tools-band">
+  <div class="tools-inner">
+    <h2>Free tools.</h2>
+    <div class="tools-links">
+      <a href="calorie-deficit-calculator.html">Calorie deficit calculator<span>Your daily number, in Calories and kJ</span></a>
+      <a href="steps-to-calories-calculator.html">Steps calculator<span>How many steps burn a Big Mac</span></a>
+      <a href="fast-food-calories-australia.html">Fast food calories<span>Maccas, KFC, GYG and more</span></a>
+    </div>
+  </div>
+</section>
+
 <section class="reviews">
   <div class="reviews-inner">
     <div class="section-eyebrow">From the App Store</div>
@@ -427,7 +454,12 @@ fbq('track', 'PageView');
     </div>
     <div class="footer-links">
       <a href="monthly.html">The Monthly</a>
+      <a href="calorie-deficit-calculator.html">Calorie deficit calculator</a>
+      <a href="steps-to-calories-calculator.html">Steps calculator</a>
+      <a href="fast-food-calories-australia.html">Fast food calories</a>
+      <a href="best-calorie-tracker-apps-australia.html">Best calorie trackers</a>
       <a href="apps-that-pay-you-to-lose-weight.html">Compare apps</a>
+      <a href="about.html">About</a>
       <a href="support.html">Support</a>
       <a href="privacy.html">Privacy</a>
       <a href="mailto:support@calcut.com.au">Contact</a>

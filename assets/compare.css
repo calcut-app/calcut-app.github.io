@@ -144,3 +144,49 @@ h3 { font-family: var(--display); font-weight: 800; font-size: 20px; line-height
 .footer-links a:hover { color: var(--black); }
 .footer-conditions { max-width: 1200px; margin: 24px auto 0; font-size: 12px; color: var(--grey-dark); line-height: 1.55; }
 @media (max-width: 600px) { .footer-inner { flex-direction: column; text-align: center; } .footer-left { flex-direction: column; gap: 10px; } .footer-links { justify-content: center; } .footer-conditions { text-align: center; } }
+
+/* SEARCH PAGES: calorie tables, calculators, QR */
+.crumbs { font-size: 13px; color: var(--grey-dark); margin-bottom: 14px; }
+.crumbs a { color: var(--orange); font-weight: 600; }
+.glance { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+@media (max-width: 640px) { .glance { gap: 8px; } }
+.glance-card { background: var(--card); border: 1px solid rgba(0,0,0,0.05); border-radius: 18px; padding: 20px 16px; text-align: center; }
+@media (max-width: 640px) { .glance-card { padding: 16px 8px; border-radius: 14px; } }
+.glance-num { font-family: var(--display); font-weight: 800; font-size: clamp(26px, 5vw, 40px); line-height: 1; letter-spacing: -0.02em; color: var(--orange); margin-bottom: 8px; }
+.glance-label { font-size: 13.5px; line-height: 1.35; color: var(--grey-dark); }
+.data { width: 100%; border-collapse: collapse; font-size: 16px; margin-bottom: 8px; }
+.data th, .data td { text-align: right; padding: 11px 8px; border-bottom: 1px solid var(--grey-light); font-variant-numeric: tabular-nums; }
+.data th:first-child { text-align: left; padding-left: 0; font-family: var(--body); font-weight: 500; }
+.data td:last-child, .data th:last-child { padding-right: 0; }
+.data thead th { font-family: var(--display); font-weight: 800; font-size: 13.5px; border-bottom: 2px solid var(--black); vertical-align: bottom; }
+.data thead th:first-child { font-family: var(--display); font-weight: 800; }
+.data a { color: var(--orange); font-weight: 600; }
+@media (max-width: 480px) { .data { font-size: 15px; } .data th, .data td { padding: 10px 5px; } }
+.data.three th, .data.three td { text-align: left; }
+.table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.table-note { font-size: 13.5px; line-height: 1.55; color: var(--grey-dark); margin-top: 10px; }
+.table-note a { color: var(--orange); font-weight: 600; }
+.band h2 + .data, .band h2 + .table-scroll { margin-top: 2px; }
+.band .data + h2, .band .table-note + h2 { margin-top: 38px; }
+.qa h3 { font-size: 18px; margin: 22px 0 6px; }
+.qa h3:first-child { margin-top: 0; }
+.qa p { font-size: 16px; line-height: 1.6; color: var(--grey-dark); }
+.qa a, .pick a, .sources a { color: var(--orange); font-weight: 600; }
+.tool { display: block; }
+.tool label { display: block; font-family: var(--display); font-weight: 700; font-size: 14px; margin-bottom: 14px; }
+.tool input[type=number], .tool select { display: block; width: 100%; margin-top: 6px; padding: 13px 14px; font: 500 16px var(--body); color: var(--black); background: var(--bg); border: 1px solid var(--grey-light); border-radius: 12px; }
+.tool input:focus, .tool select:focus { outline: 2px solid var(--orange); outline-offset: 1px; }
+.tool fieldset { border: 0; margin-bottom: 14px; }
+.tool legend { font-family: var(--display); font-weight: 700; font-size: 14px; margin-bottom: 8px; }
+.tool .radio { display: inline-block; margin: 0 18px 0 0; font-family: var(--body); font-weight: 500; font-size: 16px; }
+.tool .radio input { accent-color: var(--orange); width: 18px; height: 18px; vertical-align: -3px; }
+.tool-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.tool-grid.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.tool button { display: block; width: 100%; padding: 16px; font: 800 16px var(--display); color: #fff; background: var(--orange); border: 0; border-radius: 12px; cursor: pointer; }
+.tool button:hover { filter: brightness(0.95); }
+.tool-out { margin-top: 20px; padding: 22px; background: var(--orange-pale); border: 1px solid var(--orange-border); border-radius: 16px; font-size: 16px; line-height: 1.5; }
+.tool-big { font-size: 19px; margin-bottom: 12px; }
+.tool-out .data { margin-top: 10px; }
+.final-cta-sub + .final-cta-sub { margin-top: -18px; }
+.qr-box { display: none; }
+@media (min-width: 901px) and (hover: hover) { .qr-box { display: inline-flex; align-items: center; gap: 14px; margin-top: 26px; padding: 10px 18px 10px 10px; background: rgba(255,255,255,0.08); border-radius: 14px; font-size: 14px; color: rgba(255,255,255,0.8); text-align: left; } .qr-box img { width: 88px; height: 88px; border-radius: 6px; } }

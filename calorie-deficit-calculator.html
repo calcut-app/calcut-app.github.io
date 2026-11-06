@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calorie Deficit Calculator (kg and kJ) | CalCut</title>
+<meta name="description" content="Free calorie deficit calculator in kilograms, with Calories and kilojoules. Estimate your maintenance and a daily target to lose 0.25 to 0.75 kg a week.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://calcut.com.au/calorie-deficit-calculator.html">
+<meta name="apple-itunes-app" content="app-id=6774035581, affiliate-data=ct=web-smart-banner&amp;pt=128962605">
+<meta property="og:title" content="Calorie Deficit Calculator (kg and kJ)">
+<meta property="og:description" content="Free calorie deficit calculator in kilograms, with Calories and kilojoules. Estimate your maintenance and a daily target to lose 0.25 to 0.75 kg a week.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://calcut.com.au/calorie-deficit-calculator.html">
+<meta property="og:image" content="https://calcut.com.au/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#FF5C00">
+
+<link rel="icon" type="image/png" href="assets/icon.png">
+<link rel="apple-touch-icon" href="assets/icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/compare.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Calorie deficit calculator.", "description": "Free calorie deficit calculator in kilograms, with Calories and kilojoules. Estimate your maintenance and a daily target to lose 0.25 to 0.75 kg a week.", "url": "https://calcut.com.au/calorie-deficit-calculator.html", "dateModified": "2026-11-06", "image": "https://calcut.com.au/assets/og-image.png", "author": {"@type": "Organization", "name": "CalCut", "url": "https://calcut.com.au/about.html"}, "publisher": {"@type": "Organization", "name": "CalCut Pty Ltd", "logo": {"@type": "ImageObject", "url": "https://calcut.com.au/assets/icon.png"}}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcut.com.au/"}, {"@type": "ListItem", "position": 2, "name": "Calorie deficit calculator", "item": "https://calcut.com.au/calorie-deficit-calculator.html"}]}</script>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" aria-label="CalCut home" class="nav-brand"><img src="assets/icon.png" alt="" class="nav-brand-icon" width="30" height="30"><span class="nav-brand-text">Cal<span class="accent">Cut</span></span></a>
+    <div class="nav-links">
+      <a href="support.html">Support</a>
+      <a href="privacy.html">Privacy</a>
+    </div>
+  </div>
+</nav>
+
+<header class="page-head">
+  <div class="crumbs"><a href="index.html">Home</a></div>
+  <h1>Calorie deficit calculator.</h1>
+  <p class="lede">Estimate how many Calories and kilojoules you burn in a day, and what to eat to lose about 0.25, 0.5 or 0.75 kg a week. Built for kilograms and centimetres. For adults only.</p>
+</header>
+
+<section class="band white"><div class="inner"><form id="calc" class="tool" novalidate>
+  <fieldset><legend>Sex (the formula differs)</legend>
+    <label class="radio"><input type="radio" name="sex" value="f" checked> <span>Female</span></label>
+    <label class="radio"><input type="radio" name="sex" value="m"> <span>Male</span></label>
+  </fieldset>
+  <div class="tool-grid">
+    <label>Age<input id="age" type="number" inputmode="numeric" min="18" max="100" placeholder="35"></label>
+    <label>Height (cm)<input id="height" type="number" inputmode="decimal" min="120" max="230" placeholder="165"></label>
+    <label>Weight (kg)<input id="weight" type="number" inputmode="decimal" min="35" max="300" placeholder="75"></label>
+  </div>
+  <label>How active are you?
+    <select id="activity">
+      <option value="1.2">Mostly sitting, little exercise</option>
+      <option value="1.375" selected>Lightly active, exercise 1 to 3 days a week</option>
+      <option value="1.55">Moderately active, exercise 3 to 5 days a week</option>
+      <option value="1.725">Very active, exercise 6 to 7 days a week</option>
+    </select>
+  </label>
+  <button type="submit">Work out my calories</button>
+</form>
+<div id="out" class="tool-out" aria-live="polite" hidden></div>
+<noscript><p class="table-note">This calculator needs JavaScript. The worked example below shows the method.</p></noscript>
+<p class="table-note">Your details stay in your browser. Nothing is saved or sent.</p></div></section>
+<section class="band"><div class="inner"><h2>How the calculator works.</h2><div class="prose"><p><strong>Step 1: your resting energy.</strong> It uses the Mifflin-St Jeor equation. For women, that's 10 × weight in kg + 6.25 × height in cm − 5 × age − 161. For men, the last number is +5.</p><p><strong>Step 2: your maintenance.</strong> It multiplies that by your activity level: 1.2, 1.375, 1.55 or 1.725.</p><p><strong>Step 3: your deficit.</strong> It takes off 250, 500 or 750 Calories a day. It uses the rule of thumb that 1 kg of weight change is about 7,000 Calories, so 500 a day is about 0.5 kg a week. Other sources use up to 7,700, and real bodies don't follow any rule exactly.</p></div><h2 style="margin-top:34px;">Worked example.</h2><p class="table-note">A 35-year-old woman, 165 cm and 75 kg, lightly active. Her estimated maintenance is 1,987 Calories (8,310 kJ).</p><table class="data"><thead><tr><th scope="col">To lose about</th><th scope="col">Calories a day</th><th scope="col">kJ a day</th></tr></thead><tbody><tr><th scope="row">0.25 kg a week</th><td>1,737</td><td>7,270</td></tr><tr><th scope="row">0.5 kg a week</th><td>1,487</td><td>6,220</td></tr><tr><th scope="row">0.75 kg a week</th><td>1,237</td><td>5,180</td></tr></tbody></table></div></section>
+<section class="band white"><div class="inner"><h2>Quick answers.</h2><div class="qa"><h3>How many calories should I eat to lose weight?</h3><p>Start from your maintenance, the number this calculator estimates, and eat a little less than that. A common starting point is about 500 Calories a day under maintenance.</p><h3>What's a safe calorie deficit?</h3><p>That depends on you, so talk to your GP if you're unsure. Harvard Health says calorie intake shouldn't fall below 1,200 a day for women or 1,500 for men, except under a health professional's supervision. This calculator won't show a target below those.</p><h3>How do I convert calories to kilojoules?</h3><p>Multiply Calories by 4.184. So 1,500 Calories is about 6,280 kJ. Australian food labels usually show kilojoules.</p><h3>Who shouldn't use this?</h3><p>It isn't for anyone under 18, pregnant or breastfeeding, or living with or recovering from an eating disorder. If you have a medical condition or take medication that affects your weight, ask your doctor first.</p><h3>Is this the same number the CalCut app gives me?</h3><p>Not necessarily. CalCut sets its own target when you start. This page is a separate estimate, so the two can differ.</p></div><p class="more">Next: <a href="steps-to-calories-calculator.html">How many steps burn a given number of calories</a> &middot; <a href="fast-food-calories-australia.html">Fast food calories in Australia</a></p></div></section>
+<section class="band"><div class="inner"><div class="sources"><h2>Sources</h2><ul><li>Mifflin MD, St Jeor ST, et al. <a href="https://doi.org/10.1093/ajcn/51.2.241" rel="nofollow noopener">A new predictive equation for resting energy expenditure in healthy individuals</a>. Am J Clin Nutr. 1990;51(2):241-247.</li><li>Harvard Health Publishing, <a href="https://www.harvardhealth.org/staying-healthy/calorie-counting-made-easy" rel="nofollow noopener">Calorie counting made easy</a>, for the minimum intakes.</li></ul><p class="table-note" style="margin-top:14px;">This is general information, not medical advice. Food isn't something you have to earn back. If food or exercise feels hard to manage, Butterfly Foundation's helpline is 1800 33 4673 (<a href="https://butterfly.org.au/get-support/helpline/" rel="nofollow noopener">hours and web chat</a>).</p></div></div></section>
+<section class="band"><div class="inner"><div class="prize-note"><h3>The CalCut Monthly</h3><p>A$1,000 every month to whoever's the most consistent. Most points for hitting your two daily rules wins. Weight lost never scores. <a href="monthly.html">How it works</a> &middot; <a href="monthly-terms.html">Full terms</a></p><p class="small">Not open if you're pregnant or breastfeeding, or are living with or have a history of an eating disorder. You're still welcome to use the app. If you're under medical supervision or take medication that affects weight, appetite or activity, ask your doctor before entering.</p></div></div></section>
+<section class="final-cta" id="get">
+  <div class="final-cta-inner">
+    <h2>Stay in it <span>every day.</span></h2>
+    <p class="final-cta-sub">Scan a barcode, take a photo or describe your meal. A$1,000 every month to whoever's the most consistent. Most points for hitting your two daily rules wins. <a href="monthly-terms.html" style="color:#fff;text-decoration:underline;">Terms</a>.</p>
+    <p class="final-cta-sub">7-day free trial on the annual plan. Monthly has no trial. iPhone only.</p>
+    <a href="https://apps.apple.com/app/apple-store/id6774035581?pt=128962605&amp;ct=web-tools&amp;mt=8" class="app-store-badge" aria-label="Download CalCut on the App Store"><img src="assets/app-store-badge.svg" alt="Download on the App Store" width="168" height="56"></a>
+    <p class="rating-line"><span class="stars" aria-hidden="true">★★★★★</span> 5.0 on the Australian App Store · 32 ratings</p>
+    <div class="qr-box"><img src="assets/qr-app-store.svg" alt="QR code linking to CalCut on the App Store" width="112" height="112"><span>On a computer? Scan with your iPhone.</span></div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-left">
+      <img src="assets/icon.png" alt="CalCut" class="footer-icon" width="32" height="32">
+      <span class="footer-text">© 2026 CalCut Pty Ltd. Built in Melbourne.</span>
+    </div>
+    <div class="footer-links">
+      <a href="monthly.html">The Monthly</a>
+      <a href="calorie-deficit-calculator.html">Calorie deficit calculator</a>
+      <a href="steps-to-calories-calculator.html">Steps calculator</a>
+      <a href="fast-food-calories-australia.html">Fast food calories</a>
+      <a href="best-calorie-tracker-apps-australia.html">Best calorie trackers</a>
+      <a href="apps-that-pay-you-to-lose-weight.html">Compare apps</a>
+      <a href="about.html">About</a>
+      <a href="support.html">Support</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="mailto:support@calcut.com.au">Contact</a>
+      </div>
+  </div>
+  <p class="footer-conditions">The CalCut Monthly: 18+. Residents of AU, NZ, UK, CA (excl. Quebec) and the US (excl. AZ, CO, MD, NE, NJ, ND, TN, VT) with an active CalCut subscription. One A$1,000 prize per calendar month to the eligible entrant with the most points for hitting their daily calorie and step targets; ties split. Terms: calcut.com.au/monthly-terms</p>
+  <p class="footer-conditions">Brand and product names belong to their owners, who aren't affiliated with CalCut. Apple Inc. is not a sponsor of the Monthly and is not involved in it in any manner.</p>
+</footer>
+
+<script>
+(function () {
+  var f = document.getElementById('calc'), out = document.getElementById('out');
+  function fmt(v) { return Math.round(v).toLocaleString('en-AU'); }
+  function kj(v) { return (Math.round(v * 4.184 / 10) * 10).toLocaleString('en-AU'); }
+  f.addEventListener('submit', function (ev) {
+    ev.preventDefault();
+    var age = +document.getElementById('age').value, h = +document.getElementById('height').value, w = +document.getElementById('weight').value;
+    var act = +document.getElementById('activity').value, sex = f.querySelector('input[name=sex]:checked').value;
+    out.hidden = false;
+    if (!age || !h || !w) { out.innerHTML = '<p>Please fill in your age, height and weight.</p>'; return; }
+    if (age < 18) { out.innerHTML = '<p>This calculator is for adults. If you are under 18, please talk to your doctor about food and weight rather than using a calorie target.</p>'; return; }
+    if (h < 120 || h > 230 || w < 35 || w > 300) { out.innerHTML = '<p>Please check your height in centimetres and your weight in kilograms.</p>'; return; }
+    var bmi = w / Math.pow(h / 100, 2);
+    if (bmi < 18.5) { out.innerHTML = '<p>Your BMI is under 18.5, the World Health Organization\u2019s underweight range, so we won\u2019t show a calorie deficit. Please talk to your GP if you want to change your weight.</p>'; return; }
+    var bmr = 10 * w + 6.25 * h - 5 * age + (sex === 'm' ? 5 : -161), tdee = bmr * act, floor = sex === 'm' ? 1500 : 1200;
+    var rows = [[0.25, 250], [0.5, 500], [0.75, 750]].map(function (p) {
+      var t = tdee - p[1];
+      return t < floor
+        ? '<tr><th scope="row">' + p[0] + ' kg a week</th><td colspan="2">Below ' + floor.toLocaleString('en-AU') + ' Calories, so not shown</td></tr>'
+        : '<tr><th scope="row">' + p[0] + ' kg a week</th><td>' + fmt(t) + '</td><td>' + kj(t) + '</td></tr>';
+    }).join('');
+    out.innerHTML = '<p class="tool-big"><strong>' + fmt(tdee) + ' Calories</strong> (' + kj(tdee) + ' kJ) a day is your estimated maintenance.</p>' +
+      '<table class="data"><thead><tr><th scope="col">To lose about</th><th scope="col">Calories a day</th><th scope="col">kJ a day</th></tr></thead><tbody>' + rows + '</tbody></table>' +
+      '<p class="table-note">This is an estimate. Your real number can differ, so adjust from what actually happens over a few weeks.</p>';
+  });
+})();
+</script>
+</body>
+</html>
